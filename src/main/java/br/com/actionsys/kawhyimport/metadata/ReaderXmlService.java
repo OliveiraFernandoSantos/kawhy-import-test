@@ -17,19 +17,20 @@ import org.w3c.dom.Document;
 @Service
 public class ReaderXmlService {
 
-
-  public Object getValue(TableMapping tableMapping, Document document, FieldMapping field, int index) {
+  public Object getValue(
+      TableMapping tableMapping, Document document, FieldMapping field, int index) {
 
     try {
-      String aPath;
-
-      if (StringUtils.isBlank(tableMapping.getAPath())) {
-        aPath = field.getAPath();
-      } else {
-        aPath = field.getAPath().replace("", tableMapping.get);
-      }
+      String aPath =
+          StringUtils.isBlank(tableMapping.getAPath())
+              ? field.getAPath()
+              : StringUtils.replace(
+                  field.getAPath(),
+                  tableMapping.getAPath(),
+                  tableMapping.getAPath() + "[" + index + "]");
 
       return formatValue(APathUtil.getStringValueFromDocument(document, aPath), field);
+
     } catch (Exception e) {
       throw new RuntimeException("Erro ao recuperar valor do campo: " + field, e);
     }
@@ -40,7 +41,8 @@ public class ReaderXmlService {
     try {
       return APathUtil.count(document, tableMapping.getAPath());
     } catch (Exception e) {
-      throw new RuntimeException("Erro ao realizar contagem de registros para a tabela: " + tableMapping, e);
+      throw new RuntimeException(
+          "Erro ao realizar contagem de registros para a tabela: " + tableMapping, e);
     }
   }
 
