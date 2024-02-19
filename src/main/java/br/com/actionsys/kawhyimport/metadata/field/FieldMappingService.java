@@ -55,7 +55,10 @@ public class FieldMappingService {
         }
       }
 
-      fieldMapping.setTableId(fieldMapping.getTable() + "_" + fieldMapping.getWhereComplement());
+      fieldMapping.setTableId(
+          fieldMapping.getWhereComplement() == null
+              ? fieldMapping.getTable()
+              : fieldMapping.getTable() + "_" + fieldMapping.getWhereComplement());
 
       return fieldMapping;
 

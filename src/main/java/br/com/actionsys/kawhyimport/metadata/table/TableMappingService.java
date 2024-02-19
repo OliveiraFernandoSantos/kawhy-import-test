@@ -53,18 +53,17 @@ public class TableMappingService {
   private TableMapping build(String csvLine, List<FieldMapping> allFields) {
 
     try {
-      String[] columns = csvLine.split(",");
+      String[] columns = csvLine.split(",",-1);
 
       TableMapping tableMapping = new TableMapping();
       tableMapping.setTableName(getColumnValue(columns, 0));
       tableMapping.setAPath(getColumnValue(columns, 1));
-
-      if (columns.length > 2) {
-        tableMapping.setWhereComplement(getColumnValue(columns, 2));
-      }
+      tableMapping.setWhereComplement(getColumnValue(columns, 2));
 
       tableMapping.setTableId(
-          tableMapping.getTableName() + "_" + tableMapping.getWhereComplement());
+          tableMapping.getWhereComplement() == null
+              ? tableMapping.getTableName()
+              : tableMapping.getTableName() + "_" + tableMapping.getWhereComplement());
 
       List<FieldMapping> tableFields =
           allFields.stream()

@@ -1,10 +1,11 @@
 package br.com.actionsys.kawhyimport.metadata;
 
-import br.com.actionsys.kawhycommons.infra.util.APathUtil;
 import br.com.actionsys.kawhyimport.metadata.field.FieldMapping;
 import br.com.actionsys.kawhyimport.metadata.table.TableMapping;
+import br.com.actionsys.kawhyimport.util.APathUtil;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 import javax.xml.xpath.XPathExpressionException;
@@ -29,6 +30,10 @@ public class ReaderXmlService {
                   tableMapping.getAPath(),
                   tableMapping.getAPath() + "[" + index + "]");
 
+      if (aPath == null) {
+        return null;
+      }
+
       return formatValue(APathUtil.getStringValueFromDocument(document, aPath), field);
 
     } catch (Exception e) {
@@ -37,6 +42,10 @@ public class ReaderXmlService {
   }
 
   public int count(Document document, TableMapping tableMapping) {
+
+    if (tableMapping.getAPath() == null) {
+      return 0;
+    }
 
     try {
       return APathUtil.count(document, tableMapping.getAPath());
@@ -48,6 +57,10 @@ public class ReaderXmlService {
 
   public List<?> getListOfValues(Document document, FieldMapping field)
       throws XPathExpressionException {
+
+    if (field.getAPath() == null) {
+      return Collections.emptyList();
+    }
 
     List<String> valueXmlStr = APathUtil.getStringListFromDocument(document, field.getAPath());
 

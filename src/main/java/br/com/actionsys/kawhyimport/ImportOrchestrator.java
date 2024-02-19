@@ -46,7 +46,8 @@ public abstract class ImportOrchestrator extends IntegrationOrchestrator {
 
     for (TableMapping tableMapping : tableMappings) {
 
-      log.debug("Processando tabela: " + tableMapping);
+      log.debug("Processando tabela: " + tableMapping.getTableId());
+      log.trace("Processando tabela: " + tableMapping);
 
       List<SqlCommand> tableCommands = generateCommands(tableMapping, item);
 
@@ -93,24 +94,23 @@ public abstract class ImportOrchestrator extends IntegrationOrchestrator {
             (String) readerXmlService.getValue(tableMapping, item.getDocument(), tableMapping.getIdField(), 1));
       }
 
-      int sequence = 1; // TODO VERIFICAR COMO VAI SER O SEQUENCE
-
       // TODO PREENCHER APATH DAS TABELAS
       int tableRecors = readerXmlService.count(item.getDocument(), tableMapping);
 
-      for (int index = 1; index <= tableRecors; index++) {
-
+      int sequence = 1;
+      do {
         Map<String, Object> values = new HashMap<>();
 
         for (FieldMapping field : tableMapping.getFields()) {
 
-          log.debug("Processando campo: " + field);
+          log.debug("Processando coluna: " + field.getColumn());
+          log.trace("Processando coluna: " + field);
 
           Object value;
           if (field.getAPath().equals("${sequence}")) {
             value = sequence;
           } else {
-            value = readerXmlService.getValue(tableMapping, item.getDocument(), field, index);
+            value = readerXmlService.getValue(tableMapping, item.getDocument(), field, sequence);
           }
 
           if (value != null) {
@@ -127,7 +127,8 @@ public abstract class ImportOrchestrator extends IntegrationOrchestrator {
         tableCommands.add(sqlCommand);
 
         sequence++;
-      }
+
+      } while (sequence <= tableRecors);
 
       return tableCommands;
 
