@@ -5,33 +5,49 @@ import br.com.actionsys.kawhyimport.metadata.field.FieldMapping;
 import br.com.actionsys.kawhyimport.metadata.field.FieldMappingService;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class TableMappingService {
 
   @Value("${file.metadata.table}")
-  public Path tableMetadataFile;
+  public String tableMetadataFile;
 
   @Autowired private FieldMappingService fieldMappingService;
+
+  public List<TableMapping> readAndChain() {
+
+    List<TableMapping> allTables = read();
+
+    Map<String, List<TableMapping>> tablesByParent =
+        allTables.stream().collect(Collectors.groupingBy(TableMapping::getParentAPath));
+
+    List<TableMapping> resultTables = tablesByParent.get("-");
+    resultTables.forEach(table -> table.setChildTables(tablesByParent.get(table.getTableAPath())));
+    return resultTables;
+  }
 
   public List<TableMapping> read() {
 
     List<FieldMapping> allFields = fieldMappingService.read();
 
     try {
-      return FilesUtil.readLines(tableMetadataFile).stream()
+      return FilesUtil.readLines(Path.of(tableMetadataFile)).stream()
           .map(csvLine -> build(csvLine, allFields))
           .collect(Collectors.toList());
 
     } catch (Exception e) {
-      throw new RuntimeException(e); // TODO MENSAGEM DE ERRO
+      // TODO PARAR PROCESSAMENTO?
+      throw new RuntimeException("Erro ao ler arquivos de metadados de tabelas " + tableMetadataFile);
     }
   }
 
@@ -53,12 +69,13 @@ public class TableMappingService {
   private TableMapping build(String csvLine, List<FieldMapping> allFields) {
 
     try {
-      String[] columns = csvLine.split(",",-1);
+      String[] columns = csvLine.split(",", -1);
 
       TableMapping tableMapping = new TableMapping();
       tableMapping.setTableName(getColumnValue(columns, 0));
-      tableMapping.setAPath(getColumnValue(columns, 1));
-      tableMapping.setWhereComplement(getColumnValue(columns, 2));
+      tableMapping.setTableAPath(getColumnValue(columns, 1));
+      tableMapping.setParentAPath(getColumnValue(columns, 2));
+      tableMapping.setWhereComplement(getColumnValue(columns, 3));
 
       tableMapping.setTableId(
           tableMapping.getWhereComplement() == null

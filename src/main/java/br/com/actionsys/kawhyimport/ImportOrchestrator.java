@@ -24,9 +24,10 @@ public abstract class ImportOrchestrator extends IntegrationOrchestrator {
   @Override
   public void processDocumentFile(IntegrationItem item) throws Exception {
 
-    List<TableMapping> tableMappings = tableMappingService.read();
+    log.trace("Processando documento " + item);
+    List<TableMapping> tableMappings = tableMappingService.readAndChain();
 
-    List<SqlCommand> sqlCommands = generateCommands(tableMappings, item);
+    List<SqlCommand> sqlCommands = buildCommandsFromTables(tableMappings, item);
     sqlCommands.forEach(
         sqlCommand -> {
           if (SqlCommandType.INSERT == sqlCommand.getType()) {
@@ -38,25 +39,6 @@ public abstract class ImportOrchestrator extends IntegrationOrchestrator {
                 sqlCommand.getTableName());
           }
         });
-  }
-
-  public List<SqlCommand> generateCommands(List<TableMapping> tableMappings, IntegrationItem item) {
-
-    ArrayList<SqlCommand> sqlCommands = new ArrayList<>();
-
-    for (TableMapping tableMapping : tableMappings) {
-
-      log.debug("Processando tabela: " + tableMapping.getTableId());
-      log.trace("Processando tabela: " + tableMapping);
-
-      List<SqlCommand> tableCommands = generateCommands(tableMapping, item);
-
-      tableCommands.removeIf(sqlCommand -> !commandIsValid(tableMapping, sqlCommand));
-
-      sqlCommands.addAll(tableCommands);
-    }
-
-    return sqlCommands;
   }
 
   private boolean commandIsValid(TableMapping tableMapping, SqlCommand sqlCommand) {
@@ -84,51 +66,78 @@ public abstract class ImportOrchestrator extends IntegrationOrchestrator {
     return false;
   }
 
-  private List<SqlCommand> generateCommands(TableMapping tableMapping, IntegrationItem item) {
+  public List<SqlCommand> buildCommandsFromTables(
+      List<TableMapping> tableMappings, IntegrationItem item) {
 
+    ArrayList<SqlCommand> sqlCommands = new ArrayList<>();
+
+    for (TableMapping tableMapping : tableMappings) {
+
+      List<SqlCommand> tableCommands = buildCommandsFromTable(tableMapping, item, null);
+
+      tableCommands.removeIf(sqlCommand -> !commandIsValid(tableMapping, sqlCommand));
+
+      sqlCommands.addAll(tableCommands);
+    }
+
+    return sqlCommands;
+  }
+
+  private List<SqlCommand> buildCommandsFromTable(
+      TableMapping tableMapping, IntegrationItem item, Integer parentSequence) {
+
+    log.debug("Criando comandos para a tabela {} parentSequence {}", tableMapping, parentSequence);
     try {
       List<SqlCommand> tableCommands = new ArrayList<>();
 
       if (item.getId() == null) {
         item.setId(
-            (String) readerXmlService.getValue(tableMapping, item.getDocument(), tableMapping.getIdField(), 1));
+            (String)
+                readerXmlService.getValue(
+                    tableMapping, item.getDocument(), tableMapping.getIdField(), 1, 0));
       }
 
       // TODO PREENCHER APATH DAS TABELAS
-      int tableRecors = readerXmlService.count(item.getDocument(), tableMapping);
+      int tableRecors = readerXmlService.count(item.getDocument(), tableMapping, parentSequence);
 
-      int sequence = 1;
-      do {
-        Map<String, Object> values = new HashMap<>();
+      for (Integer sequence = 1; sequence <= tableRecors; sequence++) {
+        {
+          Map<String, Object> values = new HashMap<>();
 
-        for (FieldMapping field : tableMapping.getFields()) {
-
-          log.debug("Processando coluna: " + field.getColumn());
-          log.trace("Processando coluna: " + field);
-
-          Object value;
-          if (field.getAPath().equals("${sequence}")) {
-            value = sequence;
-          } else {
-            value = readerXmlService.getValue(tableMapping, item.getDocument(), field, sequence);
+          for (TableMapping childTable : tableMapping.getChildTables()) {
+            tableCommands.addAll(buildCommandsFromTable(childTable, item, sequence));
           }
 
-          if (value != null) {
-            values.put(field.getColumn(), value);
-          } else {
-            log.debug("Valor não encontrado para o campo: " + field);
+          for (FieldMapping field : tableMapping.getFields()) {
+
+            log.debug("Processando coluna: " + field.getColumn());
+            log.trace("Processando coluna: " + field);
+
+            Object value =
+                switch (field.getAPath()) {
+                  case "${sequence}" -> sequence;
+                  case "${parentSequence}" -> parentSequence;
+                  case "${compWhere}" ->
+                      StringUtils.substringBetween(field.getWhereComplement(), "'");
+                  default ->
+                      readerXmlService.getValue(
+                          tableMapping, item.getDocument(), field, sequence, parentSequence);
+                };
+
+            if (value != null) {
+              values.put(field.getColumn(), value);
+            } else {
+              log.debug("Valor não encontrado para o campo: " + field);
+            }
           }
+
+          SqlCommand sqlCommand = new SqlCommand();
+          sqlCommand.setType(SqlCommandType.INSERT);
+          sqlCommand.setTableName(tableMapping.getTableName());
+          sqlCommand.setValues(values);
+          tableCommands.add(sqlCommand);
         }
-
-        SqlCommand sqlCommand = new SqlCommand();
-        sqlCommand.setType(SqlCommandType.INSERT);
-        sqlCommand.setTableName(tableMapping.getTableName());
-        sqlCommand.setValues(values);
-        tableCommands.add(sqlCommand);
-
-        sequence++;
-
-      } while (sequence <= tableRecors);
+      }
 
       return tableCommands;
 

@@ -12,18 +12,19 @@ import org.springframework.stereotype.Service;
 public class FieldMappingService {
 
   @Value("${file.metadata.field}")
-  public Path fieldMetadataFile;
+  public String fieldMetadataFile;
 
   public List<FieldMapping> read() {
 
     try {
-      return FilesUtil.readLines(fieldMetadataFile).stream()
+      return FilesUtil.readLines(Path.of(fieldMetadataFile)).stream()
           .map(this::build)
           .filter(field -> !isIncomplete(field))
           .collect(Collectors.toList());
 
     } catch (Exception e) {
-      throw new RuntimeException(e); // TODO MENSAGEM DE ERRO
+      // TODO PARAR PROCESSAMENTO?
+      throw new RuntimeException("Erro ao ler arquivos de metadados de colunas " + fieldMetadataFile);
     }
   }
 
@@ -38,22 +39,16 @@ public class FieldMappingService {
   private FieldMapping build(String csvLine) {
 
     try {
-      String[] columns = csvLine.split(",");
+      String[] columns = csvLine.split(",", -1);
 
       FieldMapping fieldMapping = new FieldMapping();
       fieldMapping.setTable(getColumnValue(columns, 0));
       fieldMapping.setColumn(getColumnValue(columns, 1));
       fieldMapping.setVariable(getColumnValue(columns, 2));
       fieldMapping.setAPath(getColumnValue(columns, 3));
-
       fieldMapping.setType(getColumnValue(columns, 4));
-      if (columns.length > 5) {
-        fieldMapping.setWhereComplement(getColumnValue(columns, 5));
-
-        if (columns.length > 6) {
-          fieldMapping.setRegex(getColumnValue(columns, 6));
-        }
-      }
+      fieldMapping.setWhereComplement(getColumnValue(columns, 5));
+      fieldMapping.setRegex(getColumnValue(columns, 6));
 
       fieldMapping.setTableId(
           fieldMapping.getWhereComplement() == null

@@ -19,19 +19,25 @@ import org.w3c.dom.Document;
 public class ReaderXmlService {
 
   public Object getValue(
-      TableMapping tableMapping, Document document, FieldMapping field, int index) {
+      TableMapping tableMapping,
+      Document document,
+      FieldMapping field,
+      Integer index,
+      Integer parentIndex) {
 
     try {
-      String aPath =
-          StringUtils.isBlank(tableMapping.getAPath())
-              ? field.getAPath()
-              : StringUtils.replace(
-                  field.getAPath(),
-                  tableMapping.getAPath(),
-                  tableMapping.getAPath() + "[" + index + "]");
+      String aPath = field.getAPath();
 
       if (aPath == null) {
         return null;
+      }
+
+      if (parentIndex != null && StringUtils.isNoneBlank(tableMapping.getParentAPath())) {
+        aPath = insertIndex(field.getAPath(), tableMapping.getTableAPath(), parentIndex);
+      }
+
+      if (StringUtils.isNoneBlank(tableMapping.getTableAPath())) {
+        aPath = insertIndex(field.getAPath(), tableMapping.getTableAPath(), index);
       }
 
       return formatValue(APathUtil.getStringValueFromDocument(document, aPath), field);
@@ -41,14 +47,24 @@ public class ReaderXmlService {
     }
   }
 
-  public int count(Document document, TableMapping tableMapping) {
+  private String insertIndex(String aPath, String parentAPath, Integer index) {
+    return StringUtils.replace(aPath, parentAPath, parentAPath + "[" + index + "]");
+  }
 
-    if (tableMapping.getAPath() == null) {
+  public int count(Document document, TableMapping tableMapping, Integer parentIndex) {
+
+    String tableAPath = tableMapping.getTableAPath();
+
+    if (tableAPath == null) {
       return 0;
     }
 
+    if (parentIndex != null && StringUtils.isNoneBlank(tableMapping.getParentAPath())) {
+      tableAPath = insertIndex(tableAPath, tableMapping.getParentAPath(), parentIndex);
+    }
+
     try {
-      return APathUtil.count(document, tableMapping.getAPath());
+      return APathUtil.count(document, tableAPath);
     } catch (Exception e) {
       throw new RuntimeException(
           "Erro ao realizar contagem de registros para a tabela: " + tableMapping, e);

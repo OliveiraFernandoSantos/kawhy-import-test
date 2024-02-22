@@ -1,6 +1,7 @@
 package br.com.actionsys.kawhyimport.metadata.table;
 
 import br.com.actionsys.kawhyimport.metadata.field.FieldMapping;
+import java.util.ArrayList;
 import java.util.List;
 import lombok.Data;
 import lombok.Getter;
@@ -11,13 +12,20 @@ import lombok.Setter;
 @Setter
 public class TableMapping {
 
-    private String tableId;
+  private String tableId;
 
-    private String tableName;
-    private String whereComplement;
-    private String aPath;
+  private String tableName;
+  private String whereComplement;
+  private String tableAPath;
+  private String parentAPath;
 
-    private FieldMapping idField;
-    private FieldMapping sequenceField;
-    private List<FieldMapping> fields;
+  private FieldMapping idField;
+  private FieldMapping sequenceField;
+  private List<FieldMapping> fields;
+
+  private List<TableMapping> childTables;
+
+  public List<TableMapping> getChildTables() {
+    return childTables == null ? new ArrayList<>() : childTables;
+  }
 }
