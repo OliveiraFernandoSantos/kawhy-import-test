@@ -5,50 +5,41 @@ import br.com.actionsys.kawhyimport.command.SqlCommand;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
 @Component
-public class OrchestratorNfe extends ImportOrchestrator {
-
-
-    @Override
-    public void processDocumentFile(IntegrationItem item) throws Exception {
-        super.processDocumentFile(item);
-    }
+public class OrchestratorNfe extends MetadataOrchestrator {
 
   @Override
-  public List<SqlCommand> generateControlCommands(IntegrationItem item) throws Exception {
-    return null;
+  public void processDocumentFile(IntegrationItem item) throws Exception {
+    super.processDocumentFile(item);
   }
 
   @Override
-    public void processCancelFile(IntegrationItem item) throws Exception {
-
-    }
-
-    @Override
-    public void processEventFile(IntegrationItem item) throws Exception {
-
-    }
-
-    @Override
-    public boolean isCancel(IntegrationItem item) throws Exception {
-        return false;
-    }
-
-    @Override
-    public boolean isEvent(IntegrationItem item) throws Exception {
-        return false;
-    }
-
-    @Override
-    public boolean isDocument(IntegrationItem item) throws Exception {
-        return true;
-    }
+  public List<SqlCommand> generateControlCommands(IntegrationItem item) throws Exception {
+    return new ArrayList<>();
+  }
 
   @Override
-  public void processCancelFile(IntegrationItem item) throws Exception {
+  public void processCancelFile(IntegrationItem item) throws Exception {}
 
+  @Override
+  public void processEventFile(IntegrationItem item) throws Exception {}
+
+  @Override
+  public boolean isCancel(IntegrationItem item) throws Exception {
+    return false;
+  }
+
+  @Override
+  public boolean isEvent(IntegrationItem item) throws Exception {
+    return false;
+  }
+
+  @Override
+  public boolean isDocument(IntegrationItem item) throws Exception {
+    return true;
   }
 }
