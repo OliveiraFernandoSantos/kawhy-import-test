@@ -40,7 +40,7 @@ public class ReaderXmlService {
         aPath = insertIndex(field.getAPath(), tableMapping.getTableAPath(), index);
       }
 
-      return formatValue(APathUtil.getStringValueFromDocument(document, aPath), field);
+      return formatValue(APathUtil.getString(document, aPath), field);
 
     } catch (Exception e) {
       throw new RuntimeException("Erro ao recuperar valor do campo: " + field, e);
@@ -59,7 +59,7 @@ public class ReaderXmlService {
       return 0;
     }
 
-    if (parentIndex != null && StringUtils.isNoneBlank(tableMapping.getParentAPath())) {
+    if (parentIndex != null && parentIndex > 0 && StringUtils.isNoneBlank(tableMapping.getParentAPath())) {
       tableAPath = insertIndex(tableAPath, tableMapping.getParentAPath(), parentIndex);
     }
 
@@ -78,7 +78,7 @@ public class ReaderXmlService {
       return Collections.emptyList();
     }
 
-    List<String> valueXmlStr = APathUtil.getStringListFromDocument(document, field.getAPath());
+    List<String> valueXmlStr = APathUtil.getStringList(document, field.getAPath());
 
     return valueXmlStr.stream()
         .map(value -> formatValue(value, field))

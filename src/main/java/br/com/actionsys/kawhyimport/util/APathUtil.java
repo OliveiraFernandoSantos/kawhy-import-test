@@ -8,21 +8,25 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 import org.apache.commons.lang3.StringUtils;
-import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class APathUtil {
 
-  public static String getStringValueFromDocument(Document document, String aPath)
-      throws XPathExpressionException {
+  public static int count(Node node, String aPath) throws XPathExpressionException {
 
-    return getString(document, aPath);
+    return getNodeList(node, aPath).getLength();
   }
 
-  public static List<String> getStringListFromDocument(Document document, String aPath)
+  public static String getString(Node node, String aPath) throws XPathExpressionException {
+
+    return (String) getValue(node, aPath, XPathConstants.STRING);
+  }
+
+  public static List<String> getStringList(Node node, String aPath)
       throws XPathExpressionException {
 
-    NodeList nodeList = getNodeList(document, aPath);
+    NodeList nodeList = getNodeList(node, aPath);
 
     List<String> result = new ArrayList<>();
 
@@ -33,26 +37,25 @@ public class APathUtil {
     return result;
   }
 
-  public static int count(Document document, String aPath) throws XPathExpressionException {
-    return getNodeList(document, aPath).getLength();
-  }
-
-  private static NodeList getNodeList(Document document, String aPath)
+  public static NodeList getNodeList(Node node, String aPath)
       throws XPathExpressionException {
 
-    return (NodeList) getValue(document, aPath, XPathConstants.NODESET);
+    return (NodeList) getValue(node, aPath, XPathConstants.NODESET);
   }
 
-  private static String getString(Document document, String aPath) throws XPathExpressionException {
-
-    return (String) getValue(document, aPath, XPathConstants.STRING);
-  }
-
-  private static Object getValue(Document document, String aPath, QName returnType)
+  private static Object getValue(Node node, String aPath, QName returnType)
       throws XPathExpressionException {
 
     XPath xPath = XPathFactory.newInstance().newXPath();
-    return xPath.compile(formatExpression(aPath)).evaluate(document, returnType);
+
+    if (StringUtils.startsWith(aPath, "count(")) {
+      aPath = formatExpression(StringUtils.removeStart(aPath, "count("));
+      aPath = "count(" + aPath;
+    } else {
+      aPath = formatExpression(aPath);
+    }
+
+    return xPath.compile(aPath).evaluate(node, returnType);
   }
 
   private static String formatExpression(String inputExpression) {
