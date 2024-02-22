@@ -37,8 +37,7 @@ public class APathUtil {
     return result;
   }
 
-  public static NodeList getNodeList(Node node, String aPath)
-      throws XPathExpressionException {
+  public static NodeList getNodeList(Node node, String aPath) throws XPathExpressionException {
 
     return (NodeList) getValue(node, aPath, XPathConstants.NODESET);
   }
@@ -48,14 +47,7 @@ public class APathUtil {
 
     XPath xPath = XPathFactory.newInstance().newXPath();
 
-    if (StringUtils.startsWith(aPath, "count(")) {
-      aPath = formatExpression(StringUtils.removeStart(aPath, "count("));
-      aPath = "count(" + aPath;
-    } else {
-      aPath = formatExpression(aPath);
-    }
-
-    return xPath.compile(aPath).evaluate(node, returnType);
+    return xPath.compile(formatExpression(aPath)).evaluate(node, returnType);
   }
 
   private static String formatExpression(String inputExpression) {

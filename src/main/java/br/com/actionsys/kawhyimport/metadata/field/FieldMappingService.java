@@ -49,6 +49,7 @@ public class FieldMappingService {
       fieldMapping.setType(getColumnValue(columns, 4));
       fieldMapping.setWhereComplement(getColumnValue(columns, 5));
       fieldMapping.setRegex(getColumnValue(columns, 6));
+      fieldMapping.setMaxSize(getColumnValue(columns, 7));
 
       fieldMapping.setTableId(
           fieldMapping.getWhereComplement() == null

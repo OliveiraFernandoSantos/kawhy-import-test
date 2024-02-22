@@ -19,11 +19,7 @@ import org.w3c.dom.Document;
 public class ReaderXmlService {
 
   public Object getValue(
-      TableMapping tableMapping,
-      Document document,
-      FieldMapping field,
-      Integer index,
-      Integer parentIndex) {
+      TableMapping table, Document document, FieldMapping field, int index, int parentIndex) {
 
     try {
       String aPath = field.getAPath();
@@ -32,12 +28,12 @@ public class ReaderXmlService {
         return null;
       }
 
-      if (parentIndex != null && StringUtils.isNoneBlank(tableMapping.getParentAPath())) {
-        aPath = insertIndex(field.getAPath(), tableMapping.getTableAPath(), parentIndex);
+      if (StringUtils.isNoneBlank(table.getTableAPath())) {
+        aPath = insertIndex(aPath, table.getTableAPath(), index);
       }
 
-      if (StringUtils.isNoneBlank(tableMapping.getTableAPath())) {
-        aPath = insertIndex(field.getAPath(), tableMapping.getTableAPath(), index);
+      if (parentIndex > 0 && StringUtils.isNoneBlank(table.getParentAPath())) {
+        aPath = insertIndex(aPath, table.getParentAPath(), parentIndex);
       }
 
       return formatValue(APathUtil.getString(document, aPath), field);
@@ -51,7 +47,15 @@ public class ReaderXmlService {
     return StringUtils.replace(aPath, parentAPath, parentAPath + "[" + index + "]");
   }
 
-  public int count(Document document, TableMapping tableMapping, Integer parentIndex) {
+  public int count(Document document, String aPath) {
+    try {
+      return APathUtil.count(document, aPath);
+    } catch (Exception e) {
+      throw new RuntimeException("Erro ao realizar contagem de registros", e);
+    }
+  }
+
+  public int count(Document document, TableMapping tableMapping, int parentIndex) {
 
     String tableAPath = tableMapping.getTableAPath();
 
@@ -59,7 +63,7 @@ public class ReaderXmlService {
       return 0;
     }
 
-    if (parentIndex != null && parentIndex > 0 && StringUtils.isNoneBlank(tableMapping.getParentAPath())) {
+    if (parentIndex > 0 && StringUtils.isNoneBlank(tableMapping.getParentAPath())) {
       tableAPath = insertIndex(tableAPath, tableMapping.getParentAPath(), parentIndex);
     }
 
@@ -85,7 +89,6 @@ public class ReaderXmlService {
         .collect(Collectors.toList());
   }
 
-  // TODO VERIFICAR A CRIAÇÃO DE UM ENUM
   private Object formatValue(String value, FieldMapping field) {
 
     if (value == null || value.trim().isEmpty()) {
@@ -103,10 +106,20 @@ public class ReaderXmlService {
     } else if (field.getType().equals("Integer")) {
       return new BigInteger(value);
 
-    } else if (field.getRegex() != null) { // TODO REVISAR REGEX
-      return value.trim().replaceAll(field.getRegex(), "");
-
     } else {
+
+      if (field.getRegex() != null) { // TODO REVISAR REGEX
+        value = value.trim().replaceAll(field.getRegex(), "");
+      }
+
+      if (field.getMaxSize() != null) {
+        try {
+          value = StringUtils.substring(value, 0, Integer.parseInt(field.getMaxSize()));
+        } catch (Exception e) {
+          throw new RuntimeException("Erro processar maxSize", e);
+        }
+      }
+
       return value.trim();
     }
   }
