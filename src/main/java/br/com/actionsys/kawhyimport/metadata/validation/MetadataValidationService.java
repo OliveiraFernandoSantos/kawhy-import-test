@@ -1,7 +1,9 @@
-package br.com.actionsys.kawhyimport.metadata;
+package br.com.actionsys.kawhyimport.metadata.validation;
 
 import br.com.actionsys.kawhycommons.infra.util.XmlUtil;
 import br.com.actionsys.kawhyimport.metadata.field.FieldMapping;
+import br.com.actionsys.kawhyimport.metadata.reader.DbReaderService;
+import br.com.actionsys.kawhyimport.metadata.reader.XmlReaderService;
 import br.com.actionsys.kawhyimport.metadata.table.TableMapping;
 import br.com.actionsys.kawhyimport.metadata.table.TableMappingService;
 import java.io.IOException;
@@ -17,6 +19,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
 
+/**
+ * Classe criada para validar os registros inseridos no banco de dados contra os dados do xml
+ */
 @Slf4j
 @Service
 public class MetadataValidationService {

@@ -4,6 +4,7 @@ import br.com.actionsys.kawhycommons.integration.IntegrationItem;
 import br.com.actionsys.kawhyimport.command.SqlCommand;
 import br.com.actionsys.kawhyimport.command.SqlCommandType;
 import br.com.actionsys.kawhyimport.metadata.field.FieldMapping;
+import br.com.actionsys.kawhyimport.metadata.reader.XmlReaderService;
 import br.com.actionsys.kawhyimport.metadata.table.TableMapping;
 import br.com.actionsys.kawhyimport.metadata.table.TableMappingService;
 import br.com.actionsys.kawhyimport.repository.GenericRepository;
@@ -19,7 +20,8 @@ import org.springframework.stereotype.Service;
 public class CommandsXmlService {
 
   @Autowired TableMappingService tableMappingService;
-  @Autowired XmlReaderService xmlReaderService;
+  @Autowired
+  XmlReaderService xmlReaderService;
   @Autowired GenericRepository genericRepository;
 
   public void executeCommands(List<SqlCommand> sqlCommands) {

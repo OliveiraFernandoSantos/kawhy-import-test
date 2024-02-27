@@ -1,7 +1,8 @@
-package br.com.actionsys.kawhyimport.metadata;
+package br.com.actionsys.kawhyimport.metadata.reader;
 
 import br.com.actionsys.kawhycommons.infra.function.ChaveAcessoNfseUtil;
 import br.com.actionsys.kawhycommons.infra.function.NumeroNfseUtil;
+import br.com.actionsys.kawhyimport.util.MetadataConstants;
 import br.com.actionsys.kawhyimport.metadata.field.FieldMapping;
 import br.com.actionsys.kawhyimport.metadata.table.TableMapping;
 import br.com.actionsys.kawhyimport.util.APathUtil;

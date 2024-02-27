@@ -1,7 +1,6 @@
 package br.com.actionsys.kawhyimport.metadata.table;
 
 import br.com.actionsys.kawhyimport.metadata.field.FieldMapping;
-import java.util.ArrayList;
 import java.util.List;
 import lombok.Data;
 import lombok.Getter;
@@ -22,5 +21,4 @@ public class TableMapping {
   private FieldMapping idField;
   private FieldMapping sequenceField;
   private List<FieldMapping> fields;
-
 }

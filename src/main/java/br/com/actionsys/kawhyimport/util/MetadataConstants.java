@@ -1,4 +1,4 @@
-package br.com.actionsys.kawhyimport.metadata;
+package br.com.actionsys.kawhyimport.util;
 
 public class MetadataConstants {
 

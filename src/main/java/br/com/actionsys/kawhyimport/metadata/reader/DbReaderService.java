@@ -1,6 +1,6 @@
-package br.com.actionsys.kawhyimport.metadata;
+package br.com.actionsys.kawhyimport.metadata.reader;
 
-import static br.com.actionsys.kawhyimport.metadata.MetadataConstants.GENERATE_ID_NFSE;
+import static br.com.actionsys.kawhyimport.util.MetadataConstants.GENERATE_ID_NFSE;
 
 import br.com.actionsys.kawhyimport.metadata.field.FieldMapping;
 import br.com.actionsys.kawhyimport.metadata.table.TableMapping;
@@ -8,7 +8,6 @@ import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-import javax.xml.xpath.XPathExpressionException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +22,7 @@ public class DbReaderService {
   @Autowired private JdbcTemplate jdbcTemplate;
   @Autowired private XmlReaderService xmlReaderService;
 
-  public List<?> getDatabaseValue(TableMapping table, FieldMapping field, Document document)
-      throws XPathExpressionException {
+  public List<?> getDatabaseValue(TableMapping table, FieldMapping field, Document document) {
 
     if (GENERATE_ID_NFSE.equals(field.getAPath())) {
       return Collections.emptyList();
