@@ -23,9 +23,4 @@ public class TableMapping {
   private FieldMapping sequenceField;
   private List<FieldMapping> fields;
 
-  private List<TableMapping> childTables;
-
-  public List<TableMapping> getChildTables() {
-    return childTables == null ? new ArrayList<>() : childTables;
-  }
 }

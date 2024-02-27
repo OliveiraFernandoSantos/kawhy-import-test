@@ -28,8 +28,7 @@ public abstract class MetadataOrchestrator extends IntegrationOrchestrator {
     processDocumentFile(item, Paths.get(tableMetadataFile), Paths.get(fieldMetadataFile));
   }
 
-  public void processDocumentFile(
-      IntegrationItem item, Path tableMetadataFile, Path fieldMetadataFile) throws Exception {
+  public void processDocumentFile(IntegrationItem item, Path tableMetadataFile, Path fieldMetadataFile) throws Exception {
 
     // gerar comandos a partir de metadados
     List<SqlCommand> sqlCommands =
