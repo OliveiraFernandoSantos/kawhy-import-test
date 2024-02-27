@@ -5,7 +5,7 @@ fq72302,nfeProc/NFe/infNFe/emit,-,neq720803 = 'emit'
 fq72302,nfeProc/NFe/infNFe/entrega,-,neq720803 = 'entrega'
 fq72302,nfeProc/NFe/infNFe/retirada,-,neq720803 = 'retirada'
 fq72302,nfeProc/NFe/infNFe/transp/transporta,-,neq720803 = 'transporta'
-fq72303,nfeProc/NFe/infNFe/NFref,-,
+fq72303,nfeProc/NFe/infNFe/ide/NFref,-,
 fq72304,nfeProc/NFe/infNFe/avulsa,-,
 fq72305,nfeProc/NFe/infNFe/transp/vol,-,
 fq72306,nfeProc/NFe/infNFe/transp/reboque,-,
