@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+    <NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+        <infNFe Id="NFe35230312096667000119550010000253911351248250" versao="4.00">
+            <ide>
+                <cUF>35</cUF>
+                <cNF>35124825</cNF>
+                <natOp>VENDA DE MERCADORIA ADQUIRIDA OU RECEBIDA DE TERCEIROS</natOp>
+                <mod>55</mod>
+                <serie>1</serie>
+                <nNF>25391</nNF>
+                <dhEmi>2023-03-27T10:27:00-03:00</dhEmi>
+                <dhSaiEnt>2023-03-27T10:27:00-03:00</dhSaiEnt>
+                <tpNF>1</tpNF>
+                <idDest>2</idDest>
+                <cMunFG>3556701</cMunFG>
+                <tpImp>1</tpImp>
+                <tpEmis>1</tpEmis>
+                <cDV>0</cDV>
+                <tpAmb>1</tpAmb>
+                <finNFe>1</finNFe>
+                <indFinal>1</indFinal>
+                <indPres>9</indPres>
+                <indIntermed>0</indIntermed>
+                <procEmi>0</procEmi>
+                <verProc>12.1.033 | 3.0</verProc>
+            </ide>
+            <emit>
+                <CNPJ>12096667000119</CNPJ>
+                <xNome>ARGUS PRODUTOS E SISTEMAS CONTRA INCENDIO LTDA</xNome>
+                <xFant>Argus</xFant>
+                <enderEmit>
+                    <xLgr>RUA MAFALDA MARIA IMPERATO PINHATA</xLgr>
+                    <nro>56</nro>
+                    <xBairro>NOVA VINHEDO</xBairro>
+                    <cMun>3556701</cMun>
+                    <xMun>VINHEDO</xMun>
+                    <UF>SP</UF>
+                    <CEP>13284076</CEP>
+                    <cPais>1058</cPais>
+                    <xPais>BRASIL</xPais>
+                    <fone>1938266670</fone>
+                </enderEmit>
+                <IE>714000166117</IE>
+                <IM>000014232</IM>
+                <CNAE>4322303</CNAE>
+                <CRT>3</CRT>
+            </emit>
+            <dest>
+                <CNPJ>47254461025907</CNPJ>
+                <xNome>JACOBINA MINERACAO E COMERCIO LTDA</xNome>
+                <enderDest>
+                    <xLgr>FAZENDA ITAPICURU, S/N</xLgr>
+                    <nro>SN</nro>
+                    <xCpl>PARTE POVOADO ITAPICURU</xCpl>
+                    <xBairro>ZONA RURAL</xBairro>
+                    <cMun>2917508</cMun>
+                    <xMun>JACOBINA</xMun>
+                    <UF>BA</UF>
+                    <CEP>44700000</CEP>
+                    <cPais>1058</cPais>
+                    <xPais>BRASIL</xPais>
+                    <fone>7436218052</fone>
+                </enderDest>
+                <indIEDest>1</indIEDest>
+                <IE>026501484</IE>
+                <email>fiscal.jmc@yamana.com;tais@thebesttransportes.com.br</email>
+            </dest>
+            <det nItem="1">
+                <prod>
+                    <cProd>59183</cProd>
+                    <cEAN>SEM GTIN</cEAN>
+                    <xProd>SPK ESFR-14 PEN NPT 3/4" 74C R</xProd>
+                    <NCM>84248990</NCM>
+                    <cBenef></cBenef>
+                    <CFOP>6102</CFOP>
+                    <uCom>UN</uCom>
+                    <qCom>4.0000</qCom>
+                    <vUnCom>178.08000000</vUnCom>
+                    <vProd>712.32</vProd>
+                    <cEANTrib>SEM GTIN</cEANTrib>
+                    <uTrib>UN</uTrib>
+                    <qTrib>4.0000</qTrib>
+                    <vUnTrib>178.08000000</vUnTrib>
+                    <indTot>1</indTot>
+                    <xPed>23023193</xPed>
+                    <nItemPed>1</nItemPed>
+                </prod>
+                <imposto>
+                    <ICMS>
+                        <ICMS00>
+                            <orig>2</orig>
+                            <CST>00</CST>
+                            <modBC>3</modBC>
+                            <vBC>712.32</vBC>
+                            <pICMS>4.0000</pICMS>
+                            <vICMS>28.49</vICMS>
+                        </ICMS00>
+                    </ICMS>
+                    <IPI>
+                        <cEnq>999</cEnq>
+                        <IPINT>
+                            <CST>53</CST>
+                        </IPINT>
+                    </IPI>
+                    <PIS>
+                        <PISAliq>
+                            <CST>01</CST>
+                            <vBC>683.83</vBC>
+                            <pPIS>1.6500</pPIS>
+                            <vPIS>11.28</vPIS>
+                        </PISAliq>
+                    </PIS>
+                    <COFINS>
+                        <COFINSAliq>
+                            <CST>01</CST>
+                            <vBC>683.83</vBC>
+                            <pCOFINS>7.6000</pCOFINS>
+                            <vCOFINS>51.97</vCOFINS>
+                        </COFINSAliq>
+                    </COFINS>
+                </imposto>
+            </det>
+            <det nItem="2">
+                <prod>
+                    <cProd>59182</cProd>
+                    <cEAN>SEM GTIN</cEAN>
+                    <xProd>SPK STD. UPR NAT.3/4' K 115 79</xProd>
+                    <NCM>84248990</NCM>
+                    <cBenef></cBenef>
+                    <CFOP>6102</CFOP>
+                    <uCom>UN</uCom>
+                    <qCom>4.0000</qCom>
+                    <vUnCom>63.51000000</vUnCom>
+                    <vProd>254.04</vProd>
+                    <cEANTrib>SEM GTIN</cEANTrib>
+                    <uTrib>UN</uTrib>
+                    <qTrib>4.0000</qTrib>
+                    <vUnTrib>63.51000000</vUnTrib>
+                    <indTot>1</indTot>
+                    <xPed>23023193</xPed>
+                    <nItemPed>3</nItemPed>
+                </prod>
+                <imposto>
+                    <ICMS>
+                        <ICMS00>
+                            <orig>2</orig>
+                            <CST>00</CST>
+                            <modBC>3</modBC>
+                            <vBC>254.04</vBC>
+                            <pICMS>4.0000</pICMS>
+                            <vICMS>10.16</vICMS>
+                        </ICMS00>
+                    </ICMS>
+                    <IPI>
+                        <cEnq>999</cEnq>
+                        <IPINT>
+                            <CST>53</CST>
+                        </IPINT>
+                    </IPI>
+                    <PIS>
+                        <PISAliq>
+                            <CST>01</CST>
+                            <vBC>243.88</vBC>
+                            <pPIS>1.6500</pPIS>
+                            <vPIS>4.03</vPIS>
+                        </PISAliq>
+                    </PIS>
+                    <COFINS>
+                        <COFINSAliq>
+                            <CST>01</CST>
+                            <vBC>243.88</vBC>
+                            <pCOFINS>7.6000</pCOFINS>
+                            <vCOFINS>18.54</vCOFINS>
+                        </COFINSAliq>
+                    </COFINS>
+                </imposto>
+            </det>
+            <det nItem="3">
+                <prod>
+                    <cProd>59181</cProd>
+                    <cEAN>SEM GTIN</cEAN>
+                    <xProd>SPK STD. PEN NAT 1/2 68 K80 UL</xProd>
+                    <NCM>84248990</NCM>
+                    <cBenef></cBenef>
+                    <CFOP>6102</CFOP>
+                    <uCom>UN</uCom>
+                    <qCom>4.0000</qCom>
+                    <vUnCom>33.81000000</vUnCom>
+                    <vProd>135.24</vProd>
+                    <cEANTrib>SEM GTIN</cEANTrib>
+                    <uTrib>UN</uTrib>
+                    <qTrib>4.0000</qTrib>
+                    <vUnTrib>33.81000000</vUnTrib>
+                    <indTot>1</indTot>
+                    <xPed>23023193</xPed>
+                    <nItemPed>4</nItemPed>
+                </prod>
+                <imposto>
+                    <ICMS>
+                        <ICMS00>
+                            <orig>2</orig>
+                            <CST>00</CST>
+                            <modBC>3</modBC>
+                            <vBC>135.24</vBC>
+                            <pICMS>4.0000</pICMS>
+                            <vICMS>5.41</vICMS>
+                        </ICMS00>
+                    </ICMS>
+                    <IPI>
+                        <cEnq>999</cEnq>
+                        <IPINT>
+                            <CST>53</CST>
+                        </IPINT>
+                    </IPI>
+                    <PIS>
+                        <PISAliq>
+                            <CST>01</CST>
+                            <vBC>129.83</vBC>
+                            <pPIS>1.6500</pPIS>
+                            <vPIS>2.14</vPIS>
+                        </PISAliq>
+                    </PIS>
+                    <COFINS>
+                        <COFINSAliq>
+                            <CST>01</CST>
+                            <vBC>129.83</vBC>
+                            <pCOFINS>7.6000</pCOFINS>
+                            <vCOFINS>9.86</vCOFINS>
+                        </COFINSAliq>
+                    </COFINS>
+                </imposto>
+            </det>
+            <det nItem="4">
+                <prod>
+                    <cProd>59181C</cProd>
+                    <cEAN>SEM GTIN</cEAN>
+                    <xProd>SPK STD PEN NAT 1/2 68 K80 UL/</xProd>
+                    <NCM>84248990</NCM>
+                    <cBenef></cBenef>
+                    <CFOP>6102</CFOP>
+                    <uCom>CJ</uCom>
+                    <qCom>4.0000</qCom>
+                    <vUnCom>39.14000000</vUnCom>
+                    <vProd>156.56</vProd>
+                    <cEANTrib>SEM GTIN</cEANTrib>
+                    <uTrib>CJ</uTrib>
+                    <qTrib>4.0000</qTrib>
+                    <vUnTrib>39.14000000</vUnTrib>
+                    <indTot>1</indTot>
+                    <xPed>23023193</xPed>
+                    <nItemPed>5</nItemPed>
+                </prod>
+                <imposto>
+                    <ICMS>
+                        <ICMS00>
+                            <orig>2</orig>
+                            <CST>00</CST>
+                            <modBC>3</modBC>
+                            <vBC>156.56</vBC>
+                            <pICMS>4.0000</pICMS>
+                            <vICMS>6.27</vICMS>
+                        </ICMS00>
+                    </ICMS>
+                    <IPI>
+                        <cEnq>999</cEnq>
+                        <IPINT>
+                            <CST>53</CST>
+                        </IPINT>
+                    </IPI>
+                    <PIS>
+                        <PISAliq>
+                            <CST>01</CST>
+                            <vBC>150.29</vBC>
+                            <pPIS>1.6500</pPIS>
+                            <vPIS>2.48</vPIS>
+                        </PISAliq>
+                    </PIS>
+                    <COFINS>
+                        <COFINSAliq>
+                            <CST>01</CST>
+                            <vBC>150.29</vBC>
+                            <pCOFINS>7.6000</pCOFINS>
+                            <vCOFINS>11.43</vCOFINS>
+                        </COFINSAliq>
+                    </COFINS>
+                </imposto>
+            </det>
+            <total>
+                <ICMSTot>
+                    <vBC>1258.16</vBC>
+                    <vICMS>50.33</vICMS>
+                    <vICMSDeson>0</vICMSDeson>
+                    <vFCPUFDest>0</vFCPUFDest>
+                    <vICMSUFDest>0</vICMSUFDest>
+                    <vICMSUFRemet>0</vICMSUFRemet>
+                    <vFCP>0</vFCP>
+                    <vBCST>0</vBCST>
+                    <vST>0</vST>
+                    <vFCPST>0</vFCPST>
+                    <vFCPSTRet>0</vFCPSTRet>
+                    <vProd>1258.16</vProd>
+                    <vFrete>0</vFrete>
+                    <vSeg>0</vSeg>
+                    <vDesc>0</vDesc>
+                    <vII>0</vII>
+                    <vIPI>0</vIPI>
+                    <vIPIDevol>0</vIPIDevol>
+                    <vPIS>19.93</vPIS>
+                    <vCOFINS>91.80</vCOFINS>
+                    <vOutro>0</vOutro>
+                    <vNF>1258.16</vNF>
+                </ICMSTot>
+            </total>
+            <transp>
+                <modFrete>0</modFrete>
+                <transporta>
+                    <CNPJ>08688166000154</CNPJ>
+                    <xNome>FAZION TRANSPORTES LTDA</xNome>
+                    <IE>714041280115</IE>
+                    <xEnder>RUA RUBI 468</xEnder>
+                    <xMun>VINHEDO</xMun>
+                    <UF>SP</UF>
+                </transporta>
+                <vol>
+                    <qVol>1</qVol>
+                    <esp>VOLUME(S)</esp>
+                    <pesoL>1.500</pesoL>
+                    <pesoB>2.000</pesoB>
+                </vol>
+                <vol>
+                    <esp>PALLET(S)</esp>
+                </vol>
+                <vol>
+                    <esp>CAIXA(S)</esp>
+                </vol>
+            </transp>
+            <cobr>
+                <fat>
+                    <nFat>1000025391</nFat>
+                    <vOrig>1258.16</vOrig>
+                    <vDesc>0</vDesc>
+                    <vLiq>1258.16</vLiq>
+                </fat>
+                <dup>
+                    <nDup>001</nDup>
+                    <dVenc>2023-04-26</dVenc>
+                    <vDup>1258.16</vDup>
+                </dup>
+            </cobr>
+            <pag>
+                <detPag>
+                    <indPag>1</indPag>
+                    <tPag>15</tPag>
+                    <vPag>1258.16</vPag>
+                </detPag>
+            </pag>
+            <infAdic>
+                <infAdFisco>ALIQUOTA DE ICMS DE 4 POR CENTO CONFORME RESOLUCAO DO SENADO FEDERAL NO. 13/2012.
+                </infAdFisco>
+                <infCpl>DEPOSITO EM CONTA.Pedido 23023193 OP 00320 #ME 43692453 BASE DE CALCULO DO PIS COFINS, COM
+                    EXCLUSAO DO ICMS CONFORME DECISAO STJ RE 574.706 PV ARGUS: 021172 Detalhe dos Volumes: (VOLUME(S) =
+                    1 )
+                </infCpl>
+            </infAdic>
+            <compra>
+                <xPed>23023193</xPed>
+            </compra>
+            <infRespTec>
+                <CNPJ>53113791000122</CNPJ>
+                <xContato>Rodrigo de Almeida Sartorio</xContato>
+                <email>resp_tecnico_dfe_protheus@totvs.com.br</email>
+                <fone>1128593904</fone>
+            </infRespTec>
+        </infNFe>
+        <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+            <SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <CanonicalizationMethod
+                        Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+                <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+                <Reference URI="#NFe35230312096667000119550010000253911351248250">
+                    <Transforms>
+                        <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                        <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+                    </Transforms>
+                    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+                    <DigestValue>BqSm1+jLVnHPv9yLrHr+Kwb+SY8=</DigestValue>
+                </Reference>
+            </SignedInfo>
+            <SignatureValue>
+                d6eFkeeB0LJtPn1lbkV6e+JMt1EgIAFbCClXRXfVgbJcZ0f6EQG9n8g61SU0Y4++WYSTJ6Qlt8B5iAkwbigIN/S2IUNPqcjdnios86fbyh7gnNsEt+Urp6X3AD6HKc4/SfFhNKDJQ92BEIydZliZGtoFPKgOYib4ytSP2wXb0Fk953rfhLJrBWICNJSIUgH3m6fznmaoZlY65nO/jiINIlfTjZJ+gSrx5K2QrtUAX6Hc9rtQ5JVFzyn4sIETLvfIs3a8IqyKQ5Ijasp7L93Q4W2gRFvDmTxD7gyMjyRp1/drGSCnvShb/S5qEJ5G2enoUyzmboJfZupYdniM1qixHg==
+            </SignatureValue>
+            <KeyInfo>
+                <X509Data>
+                    <X509Certificate>
+                        MIIIJTCCBg2gAwIBAgIQVfOsOO3swtwf5Q5zC/gz2zANBgkqhkiG9w0BAQsFADB4MQswCQYDVQQGEwJCUjETMBEGA1UEChMKSUNQLUJyYXNpbDE2MDQGA1UECxMtU2VjcmV0YXJpYSBkYSBSZWNlaXRhIEZlZGVyYWwgZG8gQnJhc2lsIC0gUkZCMRwwGgYDVQQDExNBQyBDZXJ0aXNpZ24gUkZCIEc1MB4XDTIyMTAxOTE4MDExOFoXDTIzMTAxOTE4MDExOFowggENMQswCQYDVQQGEwJCUjETMBEGA1UECgwKSUNQLUJyYXNpbDELMAkGA1UECAwCU1AxEDAOBgNVBAcMB1ZpbmhlZG8xGTAXBgNVBAsMEFZpZGVvQ29uZmVyZW5jaWExFzAVBgNVBAsMDjEzMDc1MDM3MDAwMTIwMTYwNAYDVQQLDC1TZWNyZXRhcmlhIGRhIFJlY2VpdGEgRmVkZXJhbCBkbyBCcmFzaWwgLSBSRkIxFjAUBgNVBAsMDVJGQiBlLUNOUEogQTExRjBEBgNVBAMMPUFSR1VTIFBST0RVVE9TIEUgU0lTVEVNQVMgQ09OVFJBIElOQ0VORElPIExUREE6MTIwOTY2NjcwMDAxMTkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCBgwAtba6z4/LkejfR3gNmdpa51kqOdG3msqEs4T6hGlYY6GvLe1xJ+GYezgm3JwgyFY0xaguujsHURxYsTl5WH2rdH13GWsiS4QK0FrsH/Ho+2idaD82U52rUv/cK/lE4r6ZzYC4ynLhmNeCC5yZdPqLoVdpxaQfvuzCRnxfuzFhts7lyBmx1qDNRyhzUiaf0SFi9APVsJhLtv125WeQPV/kiYChjeOwKg32zGOkhwQO0LSiExDzbmfyuvXrMueb/b1dYUpbhl1J5BGpwOQTrxZstpaGuuhvaiaupDb9GlLFSBjqKUReNPKKNa9Ou6v4fMM0w8TrL2zsi6M1OUAC9AgMBAAGjggMSMIIDDjCBwQYDVR0RBIG5MIG2oD0GBWBMAQMEoDQEMjI3MDUxOTU1MDE3NDYwMjQ4MDEwMDAwMDAwMDAwMDAwMDAwMDAwNzQ0NjQwMVNTUFNQoCQGBWBMAQMCoBsEGUpPU0UgREUgT0xJVkVJUkEgQVNTVU5DQU+gGQYFYEwBAwOgEAQOMTIwOTY2NjcwMDAxMTmgFwYFYEwBAwegDgQMMDAwMDAwMDAwMDAwgRtuZmVAYXJndXMtZW5nZW5oYXJpYS5jb20uYnIwCQYDVR0TBAIwADAfBgNVHSMEGDAWgBRTfX+dvtFh0CC62p/jiacTc1jNQjB/BgNVHSAEeDB2MHQGBmBMAQIBDDBqMGgGCCsGAQUFBwIBFlxodHRwOi8vaWNwLWJyYXNpbC5jZXJ0aXNpZ24uY29tLmJyL3JlcG9zaXRvcmlvL2RwYy9BQ19DZXJ0aXNpZ25fUkZCL0RQQ19BQ19DZXJ0aXNpZ25fUkZCLnBkZjCBvAYDVR0fBIG0MIGxMFegVaBThlFodHRwOi8vaWNwLWJyYXNpbC5jZXJ0aXNpZ24uY29tLmJyL3JlcG9zaXRvcmlvL2xjci9BQ0NlcnRpc2lnblJGQkc1L0xhdGVzdENSTC5jcmwwVqBUoFKGUGh0dHA6Ly9pY3AtYnJhc2lsLm91dHJhbGNyLmNvbS5ici9yZXBvc2l0b3Jpby9sY3IvQUNDZXJ0aXNpZ25SRkJHNS9MYXRlc3RDUkwuY3JsMA4GA1UdDwEB/wQEAwIF4DAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwQwgawGCCsGAQUFBwEBBIGfMIGcMF8GCCsGAQUFBzAChlNodHRwOi8vaWNwLWJyYXNpbC5jZXJ0aXNpZ24uY29tLmJyL3JlcG9zaXRvcmlvL2NlcnRpZmljYWRvcy9BQ19DZXJ0aXNpZ25fUkZCX0c1LnA3YzA5BggrBgEFBQcwAYYtaHR0cDovL29jc3AtYWMtY2VydGlzaWduLXJmYi5jZXJ0aXNpZ24uY29tLmJyMA0GCSqGSIb3DQEBCwUAA4ICAQA67T6QcTBuviUvm/DBf+mA75tayLLrZiONztkJawk5OwXoMkcJxpnSZt+KABxoI1tZ3jg3upy3vp6JGZNTsMGZHC2HBXSNqxgGzxaGqEdy9v5mcQzQwJU6S0qC4KlM+rpzvVJIZhtgq0PzkO3GvWLcJDgpWYnu9HHHnIsf1QwvGbmXk6y1prOZV/jt4/PwsJ1daVPoYXRDDHaFJdJRgaVVjJI2jRtB0TH28YxSlz/AmeBQFxhblLPOIhH9ptFhAMJQvYHZqTQz78tO0xsscOnVOt+2wbaUJ1Ic/phmA1jhiZz85BQ+Z5qNtK9k2iIsUs1SLlzXt82cZneHOLIPyZNSNxrlk4f6S8zNqBSmayz1PRgTJUscVxW5DzVcWcXlXHkXtuuXyJkBsQx1JYljEI9Jaltovl0vQWNc7XCuz+t/OkhL6dYJ8ag0NdRKO/JP6hXR8d06/ql5hrhRMctu2g1RAwXdV9WWHovMI4ssODX3wccp6MGYquvU96UApyVlioYHaqS6nmqktzgmOKGeXvTrClZToe2c23qTDNnIKVR5c7Jk6HQtf8A2Z8bgMAdRACuffvP2aVJxu8Mc6tYWDB2XcN33jk+qqa90iYwPpjgZGqiwbM1qkbMwN3kFuQQ2Rz2LtcM+aQmzYZIbjAl9NUIHYKXce4yGwGB2P5yf/Sb1kA==
+                    </X509Certificate>
+                </X509Data>
+            </KeyInfo>
+        </Signature>
+    </NFe>
+    <protNFe xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+        <infProt>
+            <tpAmb>1</tpAmb>
+            <verAplic>SP_NFE_PL009_V4</verAplic>
+            <chNFe>35230312096667000119550010000253911351248250</chNFe>
+            <dhRecbto>2023-03-27T10:28:18-03:00</dhRecbto>
+            <nProt>135230459259185</nProt>
+            <digVal>BqSm1+jLVnHPv9yLrHr+Kwb+SY8=</digVal>
+            <cStat>100</cStat>
+            <xMotivo>Autorizado o uso da NF-e</xMotivo>
+        </infProt>
+    </protNFe>
+</nfeProc>

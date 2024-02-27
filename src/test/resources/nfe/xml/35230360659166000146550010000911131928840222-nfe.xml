@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+    <NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+        <infNFe Id="NFe35230360659166000146550010000911131928840222" versao="4.00">
+            <ide>
+                <cUF>35</cUF>
+                <cNF>92884022</cNF>
+                <natOp>VENDA PROD ESTABELEC</natOp>
+                <mod>55</mod>
+                <serie>1</serie>
+                <nNF>91113</nNF>
+                <dhEmi>2023-03-27T11:14:00-03:00</dhEmi>
+                <dhSaiEnt>2023-03-27T11:14:00-03:00</dhSaiEnt>
+                <tpNF>1</tpNF>
+                <idDest>2</idDest>
+                <cMunFG>3515004</cMunFG>
+                <tpImp>1</tpImp>
+                <tpEmis>1</tpEmis>
+                <cDV>2</cDV>
+                <tpAmb>1</tpAmb>
+                <finNFe>1</finNFe>
+                <indFinal>1</indFinal>
+                <indPres>9</indPres>
+                <procEmi>0</procEmi>
+                <verProc>12.1.033 | 3.0</verProc>
+            </ide>
+            <emit>
+                <CNPJ>60659166000146</CNPJ>
+                <xNome>CONAUT CONTROLES AUTOMATICOS LTDA</xNome>
+                <xFant>CONAUT</xFant>
+                <enderEmit>
+                    <xLgr>ESTRADA LOUIS PASTEUR</xLgr>
+                    <nro>382</nro>
+                    <xBairro>P I EMBU</xBairro>
+                    <cMun>3515004</cMun>
+                    <xMun>EMBU DAS ARTES</xMun>
+                    <UF>SP</UF>
+                    <CEP>06835701</CEP>
+                    <cPais>1058</cPais>
+                    <xPais>BRASIL</xPais>
+                    <fone>551147852700</fone>
+                </enderEmit>
+                <IE>298012193117</IE>
+                <IM>32600</IM>
+                <CNAE>2651500</CNAE>
+                <CRT>3</CRT>
+            </emit>
+            <dest>
+                <CNPJ>47254461025907</CNPJ>
+                <xNome>JACOBINA MINERACAO E COMERCIO LTDA</xNome>
+                <enderDest>
+                    <xLgr>FAZENDA ITAPICURU</xLgr>
+                    <nro>SN</nro>
+                    <xBairro>CENTRO</xBairro>
+                    <cMun>2917508</cMun>
+                    <xMun>JACOBINA</xMun>
+                    <UF>BA</UF>
+                    <CEP>44700000</CEP>
+                    <cPais>1058</cPais>
+                    <xPais>BRASIL</xPais>
+                    <fone>7436218122</fone>
+                </enderDest>
+                <indIEDest>1</indIEDest>
+                <IE>026501484</IE>
+                <email>fiscal.jmc@yamana.com; svc.gra.mercantil.prod@yamana.com; jm</email>
+            </dest>
+            <det nItem="1">
+                <prod>
+
+                    <cProd>OPT40000FN</cProd>
+                    <cEAN>SEM GTIN</cEAN>
+                    <xProd>SENSOR MEDIDOR ELETROMAGNETICO DE VAZAO COM CERTIFICADO DE CALIBRACAO OPTIFLUX 4000 DN 100mm
+                        (4)
+                    </xProd>
+                    <NCM>90261011</NCM>
+                    <cBenef></cBenef>
+                    <CFOP>6101</CFOP>
+                    <uCom>PC</uCom>
+                    <qCom>3.0000</qCom>
+                    <vUnCom>6706.69333333</vUnCom>
+                    <vProd>20120.08</vProd>
+                    <cEANTrib>SEM GTIN</cEANTrib>
+                    <uTrib>PC</uTrib>
+                    <qTrib>3.0000</qTrib>
+                    <vUnTrib>6706.69333333</vUnTrib>
+                    <indTot>1</indTot>
+                    <xPed>23022157</xPed>
+                    <nItemPed>1</nItemPed>
+                </prod>
+                <imposto>
+                    <vTotTrib>8561.11</vTotTrib>
+                    <ICMS>
+                        <ICMS00>
+                            <orig>0</orig>
+                            <CST>00</CST>
+                            <modBC>3</modBC>
+                            <vBC>22081.79</vBC>
+                            <pICMS>7.0000</pICMS>
+                            <vICMS>1545.73</vICMS>
+                        </ICMS00>
+                    </ICMS>
+                    <IPI>
+                        <cEnq>999</cEnq>
+                        <IPITrib>
+                            <CST>50</CST>
+                            <vBC>20120.08</vBC>
+                            <pIPI>9.7500</pIPI>
+                            <vIPI>1961.71</vIPI>
+                        </IPITrib>
+                    </IPI>
+                    <PIS>
+                        <PISNT>
+                            <CST>09</CST>
+                        </PISNT>
+                    </PIS>
+                    <COFINS>
+                        <COFINSNT>
+                            <CST>09</CST>
+                        </COFINSNT>
+                    </COFINS>
+                </imposto>
+            </det>
+            <det nItem="2">
+                <prod>
+                    <cProd>OPT40000FM</cProd>
+                    <cEAN>SEM GTIN</cEAN>
+                    <xProd>SENSOR MEDIDOR ELETROMAGNETICO DE VAZAO COM CERTIFICADO DE CALIBRACAO OPTIFLUX 4000 DN 150mm
+                        (6)
+                    </xProd>
+                    <NCM>90261011</NCM>
+                    <cBenef></cBenef>
+                    <CFOP>6101</CFOP>
+                    <uCom>PC</uCom>
+                    <qCom>3.0000</qCom>
+                    <vUnCom>8171.68333333</vUnCom>
+                    <vProd>24515.05</vProd>
+                    <cEANTrib>SEM GTIN</cEANTrib>
+                    <uTrib>PC</uTrib>
+                    <qTrib>3.0000</qTrib>
+                    <vUnTrib>8171.68333333</vUnTrib>
+                    <indTot>1</indTot>
+                    <xPed>23022157</xPed>
+                    <nItemPed>2</nItemPed>
+                </prod>
+                <imposto>
+                    <vTotTrib>10431.17</vTotTrib>
+                    <ICMS>
+                        <ICMS00>
+                            <orig>0</orig>
+                            <CST>00</CST>
+                            <modBC>3</modBC>
+                            <vBC>26905.27</vBC>
+                            <pICMS>7.0000</pICMS>
+                            <vICMS>1883.36</vICMS>
+                        </ICMS00>
+                    </ICMS>
+                    <IPI>
+                        <cEnq>999</cEnq>
+                        <IPITrib>
+                            <CST>50</CST>
+                            <vBC>24515.05</vBC>
+                            <pIPI>9.7500</pIPI>
+                            <vIPI>2390.22</vIPI>
+                        </IPITrib>
+                    </IPI>
+                    <PIS>
+                        <PISNT>
+                            <CST>09</CST>
+                        </PISNT>
+                    </PIS>
+                    <COFINS>
+                        <COFINSNT>
+                            <CST>09</CST>
+                        </COFINSNT>
+                    </COFINS>
+                </imposto>
+            </det>
+            <total>
+                <ICMSTot>
+                    <vBC>48987.06</vBC>
+                    <vICMS>3429.09</vICMS>
+                    <vICMSDeson>0</vICMSDeson>
+                    <vFCPUFDest>0</vFCPUFDest>
+                    <vICMSUFDest>0</vICMSUFDest>
+                    <vICMSUFRemet>0</vICMSUFRemet>
+                    <vFCP>0</vFCP>
+                    <vBCST>0</vBCST>
+                    <vST>0</vST>
+                    <vFCPST>0</vFCPST>
+                    <vFCPSTRet>0</vFCPSTRet>
+                    <vProd>44635.13</vProd>
+                    <vFrete>0</vFrete>
+                    <vSeg>0</vSeg>
+                    <vDesc>0</vDesc>
+                    <vII>0</vII>
+                    <vIPI>4351.93</vIPI>
+                    <vIPIDevol>0</vIPIDevol>
+                    <vPIS>0</vPIS>
+                    <vCOFINS>0</vCOFINS>
+                    <vOutro>0</vOutro>
+                    <vNF>48987.06</vNF>
+                    <vTotTrib>18992.28</vTotTrib>
+                </ICMSTot>
+            </total>
+            <transp>
+                <modFrete>1</modFrete>
+                <transporta>
+                    <CNPJ>06203406000158</CNPJ>
+                    <xNome>TRANSLAG TRANSPORTES E LOGISTICA LTDA</xNome>
+                    <IE>241094260116</IE>
+                    <xEnder>AVENIDA RIBEIRAO DOS CRISTAIS (G PRETO),</xEnder>
+                    <xMun>CAJAMAR</xMun>
+                    <UF>SP</UF>
+                </transporta>
+                <vol>
+                    <qVol>6</qVol>
+                    <esp>CXS</esp>
+                    <pesoL>170.000</pesoL>
+                    <pesoB>204.000</pesoB>
+                </vol>
+            </transp>
+            <cobr>
+                <fat>
+                    <nFat>1000091113</nFat>
+                    <vOrig>48987.06</vOrig>
+                    <vDesc>0</vDesc>
+                    <vLiq>48987.06</vLiq>
+                </fat>
+                <dup>
+                    <nDup>001</nDup>
+                    <dVenc>2023-04-26</dVenc>
+                    <vDup>48987.06</vDup>
+                </dup>
+            </cobr>
+            <pag>
+                <detPag>
+                    <indPag>1</indPag>
+                    <tPag>16</tPag>
+                    <vPag>48987.06</vPag>
+                </detPag>
+            </pag>
+            <infAdic>
+                <infCpl>PI: 23/0266 ** PEDIDO: 23022157 ** ** ENVIAR CREDITO ATRAVES DO BCO DO ITAU AG: 0568 C/C:
+                    02329-5 ** ** VENDA EFETUADA COM SUSPENSAO DA EXIGIBILIDADE DA CONTRIBUICAO PARA O PIS/PASEP E DA
+                    COFINS COM BASE NA LEI N°11.196 DE 21/11/2005, NO DECRETO Nº 5.649. DE 29/12/2005 E NO ART. 569 DA
+                    INSTRUCAO NORMATIVA RFB Nº 1.911, DE 11 DE OUTUBRO DE 2019 ATO DECLARATORIO EXECUTIVO DEMAC/RJO Nº
+                    12, DE 02 DE DEZEMBRO DE 2020 ** ** SEGUE CERTIFICADO DE GARANTIA** ** CERTIFICADO DE CONFORMIDADE**
+                    ** MANUAL DE INSTALACAO, OPERACAO E MANUTENCAO (COM DIMENSOES NECESSARIAS PARA INSTALACAO) ** **
+                    CONTATO: MARIA JOELICE FERREIRA DE AZEVEDO (74) 3621-8057 ** | Pedido do Cliente: 23022157 Valor
+                    Aproximado dos Tributos: R$ 18992.28 (38.77%). Fonte: IBPT.
+                </infCpl>
+            </infAdic>
+            <compra>
+                <xPed>23022157</xPed>
+            </compra>
+        </infNFe>
+        <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+            <SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <CanonicalizationMethod
+                        Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+                <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+                <Reference URI="#NFe35230360659166000146550010000911131928840222">
+                    <Transforms>
+                        <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                        <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+                    </Transforms>
+                    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+                    <DigestValue>KYK9eVaPzC+Ldw6zan+Qn0CqP04=</DigestValue>
+                </Reference>
+            </SignedInfo>
+            <SignatureValue>
+                QUj2ysoIiXjbyj9xYo4qn5x9V4mKvrHOMuux0YxcikQmo1MtFafSmz8gHohc/Ti6uhCpT3AjucH1zL77mvkcgggscPJJ+FHG8X+d6bhCjmiHYflgKKGpfqNJ4qVNTaFDwAyfDtQJel95Hnv51eVnn5v866cSinLMCY1ZAqMxdbbv/yBxdrRsYEf7rRGyGAqMoCB7FoUAtIWCyolU7eaja9VWBubPZBnuAx0EjUbBrG9FggIAeNkZtWMQnPV0aNfDUoQvJXXJhHN6mhq7bPHq0xR+8P5QIn8aKafN1hpOBTAXs/KVedvvd7D7BO5aSELncUOP5QKZ/ObJ3FnXtmmYvA==
+            </SignatureValue>
+            <KeyInfo>
+                <X509Data>
+                    <X509Certificate>
+                        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
+                    </X509Certificate>
+                </X509Data>
+            </KeyInfo>
+        </Signature>
+    </NFe>
+    <protNFe xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+        <infProt>
+            <tpAmb>1</tpAmb>
+            <verAplic>SP_NFE_PL009_V4</verAplic>
+            <chNFe>35230360659166000146550010000911131928840222</chNFe>
+            <dhRecbto>2023-03-27T11:18:55-03:00</dhRecbto>
+            <nProt>135230459744148</nProt>
+            <digVal>KYK9eVaPzC+Ldw6zan+Qn0CqP04=</digVal>
+            <cStat>100</cStat>
+            <xMotivo>Autorizado o uso da NF-e</xMotivo>
+        </infProt>
+    </protNFe>
+</nfeProc>

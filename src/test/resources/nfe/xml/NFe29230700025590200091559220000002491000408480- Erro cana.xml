@@ -1,0 +1,216 @@
+<nfeProc versao="4.00" xmlns="http://www.portalfiscal.inf.br/nfe">
+	<NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+		<infNFe Id="NFe29230700025590200091559220000002491000408480" versao="4.00">
+			<ide>
+				<cUF>29</cUF>
+				<cNF>00040848</cNF>
+				<natOp>VENDA DE PRODUÇÃO</natOp>
+				<mod>55</mod>
+				<serie>922</serie>
+				<nNF>249</nNF>
+				<dhEmi>2023-07-05T19:45:00-03:00</dhEmi>
+				<dhSaiEnt>2023-07-05T19:45:00-03:00</dhSaiEnt>
+				<tpNF>1</tpNF>
+				<idDest>1</idDest>
+				<cMunFG>2928901</cMunFG>
+				<tpImp>1</tpImp>
+				<tpEmis>1</tpEmis>
+				<cDV>0</cDV>
+				<tpAmb>1</tpAmb>
+				<finNFe>1</finNFe>
+				<indFinal>0</indFinal>
+				<indPres>0</indPres>
+				<procEmi>3</procEmi>
+				<verProc>4.01_sebrae_b041</verProc>
+			</ide>
+			<emit>
+				<CPF>25590200091</CPF>
+				<xNome>DAVIDE DINIZ DONADEL</xNome>
+				<xFant>FAZENDA SANTA LUZIA I</xFant>
+				<enderEmit>
+					<xLgr>RODOVIA BR 135 KM 120 A ESQ. SENT. SAO DESIDERIO AO ENTROCAM</xLgr>
+					<nro>SN</nro>
+					<xCpl>FAZENDA NOSSA SENHORA DE FATIMA I</xCpl>
+					<xBairro>ZONA RURAL</xBairro>
+					<cMun>2928901</cMun>
+					<xMun>Sao Desiderio</xMun>
+					<UF>BA</UF>
+					<CEP>47820000</CEP>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+					<fone>7736114393</fone>
+				</enderEmit>
+				<IE>075392115</IE>
+				<IM>000000000000000</IM>
+				<CNAE>0115600</CNAE>
+				<CRT>3</CRT>
+			</emit>
+			<dest>
+				<CNPJ>47254461025907</CNPJ>
+				<xNome>CARGIL AGRÍCOLA S/A</xNome>
+				<enderDest>
+					<xLgr>AV. AHYLON MACEDO,</xLgr>
+					<nro>11348</nro>
+					<xBairro>SERRA DA BANDEIRA</xBairro>
+					<cMun>2903201</cMun>
+					<xMun>Barreiras</xMun>
+					<UF>BA</UF>
+					<CEP>47812200</CEP>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+					<fone>7736119500</fone>
+				</enderDest>
+				<indIEDest>1</indIEDest>
+				<IE>41448478</IE>
+			</dest>
+			<autXML>
+				<CNPJ>13937073000156</CNPJ>
+			</autXML>
+			<det nItem="1">
+				<prod>
+					<cProd>001</cProd>
+					<cEAN>SEM GTIN</cEAN>
+					<xProd>SOJA EM GÃOS</xProd>
+					<NCM>12019000</NCM>
+					<CFOP>5101</CFOP>
+					<uCom>KG</uCom>
+					<qCom>51000.0000</qCom>
+					<vUnCom>1.5000000000</vUnCom>
+					<vProd>76500.00</vProd>
+					<cEANTrib>SEM GTIN</cEANTrib>
+					<uTrib>KG</uTrib>
+					<qTrib>51000.0000</qTrib>
+					<vUnTrib>1.5000000000</vUnTrib>
+					<indTot>1</indTot>
+				</prod>
+				<imposto>
+					<ICMS>
+						<ICMS51>
+							<orig>0</orig>
+							<CST>51</CST>
+						</ICMS51>
+					</ICMS>
+					<IPI>
+						<cEnq>340</cEnq>
+						<IPINT>
+							<CST>02</CST>
+						</IPINT>
+					</IPI>
+					<PIS>
+						<PISNT>
+							<CST>07</CST>
+						</PISNT>
+					</PIS>
+					<COFINS>
+						<COFINSNT>
+							<CST>07</CST>
+						</COFINSNT>
+					</COFINS>
+				</imposto>
+			</det>
+			<total>
+				<ICMSTot>
+					<vBC>0.00</vBC>
+					<vICMS>0.00</vICMS>
+					<vICMSDeson>0.00</vICMSDeson>
+					<vFCPUFDest>0.00</vFCPUFDest>
+					<vICMSUFDest>0.00</vICMSUFDest>
+					<vICMSUFRemet>0.00</vICMSUFRemet>
+					<vFCP>0.00</vFCP>
+					<vBCST>0.00</vBCST>
+					<vST>0.00</vST>
+					<vFCPST>0.00</vFCPST>
+					<vFCPSTRet>0.00</vFCPSTRet>
+					<vProd>76500.00</vProd>
+					<vFrete>0.00</vFrete>
+					<vSeg>0.00</vSeg>
+					<vDesc>0.00</vDesc>
+					<vII>0.00</vII>
+					<vIPI>0.00</vIPI>
+					<vIPIDevol>0.00</vIPIDevol>
+					<vPIS>0.00</vPIS>
+					<vCOFINS>0.00</vCOFINS>
+					<vOutro>0.00</vOutro>
+					<vNF>76500.00</vNF>
+					<vTotTrib>0.00</vTotTrib>
+				</ICMSTot>
+			</total>
+			<transp>
+				<modFrete>0</modFrete>
+				<transporta>
+					<CPF>70674744500</CPF>
+					<xNome>GELSON MASETO</xNome>
+				</transporta>
+				<veicTransp>
+					<placa>POZ0G80</placa>
+					<UF>BA</UF>
+				</veicTransp>
+				<vol>
+					<esp>GRANEL</esp>
+					<marca>SOJA</marca>
+				</vol>
+			</transp>
+			<pag>
+				<detPag>
+					<indPag>0</indPag>
+					<tPag>16</tPag>
+					<vPag>76500.00</vPag>
+				</detPag>
+			</pag>
+			<infAdic>
+				<infAdFisco>ICMS diferido conf. Art. 286,V, Dec. 13.780/12 do RICMS-BA Habilitação: 7.394.000-3 LOCAL DE PRODUÇÃO: FAZ. NOSSA SENHORA DE FATIMA, MUNICIPIO DE SÃO DESIDERIO - BA.</infAdFisco>
+			</infAdic>
+			<cana>
+				<safra>2022/2023</safra>
+				<ref>07/2023</ref>
+				<forDia dia="5">
+					<qtde>51000.0000000000</qtde>
+				</forDia>
+				<qTotMes>51000.0000000000</qTotMes>
+				<qTotAnt>0.0000000000</qTotAnt>
+				<qTotGer>51000.0000000000</qTotGer>
+				<vFor>0.00</vFor>
+				<vTotDed>0.00</vTotDed>
+				<vLiqFor>0.00</vLiqFor>
+			</cana>
+			<infRespTec>
+				<CNPJ>43728245000142</CNPJ>
+				<xContato>suporte</xContato>
+				<email>suporteemissores@sebraesp.com.br</email>
+				<fone>08005700800</fone>
+			</infRespTec>
+		</infNFe>
+		<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+			<SignedInfo>
+				<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+				<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+				<Reference URI="#NFe29230700025590200091559220000002491000408480">
+					<Transforms>
+						<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+						<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+					</Transforms>
+					<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+					<DigestValue>yPer/Am6jQ59RWapaqy3HEkc6JM=</DigestValue>
+				</Reference>
+			</SignedInfo>
+			<SignatureValue>VTEN+PQZuwrwIUMPKfx7pf457ZtsMJP+371fmViNvCB7o6sPflEmt78TyAgrAzdF8zzOYKlCxeMo b9bXOhZc2Ey0uDOBUrqkw9xucWI0qeIbr0Z4XuJR6+ZWa1Vxq0rx5ODBmWsknSgYR0CG0xYGyKr3 r9YDrmVQylDK/6GvzMyss2bN404R/P8bXmQwwB+m4TL7ITGqsncjIyb8pXr2BFosKycVj8uY6RPM lGf1dwZByNlBGbdADYbHUO9uFQxmVx8qDR5fqe8p0f4a+M2yTYY9MrqqmbG83s6S0GOXM2Uislh3 xp6nT8En74POiOCYf5lizmH2KoqjvwyQw0hZLA==</SignatureValue>
+			<KeyInfo>
+				<X509Data>
+					<X509Certificate>MIIH4jCCBcqgAwIBAgIIVajoeTQy430wDQYJKoZIhvcNAQELBQAwdTELMAkGA1UEBhMCQlIxEzAR BgNVBAoTCklDUC1CcmFzaWwxNjA0BgNVBAsTLVNlY3JldGFyaWEgZGEgUmVjZWl0YSBGZWRlcmFs IGRvIEJyYXNpbCAtIFJGQjEZMBcGA1UEAxMQQUMgT05MSU5FIFJGQiB2NTAeFw0yMzA2MDYxNzQ1 NTJaFw0yNDA2MDUxNzQ1NTJaMIIBEDELMAkGA1UEBhMCQlIxEzARBgNVBAoTCklDUC1CcmFzaWwx NjA0BgNVBAsTLVNlY3JldGFyaWEgZGEgUmVjZWl0YSBGZWRlcmFsIGRvIEJyYXNpbCAtIFJGQjEV MBMGA1UECxMMUkZCIGUtQ1BGIEExMRkwFwYDVQQLExBBQyBPTkxJTkUgUkZCIHY1MSkwJwYDVQQL EyBBUiBPTkxJTkUgTk9SREVTVEUgQ0VSVElGSUNBRE9SQTETMBEGA1UECxMKUHJlc2VuY2lhbDEX MBUGA1UECxMOMzgwMTYwODQwMDAxMjQxKTAnBgNVBAMTIERBVklERSBESU5JWiBET05BREVMOjI1 NTkwMjAwMDkxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt2rRVvMmwFbBfjgPZWxy kUb+oOD9RFNlCjXPweH2aahjngb0f2nw52VB9mNeej7c+XjrR/MnZhIcqO0T/p58fV2gQl6noVU3 eLId3mSykfDneUFPSJF/0xj0dyOug6K/xW156lv1z2/thZXN71I6VcoShXYNUcPVlvc8vQTfqNGc xHv9l03z3Trv900S8hE7Q9OAV64cYOstis7z/hBIlOh9ix7xYXnTt72fbqo4Q7WQi/vtrfV6LItn w4qAMYszLF8uvGX6j7lofsJqdTmq2Kt0Z79PAFrpP2Giwfa+NSIoyS5BvIUJ+bURcxAbIDPXC4UC oCe2PG3DhqPJoTpYYQIDAQABo4IC1zCCAtMwgaMGCCsGAQUFBwEBBIGWMIGTMFwGCCsGAQUFBzAC hlBodHRwOi8vaWNwLWJyYXNpbC52cGtpLnZhbGlkY2VydGlmaWNhZG9yYS5jb20uYnIvYWMtb25s aW5lcmZiL2FjLW9ubGluZXJmYnY1LnA3YjAzBggrBgEFBQcwAYYnaHR0cDovL29jc3B2NS52YWxp ZGNlcnRpZmljYWRvcmEuY29tLmJyMAkGA1UdEwQCMAAwHwYDVR0jBBgwFoAU7MnMq7Io1aG8d0Cu 35Bvw+1/vOkwdwYDVR0gBHAwbjBsBgZgTAECATcwYjBgBggrBgEFBQcCARZUaHR0cDovL2ljcC1i cmFzaWwudnBraS52YWxpZGNlcnRpZmljYWRvcmEuY29tLmJyL2FjLW9ubGluZXJmYi9kcGMtYWMt b25saW5lcmZidjUucGRmMIG6BgNVHR8EgbIwga8wVaBToFGGT2h0dHA6Ly9pY3AtYnJhc2lsLnZh bGlkY2VydGlmaWNhZG9yYS5jb20uYnIvYWMtb25saW5lcmZiL2xjci1hYy1vbmxpbmVyZmJ2NS5j cmwwVqBUoFKGUGh0dHA6Ly9pY3AtYnJhc2lsMi52YWxpZGNlcnRpZmljYWRvcmEuY29tLmJyL2Fj LW9ubGluZXJmYi9sY3ItYWMtb25saW5lcmZidjUuY3JsMA4GA1UdDwEB/wQEAwIF4DAdBgNVHSUE FjAUBggrBgEFBQcDAgYIKwYBBQUHAwQwgZkGA1UdEQSBkTCBjoEZc2lsdmlvLmRvdXJhZG9AdW9s LmNvbS5icqA4BgVgTAEDAaAvBC0xNDExMTk0NjI1NTkwMjAwMDkxMDAwMDAwMDAwMDAwMDAwMDAw MDAwMDAwMDCgFwYFYEwBAwagDgQMNTAwMTg3NTgzOTgxoB4GBWBMAQMFoBUEEzAwMDAwMDAwMDAw MDAwMDAwMDAwDQYJKoZIhvcNAQELBQADggIBAKkMN52i2RhgfJN6UeoFLhk/LI2e+ZGVTn5hNVP5 QU1Uj3xK2784NQ8jc7lnxjIlyKT1f1VE3jxRvfVGPE+b1bOIbJfiLdfUlMQYU3auCQOHKWafiD0w jaYbaeTxYwBg8gCWsQ8246/f8Uz4biUfuciI3Bo8cpUZ0EBcsCVVvvQ8dbeK5Cz4cq0MEoBJWkjT nKoVZHNUqECMJZ4P97EKe4xUY3cVn2DD+Q3qET8xTybZB8iXlE7ALPGNriP5RgOYj6FrpDy2SBwB PF25zi5rMlNGCthQfE7/cuCTEapbh3V9naa/0DuEJYpKqIBazb1UgEueq571AWOBqjJnJyWpzg2f 8GKXmGR93efyaFvfcAZNJldLGBdjUOYsRau6E1MzODzHTmUDapHuAzaabPlEdhwxjDwA/UlTfnhX 5NCd50LmtsK6ZEh/OOL2r5hFRly+JO3sxkmQdXyygjcFdWsbKjzowVWavLagc+2YrRxSdwos9/Wo 7T9vUx/tEG/D2YFuEB9zxbT7ChNelxGynblb6Q309Gphi29FYJuSq5JP2A0rk6R4+mW4jP6cf7fb vDPhukJ70cYQSEY/zEEpeNgYxL++NCcq4j+FDEu0t7l/XskNYo1EDUI93RjgVCvjXUsMC3/AGi0Q MpqZPTIRObrsdBHxGYFRwKV7xJMb+zJiX/ae</X509Certificate>
+				</X509Data>
+			</KeyInfo>
+		</Signature>
+	</NFe>
+	<protNFe versao="4.00">
+		<infProt Id="NFe129231414647906">
+			<tpAmb>1</tpAmb>
+			<verAplic>6.0</verAplic>
+			<chNFe>29230700025590200091559220000002491000408480</chNFe>
+			<dhRecbto>2023-07-05T19:46:13-03:00</dhRecbto>
+			<nProt>129231414647906</nProt>
+			<digVal>yPer/Am6jQ59RWapaqy3HEkc6JM=</digVal>
+			<cStat>100</cStat>
+			<xMotivo>Autorizado o uso da NF-e</xMotivo>
+		</infProt>
+	</protNFe>
+</nfeProc>

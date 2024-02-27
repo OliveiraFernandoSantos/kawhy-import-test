@@ -1,0 +1,933 @@
+<nfeProc versao="4.00" xmlns="http://www.portalfiscal.inf.br/nfe">
+    <NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+        <infNFe Id="NFe31221020346524000146550500000190351009639015" versao="4.00">
+            <ide>
+                <cUF>31</cUF>
+                <cNF>00963901</cNF>
+                <natOp>COMPRA PARA USO E CONSUMO</natOp>
+                <mod>55</mod>
+                <serie>50</serie>
+                <nNF>19035</nNF>
+                <dhEmi>2022-10-27T16:39:31-03:00</dhEmi>
+                <tpNF>0</tpNF>
+                <idDest>3</idDest>
+                <cMunFG>3147006</cMunFG>
+                <tpImp>1</tpImp>
+                <tpEmis>1</tpEmis>
+                <cDV>5</cDV>
+                <tpAmb>1</tpAmb>
+                <finNFe>1</finNFe>
+                <indFinal>0</indFinal>
+                <indPres>0</indPres>
+                <procEmi>0</procEmi>
+                <verProc>NDDigital NFe 4.8.5</verProc>
+            </ide>
+            <emit>
+                <CNPJ>20346524000146</CNPJ>
+                <xNome>Kinross Brasil Mineracao S.A.</xNome>
+                <xFant>Kinross Brasil Mineracao S.A.</xFant>
+                <enderEmit>
+                    <xLgr>Rodovia BR-040 - Km 36,5</xLgr>
+                    <nro>S/N</nro>
+                    <xCpl>Caixa Postal - 168</xCpl>
+                    <xBairro>Zona Rural</xBairro>
+                    <cMun>3147006</cMun>
+                    <xMun>Paracatu</xMun>
+                    <UF>MG</UF>
+                    <CEP>38609899</CEP>
+                    <cPais>1058</cPais>
+                    <xPais>Brasil</xPais>
+                </enderEmit>
+                <IE>4704474850056</IE>
+                <CRT>3</CRT>
+            </emit>
+            <dest>
+                <idEstrangeiro/>
+                <xNome>Artur Kupper Gmbh E Kg</xNome>
+                <enderDest>
+                    <xLgr>An Der Knippenburg</xLgr>
+                    <nro>27</nro>
+                    <xBairro>An Der Knippenburg</xBairro>
+                    <cMun>9999999</cMun>
+                    <xMun>EXTERIOR</xMun>
+                    <UF>EX</UF>
+                    <cPais>0230</cPais>
+                    <xPais>Alemanha</xPais>
+                </enderDest>
+                <indIEDest>9</indIEDest>
+                <email>m.wiesel@kuepper.eu</email>
+            </dest>
+            <det nItem="1">
+                <prod>
+                    <cProd>796589</cProd>
+                    <cEAN>SEM GTIN</cEAN>
+                    <xProd>ROLETE RET 818065 KUPPER GMBH</xProd>
+                    <NCM>84829190</NCM>
+                    <CFOP>3556</CFOP>
+                    <uCom>UN</uCom>
+                    <qCom>48.0000</qCom>
+                    <vUnCom>1184.48958333</vUnCom>
+                    <vProd>56855.50</vProd>
+                    <cEANTrib>SEM GTIN</cEANTrib>
+                    <uTrib>UN</uTrib>
+                    <qTrib>48.0000</qTrib>
+                    <vUnTrib>1184.48958333</vUnTrib>
+                    <vOutro>32935.12</vOutro>
+                    <indTot>1</indTot>
+                    <DI>
+                        <nDI>2221198327</nDI>
+                        <dDI>2022-10-26</dDI>
+                        <xLocDesemb>RFB PORTO DO RIO DE JANEIRO</xLocDesemb>
+                        <UFDesemb>RJ</UFDesemb>
+                        <dDesemb>2022-10-26</dDesemb>
+                        <tpViaTransp>1</tpViaTransp>
+                        <vAFRMM>1327.57</vAFRMM>
+                        <tpIntermedio>1</tpIntermedio>
+                        <cExportador>ARTUR KUPPER GmBH &amp; CO.KG</cExportador>
+                        <adi>
+                            <nAdicao>1</nAdicao>
+                            <nSeqAdic>100</nSeqAdic>
+                            <cFabricante>ARTUR KUPPER GmBH &amp; CO.KG</cFabricante>
+                        </adi>
+                    </DI>
+                </prod>
+                <imposto>
+                    <ICMS>
+                        <ICMS00>
+                            <orig>1</orig>
+                            <CST>00</CST>
+                            <modBC>3</modBC>
+                            <vBC>95461.72</vBC>
+                            <pICMS>18.00</pICMS>
+                            <vICMS>17183.11</vICMS>
+                        </ICMS00>
+                    </ICMS>
+                    <IPI>
+                        <cEnq>999</cEnq>
+                        <IPITrib>
+                            <CST>00</CST>
+                            <vBC>65723.59</vBC>
+                            <pIPI>7.80</pIPI>
+                            <vIPI>5126.44</vIPI>
+                        </IPITrib>
+                    </IPI>
+                    <II>
+                        <vBC>59103.95</vBC>
+                        <vDespAdu>0</vDespAdu>
+                        <vII>6619.64</vII>
+                        <vIOF>0</vIOF>
+                    </II>
+                    <PIS>
+                        <PISAliq>
+                            <CST>02</CST>
+                            <vBC>59103.95</vBC>
+                            <pPIS>2.10</pPIS>
+                            <vPIS>1241.18</vPIS>
+                        </PISAliq>
+                    </PIS>
+                    <COFINS>
+                        <COFINSAliq>
+                            <CST>02</CST>
+                            <vBC>59103.95</vBC>
+                            <pCOFINS>9.65</pCOFINS>
+                            <vCOFINS>5703.53</vCOFINS>
+                        </COFINSAliq>
+                    </COFINS>
+                </imposto>
+            </det>
+            <det nItem="2">
+                <prod>
+                    <cProd>796590</cProd>
+                    <cEAN>SEM GTIN</cEAN>
+                    <xProd>ROLETE CAR 818071 KUPPER GMBH</xProd>
+                    <NCM>84829190</NCM>
+                    <CFOP>3556</CFOP>
+                    <uCom>UN</uCom>
+                    <qCom>48.0000</qCom>
+                    <vUnCom>1052.29208333</vUnCom>
+                    <vProd>50510.02</vProd>
+                    <cEANTrib>SEM GTIN</cEANTrib>
+                    <uTrib>UN</uTrib>
+                    <qTrib>48.0000</qTrib>
+                    <vUnTrib>1052.29208333</vUnTrib>
+                    <vOutro>29259.32</vOutro>
+                    <indTot>1</indTot>
+                    <DI>
+                        <nDI>2221198327</nDI>
+                        <dDI>2022-10-26</dDI>
+                        <xLocDesemb>RFB PORTO DO RIO DE JANEIRO</xLocDesemb>
+                        <UFDesemb>RJ</UFDesemb>
+                        <dDesemb>2022-10-26</dDesemb>
+                        <tpViaTransp>1</tpViaTransp>
+                        <vAFRMM>1179.40</vAFRMM>
+                        <tpIntermedio>1</tpIntermedio>
+                        <cExportador>ARTUR KUPPER GmBH &amp; CO.KG</cExportador>
+                        <adi>
+                            <nAdicao>1</nAdicao>
+                            <nSeqAdic>200</nSeqAdic>
+                            <cFabricante>ARTUR KUPPER GmBH &amp; CO.KG</cFabricante>
+                        </adi>
+                    </DI>
+                </prod>
+                <imposto>
+                    <ICMS>
+                        <ICMS00>
+                            <orig>1</orig>
+                            <CST>00</CST>
+                            <modBC>3</modBC>
+                            <vBC>84742.81</vBC>
+                            <pICMS>18.00</pICMS>
+                            <vICMS>15253.71</vICMS>
+                        </ICMS00>
+                    </ICMS>
+                    <IPI>
+                        <cEnq>999</cEnq>
+                        <IPITrib>
+                            <CST>00</CST>
+                            <vBC>58343.82</vBC>
+                            <pIPI>7.80</pIPI>
+                            <vIPI>4550.82</vIPI>
+                        </IPITrib>
+                    </IPI>
+                    <II>
+                        <vBC>52467.46</vBC>
+                        <vDespAdu>0</vDespAdu>
+                        <vII>5876.36</vII>
+                        <vIOF>0</vIOF>
+                    </II>
+                    <PIS>
+                        <PISAliq>
+                            <CST>02</CST>
+                            <vBC>52467.46</vBC>
+                            <pPIS>2.10</pPIS>
+                            <vPIS>1101.82</vPIS>
+                        </PISAliq>
+                    </PIS>
+                    <COFINS>
+                        <COFINSAliq>
+                            <CST>02</CST>
+                            <vBC>52467.46</vBC>
+                            <pCOFINS>9.65</pCOFINS>
+                            <vCOFINS>5063.11</vCOFINS>
+                        </COFINSAliq>
+                    </COFINS>
+                </imposto>
+            </det>
+            <det nItem="3">
+                <prod>
+                    <cProd>796589</cProd>
+                    <cEAN>SEM GTIN</cEAN>
+                    <xProd>ROLETE RET 818065 KUPPER GMBH</xProd>
+                    <NCM>84829190</NCM>
+                    <CFOP>3556</CFOP>
+                    <uCom>UN</uCom>
+                    <qCom>150.0000</qCom>
+                    <vUnCom>1184.48960000</vUnCom>
+                    <vProd>177673.44</vProd>
+                    <cEANTrib>SEM GTIN</cEANTrib>
+                    <uTrib>UN</uTrib>
+                    <qTrib>150.0000</qTrib>
+                    <vUnTrib>1184.48960000</vUnTrib>
+                    <vOutro>102922.22</vOutro>
+                    <indTot>1</indTot>
+                    <DI>
+                        <nDI>2221198327</nDI>
+                        <dDI>2022-10-26</dDI>
+                        <xLocDesemb>RFB PORTO DO RIO DE JANEIRO</xLocDesemb>
+                        <UFDesemb>RJ</UFDesemb>
+                        <dDesemb>2022-10-26</dDesemb>
+                        <tpViaTransp>1</tpViaTransp>
+                        <vAFRMM>4148.66</vAFRMM>
+                        <tpIntermedio>1</tpIntermedio>
+                        <cExportador>ARTUR KUPPER GmBH &amp; CO.KG</cExportador>
+                        <adi>
+                            <nAdicao>1</nAdicao>
+                            <nSeqAdic>300</nSeqAdic>
+                            <cFabricante>ARTUR KUPPER GmBH &amp; CO.KG</cFabricante>
+                        </adi>
+                    </DI>
+                </prod>
+                <imposto>
+                    <ICMS>
+                        <ICMS00>
+                            <orig>1</orig>
+                            <CST>00</CST>
+                            <modBC>3</modBC>
+                            <vBC>298317.90</vBC>
+                            <pICMS>18.00</pICMS>
+                            <vICMS>53697.22</vICMS>
+                        </ICMS00>
+                    </ICMS>
+                    <IPI>
+                        <cEnq>999</cEnq>
+                        <IPITrib>
+                            <CST>00</CST>
+                            <vBC>205386.21</vBC>
+                            <pIPI>7.80</pIPI>
+                            <vIPI>16020.12</vIPI>
+                        </IPITrib>
+                    </IPI>
+                    <II>
+                        <vBC>184699.83</vBC>
+                        <vDespAdu>0</vDespAdu>
+                        <vII>20686.38</vII>
+                        <vIOF>0</vIOF>
+                    </II>
+                    <PIS>
+                        <PISAliq>
+                            <CST>02</CST>
+                            <vBC>184699.83</vBC>
+                            <pPIS>2.10</pPIS>
+                            <vPIS>3878.70</vPIS>
+                        </PISAliq>
+                    </PIS>
+                    <COFINS>
+                        <COFINSAliq>
+                            <CST>02</CST>
+                            <vBC>184699.83</vBC>
+                            <pCOFINS>9.65</pCOFINS>
+                            <vCOFINS>17823.53</vCOFINS>
+                        </COFINSAliq>
+                    </COFINS>
+                </imposto>
+            </det>
+            <det nItem="4">
+                <prod>
+                    <cProd>796590</cProd>
+                    <cEAN>SEM GTIN</cEAN>
+                    <xProd>ROLETE CAR 818071 KUPPER GMBH</xProd>
+                    <NCM>84829190</NCM>
+                    <CFOP>3556</CFOP>
+                    <uCom>UN</uCom>
+                    <qCom>51.0000</qCom>
+                    <vUnCom>1052.29196078</vUnCom>
+                    <vProd>53666.89</vProd>
+                    <cEANTrib>SEM GTIN</cEANTrib>
+                    <uTrib>UN</uTrib>
+                    <qTrib>51.0000</qTrib>
+                    <vUnTrib>1052.29196078</vUnTrib>
+                    <vOutro>31088.02</vOutro>
+                    <indTot>1</indTot>
+                    <DI>
+                        <nDI>2221198327</nDI>
+                        <dDI>2022-10-26</dDI>
+                        <xLocDesemb>RFB PORTO DO RIO DE JANEIRO</xLocDesemb>
+                        <UFDesemb>RJ</UFDesemb>
+                        <dDesemb>2022-10-26</dDesemb>
+                        <tpViaTransp>1</tpViaTransp>
+                        <vAFRMM>1253.12</vAFRMM>
+                        <tpIntermedio>1</tpIntermedio>
+                        <cExportador>ARTUR KUPPER GmBH &amp; CO.KG</cExportador>
+                        <adi>
+                            <nAdicao>1</nAdicao>
+                            <nSeqAdic>400</nSeqAdic>
+                            <cFabricante>ARTUR KUPPER GmBH &amp; CO.KG</cFabricante>
+                        </adi>
+                    </DI>
+                </prod>
+                <imposto>
+                    <ICMS>
+                        <ICMS00>
+                            <orig>1</orig>
+                            <CST>00</CST>
+                            <modBC>3</modBC>
+                            <vBC>90039.23</vBC>
+                            <pICMS>18.00</pICMS>
+                            <vICMS>16207.06</vICMS>
+                        </ICMS00>
+                    </ICMS>
+                    <IPI>
+                        <cEnq>999</cEnq>
+                        <IPITrib>
+                            <CST>00</CST>
+                            <vBC>61990.30</vBC>
+                            <pIPI>7.80</pIPI>
+                            <vIPI>4835.24</vIPI>
+                        </IPITrib>
+                    </IPI>
+                    <II>
+                        <vBC>55746.67</vBC>
+                        <vDespAdu>0</vDespAdu>
+                        <vII>6243.63</vII>
+                        <vIOF>0</vIOF>
+                    </II>
+                    <PIS>
+                        <PISAliq>
+                            <CST>02</CST>
+                            <vBC>55746.67</vBC>
+                            <pPIS>2.10</pPIS>
+                            <vPIS>1170.68</vPIS>
+                        </PISAliq>
+                    </PIS>
+                    <COFINS>
+                        <COFINSAliq>
+                            <CST>02</CST>
+                            <vBC>55746.67</vBC>
+                            <pCOFINS>9.65</pCOFINS>
+                            <vCOFINS>5379.55</vCOFINS>
+                        </COFINSAliq>
+                    </COFINS>
+                </imposto>
+            </det>
+            <det nItem="5">
+                <prod>
+                    <cProd>796591</cProd>
+                    <cEAN>SEM GTIN</cEAN>
+                    <xProd>ROLETE CAR</xProd>
+                    <NCM>84829190</NCM>
+                    <CFOP>3556</CFOP>
+                    <uCom>UN</uCom>
+                    <qCom>15.0000</qCom>
+                    <vUnCom>412.45600000</vUnCom>
+                    <vProd>6186.84</vProd>
+                    <cEANTrib>SEM GTIN</cEANTrib>
+                    <uTrib>UN</uTrib>
+                    <qTrib>15.0000</qTrib>
+                    <vUnTrib>412.45600000</vUnTrib>
+                    <vOutro>3583.90</vOutro>
+                    <indTot>1</indTot>
+                    <DI>
+                        <nDI>2221198327</nDI>
+                        <dDI>2022-10-26</dDI>
+                        <xLocDesemb>RFB PORTO DO RIO DE JANEIRO</xLocDesemb>
+                        <UFDesemb>RJ</UFDesemb>
+                        <dDesemb>2022-10-26</dDesemb>
+                        <tpViaTransp>1</tpViaTransp>
+                        <vAFRMM>144.46</vAFRMM>
+                        <tpIntermedio>1</tpIntermedio>
+                        <cExportador>ARTUR KUPPER GmBH &amp; CO.KG</cExportador>
+                        <adi>
+                            <nAdicao>1</nAdicao>
+                            <nSeqAdic>500</nSeqAdic>
+                            <cFabricante>ARTUR KUPPER GmBH &amp; CO.KG</cFabricante>
+                        </adi>
+                    </DI>
+                </prod>
+                <imposto>
+                    <ICMS>
+                        <ICMS00>
+                            <orig>1</orig>
+                            <CST>00</CST>
+                            <modBC>3</modBC>
+                            <vBC>10334.20</vBC>
+                            <pICMS>18.00</pICMS>
+                            <vICMS>1860.16</vICMS>
+                        </ICMS00>
+                    </ICMS>
+                    <IPI>
+                        <cEnq>999</cEnq>
+                        <IPITrib>
+                            <CST>00</CST>
+                            <vBC>7114.90</vBC>
+                            <pIPI>7.80</pIPI>
+                            <vIPI>554.96</vIPI>
+                        </IPITrib>
+                    </IPI>
+                    <II>
+                        <vBC>6398.29</vBC>
+                        <vDespAdu>0</vDespAdu>
+                        <vII>716.61</vII>
+                        <vIOF>0</vIOF>
+                    </II>
+                    <PIS>
+                        <PISAliq>
+                            <CST>02</CST>
+                            <vBC>6398.29</vBC>
+                            <pPIS>2.10</pPIS>
+                            <vPIS>134.36</vPIS>
+                        </PISAliq>
+                    </PIS>
+                    <COFINS>
+                        <COFINSAliq>
+                            <CST>02</CST>
+                            <vBC>6398.29</vBC>
+                            <pCOFINS>9.65</pCOFINS>
+                            <vCOFINS>617.43</vCOFINS>
+                        </COFINSAliq>
+                    </COFINS>
+                </imposto>
+            </det>
+            <det nItem="6">
+                <prod>
+                    <cProd>796592</cProd>
+                    <cEAN>SEM GTIN</cEAN>
+                    <xProd>ROLETE RET</xProd>
+                    <NCM>84829190</NCM>
+                    <CFOP>3556</CFOP>
+                    <uCom>UN</uCom>
+                    <qCom>8.0000</qCom>
+                    <vUnCom>1433.02000000</vUnCom>
+                    <vProd>11464.16</vProd>
+                    <cEANTrib>SEM GTIN</cEANTrib>
+                    <uTrib>UN</uTrib>
+                    <qTrib>8.0000</qTrib>
+                    <vUnTrib>1433.02000000</vUnTrib>
+                    <vOutro>6640.93</vOutro>
+                    <indTot>1</indTot>
+                    <DI>
+                        <nDI>2221198327</nDI>
+                        <dDI>2022-10-26</dDI>
+                        <xLocDesemb>RFB PORTO DO RIO DE JANEIRO</xLocDesemb>
+                        <UFDesemb>RJ</UFDesemb>
+                        <dDesemb>2022-10-26</dDesemb>
+                        <tpViaTransp>1</tpViaTransp>
+                        <vAFRMM>267.69</vAFRMM>
+                        <tpIntermedio>1</tpIntermedio>
+                        <cExportador>ARTUR KUPPER GmBH &amp; CO.KG</cExportador>
+                        <adi>
+                            <nAdicao>1</nAdicao>
+                            <nSeqAdic>600</nSeqAdic>
+                            <cFabricante>ARTUR KUPPER GmBH &amp; CO.KG</cFabricante>
+                        </adi>
+                    </DI>
+                </prod>
+                <imposto>
+                    <ICMS>
+                        <ICMS00>
+                            <orig>1</orig>
+                            <CST>00</CST>
+                            <modBC>3</modBC>
+                            <vBC>19028.00</vBC>
+                            <pICMS>18.00</pICMS>
+                            <vICMS>3425.04</vICMS>
+                        </ICMS00>
+                    </ICMS>
+                    <IPI>
+                        <cEnq>999</cEnq>
+                        <IPITrib>
+                            <CST>00</CST>
+                            <vBC>13100.42</vBC>
+                            <pIPI>7.80</pIPI>
+                            <vIPI>1021.83</vIPI>
+                        </IPITrib>
+                    </IPI>
+                    <II>
+                        <vBC>11780.95</vBC>
+                        <vDespAdu>0</vDespAdu>
+                        <vII>1319.47</vII>
+                        <vIOF>0</vIOF>
+                    </II>
+                    <PIS>
+                        <PISAliq>
+                            <CST>02</CST>
+                            <vBC>11780.95</vBC>
+                            <pPIS>2.10</pPIS>
+                            <vPIS>247.40</vPIS>
+                        </PISAliq>
+                    </PIS>
+                    <COFINS>
+                        <COFINSAliq>
+                            <CST>02</CST>
+                            <vBC>11780.95</vBC>
+                            <pCOFINS>9.65</pCOFINS>
+                            <vCOFINS>1136.86</vCOFINS>
+                        </COFINSAliq>
+                    </COFINS>
+                </imposto>
+            </det>
+            <det nItem="7">
+                <prod>
+                    <cProd>796593</cProd>
+                    <cEAN>SEM GTIN</cEAN>
+                    <xProd>ROLETE 818072 KUPPER GMBH</xProd>
+                    <NCM>84829190</NCM>
+                    <CFOP>3556</CFOP>
+                    <uCom>UN</uCom>
+                    <qCom>42.0000</qCom>
+                    <vUnCom>2109.87214286</vUnCom>
+                    <vProd>88614.63</vProd>
+                    <cEANTrib>SEM GTIN</cEANTrib>
+                    <uTrib>UN</uTrib>
+                    <qTrib>42.0000</qTrib>
+                    <vUnTrib>2109.87214286</vUnTrib>
+                    <vOutro>51332.46</vOutro>
+                    <indTot>1</indTot>
+                    <DI>
+                        <nDI>2221198327</nDI>
+                        <dDI>2022-10-26</dDI>
+                        <xLocDesemb>RFB PORTO DO RIO DE JANEIRO</xLocDesemb>
+                        <UFDesemb>RJ</UFDesemb>
+                        <dDesemb>2022-10-26</dDesemb>
+                        <tpViaTransp>1</tpViaTransp>
+                        <vAFRMM>2069.14</vAFRMM>
+                        <tpIntermedio>1</tpIntermedio>
+                        <cExportador>ARTUR KUPPER GmBH &amp; CO.KG</cExportador>
+                        <adi>
+                            <nAdicao>1</nAdicao>
+                            <nSeqAdic>700</nSeqAdic>
+                            <cFabricante>ARTUR KUPPER GmBH &amp; CO.KG</cFabricante>
+                        </adi>
+                    </DI>
+                </prod>
+                <imposto>
+                    <ICMS>
+                        <ICMS00>
+                            <orig>1</orig>
+                            <CST>00</CST>
+                            <modBC>3</modBC>
+                            <vBC>145226.60</vBC>
+                            <pICMS>18.00</pICMS>
+                            <vICMS>26140.79</vICMS>
+                        </ICMS00>
+                    </ICMS>
+                    <IPI>
+                        <cEnq>999</cEnq>
+                        <IPITrib>
+                            <CST>00</CST>
+                            <vBC>99985.76</vBC>
+                            <pIPI>7.80</pIPI>
+                            <vIPI>7798.89</vIPI>
+                        </IPITrib>
+                    </IPI>
+                    <II>
+                        <vBC>89915.25</vBC>
+                        <vDespAdu>0</vDespAdu>
+                        <vII>10070.51</vII>
+                        <vIOF>0</vIOF>
+                    </II>
+                    <PIS>
+                        <PISAliq>
+                            <CST>02</CST>
+                            <vBC>89915.25</vBC>
+                            <pPIS>2.10</pPIS>
+                            <vPIS>1888.22</vPIS>
+                        </PISAliq>
+                    </PIS>
+                    <COFINS>
+                        <COFINSAliq>
+                            <CST>02</CST>
+                            <vBC>89915.25</vBC>
+                            <pCOFINS>9.65</pCOFINS>
+                            <vCOFINS>8676.82</vCOFINS>
+                        </COFINSAliq>
+                    </COFINS>
+                </imposto>
+            </det>
+            <det nItem="8">
+                <prod>
+                    <cProd>796594</cProd>
+                    <cEAN>SEM GTIN</cEAN>
+                    <xProd>ROLETE IMPAC 818068 KUPPER GMB</xProd>
+                    <NCM>84829190</NCM>
+                    <CFOP>3556</CFOP>
+                    <uCom>UN</uCom>
+                    <qCom>84.0000</qCom>
+                    <vUnCom>798.47297619</vUnCom>
+                    <vProd>67071.73</vProd>
+                    <cEANTrib>SEM GTIN</cEANTrib>
+                    <uTrib>UN</uTrib>
+                    <qTrib>84.0000</qTrib>
+                    <vUnTrib>798.47297619</vUnTrib>
+                    <vOutro>38853.15</vOutro>
+                    <indTot>1</indTot>
+                    <DI>
+                        <nDI>2221198327</nDI>
+                        <dDI>2022-10-26</dDI>
+                        <xLocDesemb>RFB PORTO DO RIO DE JANEIRO</xLocDesemb>
+                        <UFDesemb>RJ</UFDesemb>
+                        <dDesemb>2022-10-26</dDesemb>
+                        <tpViaTransp>1</tpViaTransp>
+                        <vAFRMM>1566.12</vAFRMM>
+                        <tpIntermedio>1</tpIntermedio>
+                        <cExportador>ARTUR KUPPER GmBH &amp; CO.KG</cExportador>
+                        <adi>
+                            <nAdicao>1</nAdicao>
+                            <nSeqAdic>800</nSeqAdic>
+                            <cFabricante>ARTUR KUPPER GmBH &amp; CO.KG</cFabricante>
+                        </adi>
+                    </DI>
+                </prod>
+                <imposto>
+                    <ICMS>
+                        <ICMS00>
+                            <orig>1</orig>
+                            <CST>00</CST>
+                            <modBC>3</modBC>
+                            <vBC>110822.97</vBC>
+                            <pICMS>18.00</pICMS>
+                            <vICMS>19948.13</vICMS>
+                        </ICMS00>
+                    </ICMS>
+                    <IPI>
+                        <cEnq>999</cEnq>
+                        <IPITrib>
+                            <CST>00</CST>
+                            <vBC>76299.51</vBC>
+                            <pIPI>7.80</pIPI>
+                            <vIPI>5951.36</vIPI>
+                        </IPITrib>
+                    </IPI>
+                    <II>
+                        <vBC>68614.67</vBC>
+                        <vDespAdu>0</vDespAdu>
+                        <vII>7684.84</vII>
+                        <vIOF>0</vIOF>
+                    </II>
+                    <PIS>
+                        <PISAliq>
+                            <CST>02</CST>
+                            <vBC>68614.67</vBC>
+                            <pPIS>2.10</pPIS>
+                            <vPIS>1440.91</vPIS>
+                        </PISAliq>
+                    </PIS>
+                    <COFINS>
+                        <COFINSAliq>
+                            <CST>02</CST>
+                            <vBC>68614.67</vBC>
+                            <pCOFINS>9.65</pCOFINS>
+                            <vCOFINS>6621.32</vCOFINS>
+                        </COFINSAliq>
+                    </COFINS>
+                </imposto>
+            </det>
+            <det nItem="9">
+                <prod>
+                    <cProd>796596</cProd>
+                    <cEAN>SEM GTIN</cEAN>
+                    <xProd>ROLETE RET</xProd>
+                    <NCM>84829190</NCM>
+                    <CFOP>3556</CFOP>
+                    <uCom>UN</uCom>
+                    <qCom>136.0000</qCom>
+                    <vUnCom>1618.09742647</vUnCom>
+                    <vProd>220061.25</vProd>
+                    <cEANTrib>SEM GTIN</cEANTrib>
+                    <uTrib>UN</uTrib>
+                    <qTrib>136.0000</qTrib>
+                    <vUnTrib>1618.09742647</vUnTrib>
+                    <vOutro>127476.53</vOutro>
+                    <indTot>1</indTot>
+                    <DI>
+                        <nDI>2221198327</nDI>
+                        <dDI>2022-10-26</dDI>
+                        <xLocDesemb>RFB PORTO DO RIO DE JANEIRO</xLocDesemb>
+                        <UFDesemb>RJ</UFDesemb>
+                        <dDesemb>2022-10-26</dDesemb>
+                        <tpViaTransp>1</tpViaTransp>
+                        <vAFRMM>5138.41</vAFRMM>
+                        <tpIntermedio>1</tpIntermedio>
+                        <cExportador>ARTUR KUPPER GmBH &amp; CO.KG</cExportador>
+                        <adi>
+                            <nAdicao>1</nAdicao>
+                            <nSeqAdic>900</nSeqAdic>
+                            <cFabricante>ARTUR KUPPER GmBH &amp; CO.KG</cFabricante>
+                        </adi>
+                    </DI>
+                </prod>
+                <imposto>
+                    <ICMS>
+                        <ICMS00>
+                            <orig>1</orig>
+                            <CST>00</CST>
+                            <modBC>3</modBC>
+                            <vBC>367866.31</vBC>
+                            <pICMS>18.00</pICMS>
+                            <vICMS>66215.94</vICMS>
+                        </ICMS00>
+                    </ICMS>
+                    <IPI>
+                        <cEnq>999</cEnq>
+                        <IPITrib>
+                            <CST>00</CST>
+                            <vBC>253268.96</vBC>
+                            <pIPI>7.80</pIPI>
+                            <vIPI>19754.98</vIPI>
+                        </IPITrib>
+                    </IPI>
+                    <II>
+                        <vBC>227759.86</vBC>
+                        <vDespAdu>0</vDespAdu>
+                        <vII>25509.10</vII>
+                        <vIOF>0</vIOF>
+                    </II>
+                    <PIS>
+                        <PISAliq>
+                            <CST>02</CST>
+                            <vBC>227759.86</vBC>
+                            <pPIS>2.10</pPIS>
+                            <vPIS>4782.96</vPIS>
+                        </PISAliq>
+                    </PIS>
+                    <COFINS>
+                        <COFINSAliq>
+                            <CST>02</CST>
+                            <vBC>227759.86</vBC>
+                            <pCOFINS>9.65</pCOFINS>
+                            <vCOFINS>21978.83</vCOFINS>
+                        </COFINSAliq>
+                    </COFINS>
+                </imposto>
+            </det>
+            <det nItem="10">
+                <prod>
+                    <cProd>796597</cProd>
+                    <cEAN>SEM GTIN</cEAN>
+                    <xProd>ROLETE BAL</xProd>
+                    <NCM>84829190</NCM>
+                    <CFOP>3556</CFOP>
+                    <uCom>UN</uCom>
+                    <qCom>6.0000</qCom>
+                    <vUnCom>650.41166667</vUnCom>
+                    <vProd>3902.47</vProd>
+                    <cEANTrib>SEM GTIN</cEANTrib>
+                    <uTrib>UN</uTrib>
+                    <qTrib>6.0000</qTrib>
+                    <vUnTrib>650.41166667</vUnTrib>
+                    <vOutro>2260.61</vOutro>
+                    <indTot>1</indTot>
+                    <DI>
+                        <nDI>2221198327</nDI>
+                        <dDI>2022-10-26</dDI>
+                        <xLocDesemb>RFB PORTO DO RIO DE JANEIRO</xLocDesemb>
+                        <UFDesemb>RJ</UFDesemb>
+                        <dDesemb>2022-10-26</dDesemb>
+                        <tpViaTransp>1</tpViaTransp>
+                        <vAFRMM>91.12</vAFRMM>
+                        <tpIntermedio>1</tpIntermedio>
+                        <cExportador>ARTUR KUPPER GmBH &amp; CO.KG</cExportador>
+                        <adi>
+                            <nAdicao>1</nAdicao>
+                            <nSeqAdic>100</nSeqAdic>
+                            <cFabricante>ARTUR KUPPER GmBH &amp; CO.KG</cFabricante>
+                        </adi>
+                    </DI>
+                </prod>
+                <imposto>
+                    <ICMS>
+                        <ICMS00>
+                            <orig>1</orig>
+                            <CST>00</CST>
+                            <modBC>3</modBC>
+                            <vBC>6482.19</vBC>
+                            <pICMS>18.00</pICMS>
+                            <vICMS>1166.79</vICMS>
+                        </ICMS00>
+                    </ICMS>
+                    <IPI>
+                        <cEnq>999</cEnq>
+                        <IPITrib>
+                            <CST>00</CST>
+                            <vBC>4462.87</vBC>
+                            <pIPI>7.80</pIPI>
+                            <vIPI>348.10</vIPI>
+                        </IPITrib>
+                    </IPI>
+                    <II>
+                        <vBC>4013.37</vBC>
+                        <vDespAdu>0</vDespAdu>
+                        <vII>449.50</vII>
+                        <vIOF>0</vIOF>
+                    </II>
+                    <PIS>
+                        <PISAliq>
+                            <CST>02</CST>
+                            <vBC>4013.37</vBC>
+                            <pPIS>2.10</pPIS>
+                            <vPIS>84.28</vPIS>
+                        </PISAliq>
+                    </PIS>
+                    <COFINS>
+                        <COFINSAliq>
+                            <CST>02</CST>
+                            <vBC>4013.37</vBC>
+                            <pCOFINS>9.65</pCOFINS>
+                            <vCOFINS>387.29</vCOFINS>
+                        </COFINSAliq>
+                    </COFINS>
+                </imposto>
+            </det>
+            <total>
+                <ICMSTot>
+                    <vBC>1228321.93</vBC>
+                    <vICMS>221097.95</vICMS>
+                    <vICMSDeson>0.00</vICMSDeson>
+                    <vFCP>0.00</vFCP>
+                    <vBCST>0.00</vBCST>
+                    <vST>0.00</vST>
+                    <vFCPST>0.00</vFCPST>
+                    <vFCPSTRet>0.00</vFCPSTRet>
+                    <vProd>736006.93</vProd>
+                    <vFrete>0.00</vFrete>
+                    <vSeg>0.00</vSeg>
+                    <vDesc>0.00</vDesc>
+                    <vII>85176.04</vII>
+                    <vIPI>65962.74</vIPI>
+                    <vIPIDevol>0.00</vIPIDevol>
+                    <vPIS>15970.51</vPIS>
+                    <vCOFINS>73388.27</vCOFINS>
+                    <vOutro>426352.26</vOutro>
+                    <vNF>1228321.93</vNF>
+                </ICMSTot>
+            </total>
+            <transp>
+                <modFrete>0</modFrete>
+                <transporta>
+                    <CNPJ>19199348001311</CNPJ>
+                    <xNome>Sada Transportes E Armazenagens Ltda</xNome>
+                    <IE>83798726</IE>
+                    <xEnder>R Carlos Seidl</xEnder>
+                    <xMun>Rio De Janeiro</xMun>
+                    <UF>RJ</UF>
+                </transporta>
+                <vol>
+                    <qVol>1</qVol>
+                    <esp>OUTROS</esp>
+                    <pesoL>17803.878</pesoL>
+                    <pesoB>19164.420</pesoB>
+                </vol>
+            </transp>
+            <pag>
+                <detPag>
+                    <tPag>90</tPag>
+                    <vPag>1228321.93</vPag>
+                </detPag>
+            </pag>
+            <infAdic>
+                <infAdFisco>2221198327</infAdFisco>
+                <infCpl>D.I 22/2119832-7 DE 26/10/2022 INVOICE 139187,00 FRETE 17185,68 E SEGURO 347,75. II: 85176,03
+                    PIS: 15970,51 COFINS: 73388,28 DESPESAS ACESSORIAS: 6226,13. TAXA DE CONVERSAO USD: 5,3091 EUR:
+                    5,2879. EMITIDA NOS TERMOS DO INCISO VI DO CAPUT DO ARTIGO 20 DO ANEXO V DO RICMS/MG. COMBINADO COM
+                    O INCISO V DO ARTIGO 336 DO ANEXO IX DO RICMS/MG. PEDIDO DE COMPRA: 1502811-O1. DADOS RECEBIMENTO:
+                    FORN AN8:719005# CAMBIO:5,2879#
+                </infCpl>
+            </infAdic>
+        </infNFe>
+        <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+            <SignedInfo>
+                <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+                <Reference URI="#NFe31221020346524000146550500000190351009639015">
+                    <Transforms>
+                        <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                        <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                    </Transforms>
+                    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                    <DigestValue>JEfXxdxoQhofSTZ5rFaQt6BBjwY=</DigestValue>
+                </Reference>
+            </SignedInfo>
+            <SignatureValue>
+                vSqSbGOGihteSoV+ajcdB5J2Yg58qM9bvYmEFtuJvJAawAb1EQ9FHjZcHOsu4mm544PxNipKJD04KUMQE3Pr/1/KR9Isgh+m9jfScAhXSiNnok5O4XD6bLwfJI/s7i/dvt6WcTmbR3XyDHNfDKGbn1gyIsZH/EPHNLXmpNHl5Ss=
+            </SignatureValue>
+            <KeyInfo>
+                <X509Data>
+                    <X509Certificate>
+                        MIICOTCCAaKgAwIBAgIQUXn+h7UWga1DGzpPjVYJZDANBgkqhkiG9w0BAQUFADBbMVkwVwYDVQQDHlAAdwB3AHcALgBmAHMAaQBzAHQALgBjAG8AbQAuAGIAcgAgACgAUwBFAE0AIABWAEEATABJAEQAQQBEAEUAIABKAFUAUgDNAEQASQBDAEEAKTAeFw0yMDA4MTkwOTI3MDZaFw0yMzA4MTkwOTI3MDZaMFsxWTBXBgNVBAMeUAB3AHcAdwAuAGYAcwBpAHMAdAAuAGMAbwBtAC4AYgByACAAKABTAEUATQAgAFYAQQBMAEkARABBAEQARQAgAEoAVQBSAM0ARABJAEMAQQApMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDVuzPKD5jupb87mp0A11qpowBTokuORSdopo6YbwvK9eyM0wi3P0qu1UuuVLSQTnHiKMdWEoEWvBmvMYKXpfvQWgAoyJb+IfI21edIrs/UjRxzaBsq8Ui/J9EAcACt60nAFmWMS3U/ZqIqxmv5VDyb+DE/DU9ZOlQ+KnWcE3o7vQIDAQABMA0GCSqGSIb3DQEBBQUAA4GBABV4U5v2ZnFKblaCRGWLZp/jaupbYpzHyYLSl7ur/7eLYH8vpK9JPKcnLekNvbrT224FuBfo1tRHV3vAH+lAWQKwsLNJByRHH4/5LmYVzIZCWLwWRUapANeouRYSGY7Ye9RuCK1T2I1RmrIBaG7uNFT+d9BXA/+bKcJ5hjYShOs8
+                    </X509Certificate>
+                </X509Data>
+            </KeyInfo>
+        </Signature>
+    </NFe>
+    <protNFe versao="4.00">
+        <infProt Id="ID131225012700265">
+            <tpAmb>1</tpAmb>
+            <verAplic>14.4.86-AC1</verAplic>
+            <chNFe>31221020346524000146550500000190351009639015</chNFe>
+            <dhRecbto>2022-10-28T07:46:04-03:00</dhRecbto>
+            <nProt>131225012700265</nProt>
+            <digVal>JEfXxdxoQhofSTZ5rFaQt6BBjwY=</digVal>
+            <cStat>100</cStat>
+            <xMotivo>Autorizado o uso da NF-e</xMotivo>
+        </infProt>
+    </protNFe>
+</nfeProc>

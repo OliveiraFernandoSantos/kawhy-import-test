@@ -1,0 +1,408 @@
+<nfeProc versao="4.00"
+       	xmlns="http://www.portalfiscal.inf.br/nfe">
+	<NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+		<infNFe Id="NFe35200692633315000194550010003125461010299326"
+      			versao="4.00">
+			<ide>
+				<cUF>35</cUF>
+				<cNF>01029932</cNF>
+				<natOp>5106 VENDA DE MERCADORIA SEM TRANSITAR</natOp>
+				<mod>55</mod>
+				<serie>1</serie>
+				<nNF>312546</nNF>
+				<dhEmi>2020-06-08T14:39:30-03:00</dhEmi>
+				<tpNF>1</tpNF>
+				<idDest>1</idDest>
+				<cMunFG>3550308</cMunFG>
+				<tpImp>1</tpImp>
+				<tpEmis>1</tpEmis>
+				<cDV>6</cDV>
+				<tpAmb>1</tpAmb>
+				<finNFe>1</finNFe>
+				<indFinal>0</indFinal>
+				<indPres>3</indPres>
+				<procEmi>0</procEmi>
+				<verProc>4.0</verProc>
+			</ide>
+			<emit>
+				<CNPJ>92633315000194</CNPJ>
+				<xNome>FORNECEDOR_GRA_1</xNome>
+				<xFant>FORNECEDOR_GRA_1</xFant>
+				<enderEmit>
+					<xLgr>RUA BANDEIRA PAULISTA</xLgr>
+					<nro>726</nro>
+					<xCpl>Cj.31 E 32</xCpl>
+					<xBairro>ITAIM BIBI</xBairro>
+					<cMun>3550308</cMun>
+					<xMun>SAO PAULO</xMun>
+					<UF>SP</UF>
+					<CEP>09852060</CEP>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+					<fone>1126133129</fone>
+				</enderEmit>
+				<IE>048227821579</IE>
+				<CRT>3</CRT>
+			</emit>
+			<dest>
+				<CNPJ>11450358000132</CNPJ>
+				<xNome>CIPATEX IMPREGNADORA DE PAPEIS E TECIDOS LTDA</xNome>
+				<enderDest>
+					<xLgr>AVENIDA 1 DE MAIO</xLgr>
+					<nro>1341</nro>
+					<xBairro>ESTIVA</xBairro>
+					<cMun>3511508</cMun>
+					<xMun>CERQUILHO</xMun>
+					<UF>SP</UF>
+					<CEP>18520000</CEP>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+					<fone>1532849000</fone>
+				</enderDest>
+				<indIEDest>1</indIEDest>
+				<IE>048227821579</IE>
+				<email>antonio.farah@cipatex.com.br</email>
+			</dest>
+			<det nItem="1">
+				<prod>
+					<cProd>7002687</cProd>
+					<cEAN>SEM GTIN</cEAN>
+					<xProd>ALFAKOTE M</xProd>
+					<NCM>48119090</NCM>
+					<CFOP>5106</CFOP>
+					<uCom>KG</uCom>
+					<qCom>1043.0000</qCom>
+					<vUnCom>20.865400</vUnCom> 
+					<vProd>21762.61</vProd>
+					<cEANTrib>SEM GTIN</cEANTrib>
+					<uTrib>KG</uTrib>
+					<qTrib>1043.0000</qTrib>
+					<vUnTrib>20.865400</vUnTrib>
+					<indTot>1</indTot>
+					<xPed>15884</xPed>
+					<nItemPed>2</nItemPed>
+				</prod>
+				<imposto>
+					<ICMS>
+						<ICMS00>
+							<orig>1</orig>
+							<CST>00</CST>
+							<modBC>3</modBC>
+							<vBC>21762.61</vBC>
+							<pICMS>18.00</pICMS>
+							<vICMS>3917.27</vICMS>
+						</ICMS00>
+					</ICMS>
+					<IPI>
+						<CNPJProd>00000000000000</CNPJProd>
+						<cSelo>0</cSelo>
+						<qSelo>0</qSelo>
+						<cEnq>999</cEnq>
+						<IPITrib>
+							<CST>50</CST>
+							<vBC>21762.61</vBC>
+							<pIPI>5.00</pIPI>
+							<vIPI>1088.13</vIPI>
+						</IPITrib>
+					</IPI>
+					<PIS>
+						<PISAliq>
+							<CST>01</CST>
+							<vBC>21762.61</vBC>
+							<pPIS>1.65</pPIS>
+							<vPIS>359.08</vPIS>
+						</PISAliq>
+					</PIS>
+					<COFINS>
+						<COFINSAliq>
+							<CST>01</CST>
+							<vBC>21762.61</vBC>
+							<pCOFINS>7.60</pCOFINS>
+							<vCOFINS>1653.96</vCOFINS>
+						</COFINSAliq>
+					</COFINS>
+				</imposto>
+				<infAdProd>L 4001264120 (524)|L 4001264013 (519)||</infAdProd>
+			</det>
+			<det nItem="2">
+				<prod>
+					<cProd>8500812</cProd>
+					<cEAN>SEM GTIN</cEAN>
+					<xProd>MULTIKAST 440 CAPRA NOVA</xProd>
+					<NCM>48119090</NCM>
+					<CFOP>5106</CFOP>
+					<uCom>KG</uCom>
+					<qCom>508.0000</qCom>
+					<vUnCom>30.932600</vUnCom>
+					<vProd>15713.76</vProd>
+					<cEANTrib>SEM GTIN</cEANTrib>
+					<uTrib>KG</uTrib>
+					<qTrib>508.0000</qTrib>
+					<vUnTrib>30.932600</vUnTrib>
+					<indTot>1</indTot>
+					<xPed>15884</xPed>
+					<nItemPed>3</nItemPed>
+				</prod>
+				<imposto>
+					<ICMS>
+						<ICMS00>
+							<orig>1</orig>
+							<CST>00</CST>
+							<modBC>3</modBC>
+							<vBC>15713.76</vBC>
+							<pICMS>18.00</pICMS>
+							<vICMS>2828.48</vICMS>
+						</ICMS00>
+					</ICMS>
+					<IPI>
+						<CNPJProd>00000000000000</CNPJProd>
+						<cSelo>0</cSelo>
+						<qSelo>0</qSelo>
+						<cEnq>999</cEnq>
+						<IPITrib>
+							<CST>50</CST>
+							<vBC>15713.76</vBC>
+							<pIPI>5.00</pIPI>
+							<vIPI>785.69</vIPI>
+						</IPITrib>
+					</IPI>
+					<PIS>
+						<PISAliq>
+							<CST>01</CST>
+							<vBC>15713.76</vBC>
+							<pPIS>1.65</pPIS>
+							<vPIS>259.28</vPIS>
+						</PISAliq>
+					</PIS>
+					<COFINS>
+						<COFINSAliq>
+							<CST>01</CST>
+							<vBC>15713.76</vBC>
+							<pCOFINS>7.60</pCOFINS>
+							<vCOFINS>1194.25</vCOFINS>
+						</COFINSAliq>
+					</COFINS>
+				</imposto>
+				<infAdProd>L 4001310356 (508)||</infAdProd>
+			</det>
+			<det nItem="3">
+				<prod>
+					<cProd>7000261</cProd>
+					<cEAN>SEM GTIN</cEAN>
+					<xProd>PETALO</xProd>
+					<NCM>48115121</NCM>
+					<CFOP>5106</CFOP>
+					<uCom>KG</uCom>
+					<qCom>2005.0000</qCom>
+					<vUnCom>35.938000</vUnCom>
+					<vProd>72055.69</vProd>
+					<cEANTrib>SEM GTIN</cEANTrib>
+					<uTrib>KG</uTrib>
+					<qTrib>2005.0000</qTrib>
+					<vUnTrib>35.938000</vUnTrib>
+					<indTot>1</indTot>
+					<xPed>15884</xPed>
+					<nItemPed>5</nItemPed>
+				</prod>
+				<imposto>
+					<ICMS>
+						<ICMS00>
+							<orig>1</orig>
+							<CST>00</CST>
+							<modBC>3</modBC>
+							<vBC>72055.69</vBC>
+							<pICMS>18.00</pICMS>
+							<vICMS>12970.02</vICMS>
+						</ICMS00>
+					</ICMS>
+					<IPI>
+						<CNPJProd>00000000000000</CNPJProd>
+						<cSelo>0</cSelo>
+						<qSelo>0</qSelo>
+						<cEnq>999</cEnq>
+						<IPITrib>
+							<CST>50</CST>
+							<vBC>72055.69</vBC>
+							<pIPI>5.00</pIPI>
+							<vIPI>3602.78</vIPI>
+						</IPITrib>
+					</IPI>
+					<PIS>
+						<PISAliq>
+							<CST>01</CST>
+							<vBC>72055.69</vBC>
+							<pPIS>1.65</pPIS>
+							<vPIS>1188.92</vPIS>
+						</PISAliq>
+					</PIS>
+					<COFINS>
+						<COFINSAliq>
+							<CST>01</CST>
+							<vBC>72055.69</vBC>
+							<pCOFINS>7.60</pCOFINS>
+							<vCOFINS>5476.23</vCOFINS>
+						</COFINSAliq>
+					</COFINS>
+				</imposto>
+				<infAdProd>L 4001296817 (418)|L 4001296834 (522)|L 4001296840 (524)|L 4001296844 (541)||</infAdProd>
+			</det>
+			<det nItem="4">
+				<prod>
+					<cProd>8501203</cProd>
+					<cEAN>SEM GTIN</cEAN>
+					<xProd>T2000S 705 CANYON</xProd>
+					<NCM>48115128</NCM>
+					<CFOP>5106</CFOP>
+					<uCom>KG</uCom>
+					<qCom>485.0000</qCom>
+					<vUnCom>40.887200</vUnCom>
+					<vProd>19830.29</vProd>
+					<cEANTrib>SEM GTIN</cEANTrib>
+					<uTrib>KG</uTrib>
+					<qTrib>485.0000</qTrib>
+					<vUnTrib>40.887200</vUnTrib>
+					<indTot>1</indTot>
+					<xPed>15884</xPed>
+					<nItemPed>4</nItemPed>
+				</prod>
+				<imposto>
+					<ICMS>
+						<ICMS00>
+							<orig>6</orig>
+							<CST>00</CST>
+							<modBC>3</modBC>
+							<vBC>19830.29</vBC>
+							<pICMS>18.00</pICMS>
+							<vICMS>3569.45</vICMS>
+						</ICMS00>
+					</ICMS>
+					<IPI>
+						<CNPJProd>00000000000000</CNPJProd>
+						<cSelo>0</cSelo>
+						<qSelo>0</qSelo>
+						<cEnq>999</cEnq>
+						<IPITrib>
+							<CST>50</CST>
+							<vBC>19830.29</vBC>
+							<pIPI>5.00</pIPI>
+							<vIPI>991.51</vIPI>
+						</IPITrib>
+					</IPI>
+					<PIS>
+						<PISAliq>
+							<CST>01</CST>
+							<vBC>19830.29</vBC>
+							<pPIS>1.65</pPIS>
+							<vPIS>327.20</vPIS>
+						</PISAliq>
+					</PIS>
+					<COFINS>
+						<COFINSAliq>
+							<CST>01</CST>
+							<vBC>19830.29</vBC>
+							<pCOFINS>7.60</pCOFINS>
+							<vCOFINS>1507.10</vCOFINS>
+						</COFINSAliq>
+					</COFINS>
+				</imposto>
+				<infAdProd>L 4001270086 (485)||</infAdProd>
+			</det>
+			<total>
+				<ICMSTot>
+					<vBC>129362.35</vBC>
+					<vICMS>23285.22</vICMS>
+					<vICMSDeson>0.00</vICMSDeson>
+					<vFCP>0.00</vFCP>
+					<vBCST>0.00</vBCST>
+					<vST>0.00</vST>
+					<vFCPST>0.00</vFCPST>
+					<vFCPSTRet>0.00</vFCPSTRet>
+					<vProd>129362.35</vProd>
+					<vFrete>0.00</vFrete>
+					<vSeg>0.00</vSeg>
+					<vDesc>0.00</vDesc>
+					<vII>0.00</vII>
+					<vIPI>6468.11</vIPI>
+					<vIPIDevol>0.00</vIPIDevol>
+					<vPIS>2134.48</vPIS>
+					<vCOFINS>9831.54</vCOFINS>
+					<vOutro>0.00</vOutro>
+					<vNF>135830.46</vNF>
+				</ICMSTot>
+			</total>
+			<transp>
+				<modFrete>1</modFrete>
+				<transporta>
+					<CNPJ>16811582000126</CNPJ>
+					<xNome>EXPIDEX TRANSPORTES LTDA</xNome>
+					<IE>692039410111</IE>
+					<xEnder>ROD. MARECHAL RONDON SP 300, KM 155</xEnder>
+					<xMun>TIETE</xMun>
+					<UF>SP</UF>
+				</transporta>
+				<vol>
+					<qVol>8</qVol>
+					<esp>BOBINAS</esp>
+					<marca>FAVINI</marca>
+					<pesoL>4041.000</pesoL>
+					<pesoB>4251.000</pesoB>
+				</vol>
+			</transp>
+			<cobr>
+				<fat>
+					<nFat>6041</nFat>
+					<vOrig>135830.46</vOrig>
+					<vDesc>0.00</vDesc>
+					<vLiq>135830.46</vLiq>
+				</fat>
+				<dup>
+					<nDup>001</nDup>
+					<dVenc>2020-08-07</dVenc>
+					<vDup>135830.46</vDup>
+				</dup>
+			</cobr>
+			<pag>
+				<detPag>
+					<indPag>1</indPag>
+					<tPag>15</tPag>
+					<vPag>135830.46</vPag>
+				</detPag>
+			</pag>
+			<infAdic>
+				<infCpl>CAMBIO:5,6241#</infCpl>
+			</infAdic>
+		</infNFe>
+		<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+			<SignedInfo>
+				<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+				<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+				<Reference URI="#NFe35200692633315000194550010000965431010299326">
+					<Transforms>
+						<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+						<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+					</Transforms>
+					<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+					<DigestValue>wYIGxzDC/nbu0fwtBY5abqxFLGU=</DigestValue>
+				</Reference>
+			</SignedInfo>
+			<SignatureValue>V0iAJyXzKUkiSjqeDG3LRifSeVEzWls7gpqXNmfGjuGfjRWA0RvfafrYHkjCSmgcplgMHUeFhvctwFOcu3TbZVtCJxz/T5BIUSBXanfyxxpO8WAz20iHbrUi4OvAcQo8iCEWxTZPOeAsajEa/wb8NfLkA7C47w4T++WdpoDbI3gPm9L/FJ8mIiVPB0zvK4KgwgTXOclD/KYARy5sEblD4ozwPxbSof/WJ1EihdsBgcKvlGKkLaBNBMvam0nff1QaZFcFCAEgurfFwzxKrlgmezBSAhrLyE9QoR3KiGmlqK8ThsDQJeoXFgvS4t64JeTFbehWhIw+bJ8FEV/VxK5oOw==</SignatureValue>
+			<KeyInfo>
+				<X509Data>
+					<X509Certificate>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</X509Certificate>
+				</X509Data>
+			</KeyInfo>
+		</Signature>
+	</NFe>
+	<protNFe versao="4.00">
+		<infProt Id="Id135200463265504">
+			<tpAmb>1</tpAmb>
+			<verAplic>SP_NFE_PL009_V4</verAplic>
+			<chNFe>35200692633315000194550010000965431010299326</chNFe>
+			<dhRecbto>2020-06-08T14:39:39-03:00</dhRecbto>
+			<nProt>135200463265504</nProt>
+			<digVal>wYIGxzDC/nbu0fwtBY5abqxFLGU=</digVal>
+			<cStat>100</cStat>
+			<xMotivo>Autorizado o uso da NF-e</xMotivo>
+		</infProt>
+	</protNFe>
+</nfeProc>
