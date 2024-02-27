@@ -5,13 +5,11 @@ import br.com.actionsys.kawhyimport.metadata.field.FieldMapping;
 import br.com.actionsys.kawhyimport.metadata.field.FieldMappingService;
 import java.nio.file.Path;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Slf4j
@@ -19,39 +17,26 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class TableMappingService {
 
-  @Value("${file.metadata.table}")
-  public String tableMetadataFile;
-
   @Autowired private FieldMappingService fieldMappingService;
 
-  public List<TableMapping> readAndChain() {
-
-    List<TableMapping> allTables = read();
-
-    Map<String, List<TableMapping>> tablesByParent =
-        allTables.stream().collect(Collectors.groupingBy(TableMapping::getParentAPath));
-
-    List<TableMapping> resultTables = tablesByParent.get("-");
-    resultTables.forEach(table -> table.setChildTables(tablesByParent.get(table.getTableAPath())));
-    return resultTables;
-  }
-
-  public List<TableMapping> read() {
-
-    List<FieldMapping> allFields = fieldMappingService.read();
+  public List<TableMapping> read(Path tableMetadataFile, Path fieldMetadataFile) {
 
     try {
-      return FilesUtil.readLines(Path.of(tableMetadataFile)).stream()
+      List<FieldMapping> allFields = fieldMappingService.read(fieldMetadataFile);
+
+      return FilesUtil.readLines(tableMetadataFile).stream()
           .map(csvLine -> build(csvLine, allFields))
           .collect(Collectors.toList());
 
     } catch (Exception e) {
       // TODO PARAR PROCESSAMENTO?
-      throw new RuntimeException("Erro ao ler arquivos de metadados de tabelas " + tableMetadataFile);
+      throw new RuntimeException(
+          "Erro ao ler arquivos de metadados de tabelas " + tableMetadataFile);
     }
   }
 
   private FieldMapping getIdField(List<FieldMapping> tableFields, String tableId) {
+
     return tableFields.stream()
         .filter(field -> "id".equalsIgnoreCase(field.getVariable()))
         .findFirst()
@@ -60,6 +45,7 @@ public class TableMappingService {
   }
 
   private FieldMapping getSequenceField(List<FieldMapping> tableFields) {
+
     return tableFields.stream()
         .filter(field -> "nSequencia".equalsIgnoreCase(field.getVariable()))
         .findFirst()
@@ -85,7 +71,7 @@ public class TableMappingService {
       List<FieldMapping> tableFields =
           allFields.stream()
               .filter(fieldMapping -> tableMapping.getTableId().equals(fieldMapping.getTableId()))
-              .toList();
+              .collect(Collectors.toList());
 
       tableMapping.setIdField(getIdField(tableFields, tableMapping.getTableId()));
       tableMapping.setSequenceField(getSequenceField(tableFields));
@@ -99,6 +85,7 @@ public class TableMappingService {
   }
 
   private String getColumnValue(String[] columns, int columnIndex) {
+
     String value = columns[columnIndex].trim();
     return StringUtils.isBlank(value) ? null : value;
   }

@@ -1,5 +1,7 @@
 package br.com.actionsys.kawhyimport.metadata;
 
+import br.com.actionsys.kawhycommons.infra.function.ChaveAcessoNfseUtil;
+import br.com.actionsys.kawhycommons.infra.function.NumeroNfseUtil;
 import br.com.actionsys.kawhyimport.metadata.field.FieldMapping;
 import br.com.actionsys.kawhyimport.metadata.table.TableMapping;
 import br.com.actionsys.kawhyimport.util.APathUtil;
@@ -16,10 +18,10 @@ import org.w3c.dom.Document;
 
 @Slf4j
 @Service
-public class ReaderXmlService {
+public class XmlReaderService {
 
   public Object getValue(
-      TableMapping table, Document document, FieldMapping field, int index, int parentIndex) {
+      TableMapping table, Document document, FieldMapping field, int sequence, int parentSequence) {
 
     try {
       String aPath = field.getAPath();
@@ -28,12 +30,42 @@ public class ReaderXmlService {
         return null;
       }
 
-      if (StringUtils.isNoneBlank(table.getTableAPath())) {
-        aPath = insertIndex(aPath, table.getTableAPath(), index);
+      if (aPath.equals(MetadataConstants.SEQUENCE)) {
+        return sequence;
       }
 
-      if (parentIndex > 0 && StringUtils.isNoneBlank(table.getParentAPath())) {
-        aPath = insertIndex(aPath, table.getParentAPath(), parentIndex);
+      if (aPath.equals(MetadataConstants.PARENT_SEQUENCE)) {
+        return parentSequence;
+      }
+
+      if (aPath.equals(MetadataConstants.COMP_WHERE)) {
+        return StringUtils.substringBetween(field.getWhereComplement(), "'");
+      }
+
+      if (MetadataConstants.GENERATE_ID_NFSE.equals(field.getAPath())) {
+        String cnpjPrest = APathUtil.getString(document, "IntegracaoMidas/DadosPrestador/Cnpj");
+        String data = APathUtil.getString(document, "IntegracaoMidas/DtEmissao");
+        String numNf = APathUtil.getString(document, "IntegracaoMidas/Numero");
+
+        return Collections.singletonList(
+            ChaveAcessoNfseUtil.generateNfseId(data, cnpjPrest, numNf));
+      }
+
+      if (MetadataConstants.GENERATE_NUMBER_NFSE.equals(field.getAPath())) {
+        // Quando receber o NNF é feita a validação e alteração do número conforme regra no método
+        // generateNfseNumber
+        String numNf = APathUtil.getString(document, "IntegracaoMidas/Numero");
+
+        return Collections.singletonList(
+            BigDecimal.valueOf(Double.parseDouble(NumeroNfseUtil.generateNfseNumber(numNf, ""))));
+      }
+
+      if (StringUtils.isNoneBlank(table.getTableAPath())) {
+        aPath = insertIndex(aPath, table.getTableAPath(), sequence);
+      }
+
+      if (parentSequence > 0 && StringUtils.isNoneBlank(table.getParentAPath())) {
+        aPath = insertIndex(aPath, table.getParentAPath(), parentSequence);
       }
 
       return formatValue(APathUtil.getString(document, aPath), field);
@@ -55,7 +87,7 @@ public class ReaderXmlService {
     }
   }
 
-  public int count(Document document, TableMapping tableMapping, int parentIndex) {
+  public int count(Document document, TableMapping tableMapping, int parentSequence) {
 
     String tableAPath = tableMapping.getTableAPath();
 
@@ -63,8 +95,8 @@ public class ReaderXmlService {
       return 0;
     }
 
-    if (parentIndex > 0 && StringUtils.isNoneBlank(tableMapping.getParentAPath())) {
-      tableAPath = insertIndex(tableAPath, tableMapping.getParentAPath(), parentIndex);
+    if (parentSequence > 0 && StringUtils.isNoneBlank(tableMapping.getParentAPath())) {
+      tableAPath = insertIndex(tableAPath, tableMapping.getParentAPath(), parentSequence);
     }
 
     try {

@@ -6,6 +6,8 @@ import br.com.actionsys.kawhyimport.command.SqlCommandType;
 import br.com.actionsys.kawhyimport.metadata.field.FieldMapping;
 import br.com.actionsys.kawhyimport.metadata.table.TableMapping;
 import br.com.actionsys.kawhyimport.metadata.table.TableMappingService;
+import br.com.actionsys.kawhyimport.repository.GenericRepository;
+import java.nio.file.Path;
 import java.util.*;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -17,13 +19,33 @@ import org.springframework.stereotype.Service;
 public class CommandsXmlService {
 
   @Autowired TableMappingService tableMappingService;
-  @Autowired ReaderXmlService readerXmlService;
+  @Autowired XmlReaderService xmlReaderService;
+  @Autowired GenericRepository genericRepository;
 
-  public List<SqlCommand> generateCommandsFromXml(IntegrationItem item) {
+  public void executeCommands(List<SqlCommand> sqlCommands) {
+
+    // TODO IMPLEMENTAR UPDATE OU COMANDOS DE CONTROLE FICARÃO EM OUTRO LUGAR?
+    sqlCommands.forEach(
+        sqlCommand -> {
+          log.trace("Executando comando: " + sqlCommand);
+
+          if (SqlCommandType.INSERT == sqlCommand.getType()) {
+            genericRepository.insert(sqlCommand.getTableName(), sqlCommand.getValues());
+
+          } else {
+            log.warn(
+                "Tipo de comando não suportado, comando={} tabela={}",
+                sqlCommand.getType(),
+                sqlCommand.getTableName());
+          }
+        });
+  }
+
+  public List<SqlCommand> generateCommandsFromXml(IntegrationItem item, Path tableMetadataFile, Path fieldMetadataFile) {
 
     log.trace("Gerando comandos a partir do xml para o documento " + item.getId());
 
-    List<TableMapping> tableMappings = tableMappingService.read();
+    List<TableMapping> tableMappings = tableMappingService.read(tableMetadataFile, fieldMetadataFile);
 
     return generateCommands(tableMappings, item);
   }
@@ -57,10 +79,10 @@ public class CommandsXmlService {
 
     if (item.getId() == null) {
       item.setId(
-          (String) readerXmlService.getValue(table, item.getDocument(), table.getIdField(), 1, 0));
+          (String) xmlReaderService.getValue(table, item.getDocument(), table.getIdField(), 1, 0));
     }
 
-    int countItens = readerXmlService.count(item.getDocument(), table, parentSequence);
+    int countItens = xmlReaderService.count(item.getDocument(), table, parentSequence);
 
     for (int sequence = 1; sequence <= countItens; sequence++) {
 
@@ -72,14 +94,7 @@ public class CommandsXmlService {
         log.trace(field.toString());
 
         Object value =
-            switch (field.getAPath()) {
-              case "${sequence}" -> sequence;
-              case "${parentSequence}" -> parentSequence;
-              case "${compWhere}" -> StringUtils.substringBetween(field.getWhereComplement(), "'");
-              default ->
-                  readerXmlService.getValue(
-                      table, item.getDocument(), field, sequence, parentSequence);
-            };
+            xmlReaderService.getValue(table, item.getDocument(), field, sequence, parentSequence);
 
         if (value != null) {
           values.put(field.getColumn(), value);
@@ -106,7 +121,7 @@ public class CommandsXmlService {
     List<SqlCommand> commands = new ArrayList<>();
 
     int countParentItens =
-        readerXmlService.count(item.getDocument(), tableMapping.getParentAPath());
+        xmlReaderService.count(item.getDocument(), tableMapping.getParentAPath());
 
     log.trace(
         "{} registros encontrados para o parentAPath {}",

@@ -5,26 +5,22 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
 public class FieldMappingService {
 
-  @Value("${file.metadata.field}")
-  public String fieldMetadataFile;
-
-  public List<FieldMapping> read() {
+  public List<FieldMapping> read(Path fieldMetadataFile) {
 
     try {
-      return FilesUtil.readLines(Path.of(fieldMetadataFile)).stream()
+      return FilesUtil.readLines(fieldMetadataFile).stream()
           .map(this::build)
           .filter(field -> !isIncomplete(field))
           .collect(Collectors.toList());
 
     } catch (Exception e) {
       // TODO PARAR PROCESSAMENTO?
-      throw new RuntimeException("Erro ao ler arquivos de metadados de colunas " + fieldMetadataFile);
+      throw new RuntimeException("Erro ao ler arquivos de metadados de colunas " + fieldMetadataFile, e);
     }
   }
 

@@ -1,0 +1,32 @@
+fq72300,nfeProc/NFe/infNFe,-,
+fq72301,nfeProc/NFe/infNFe/det,-,
+fq72302,nfeProc/NFe/infNFe/dest,-,neq720803 = 'dest'
+fq72302,nfeProc/NFe/infNFe/emit,-,neq720803 = 'emit'
+fq72302,nfeProc/NFe/infNFe/entrega,-,neq720803 = 'entrega'
+fq72302,nfeProc/NFe/infNFe/retirada,-,neq720803 = 'retirada'
+fq72302,nfeProc/NFe/infNFe/transp/transporta,-,neq720803 = 'transporta'
+fq72303,nfeProc/NFe/infNFe/NFref,-,
+fq72304,nfeProc/NFe/infNFe/avulsa,-,
+fq72305,nfeProc/NFe/infNFe/transp/vol,-,
+fq72306,nfeProc/NFe/infNFe/transp/reboque,-,
+fq72307,nfeProc/NFe/infNFe/transp/vol/lacres,nfeProc/NFe/infNFe/transp,
+fq72308,nfeProc/NFe/infNFe/cobr/dup,-,
+fq72309,nfeProc/NFe/infNFe/infAdic/obsCont,-,
+fq72310,nfeProc/NFe/infNFe/infAdic/procRef,-,
+fq72311,nfeProc/NFe/infNFe/det/prod/DI/adi,nfeProc/NFe/infNFe/det,
+fq72312,nfeProc/NFe/infNFe/det/prod/DI,nfeProc/NFe/infNFe/det,
+fq72313,nfeProc/NFe/infNFe/det/prod/veicProd,nfeProc/NFe/infNFe/det,
+fq72314,nfeProc/NFe/infNFe/det/prod/med,nfeProc/NFe/infNFe/det,
+fq72315,nfeProc/NFe/infNFe/det/prod/arma,nfeProc/NFe/infNFe/det,
+fq72316,nfeProc/NFe/infNFe/det/prod/comb,nfeProc/NFe/infNFe/det,
+fq72336,nfeProc/NFe/infNFe/infRespTec,-,
+fq72300a,nfeProc/NFe/infNFe/infAdic,-,
+fq72322,nfeProc/NFe/infNFe/autXML,-,
+fq72323,nfeProc/NFe/infNFe/det/prod/detExport,nfeProc/NFe/infNFe/det,
+fq72325,nfeProc/NFe/infNFe/pag/detPag,-,
+fq72326,nfeProc/NFe/infNFe/exporta,-,
+fq72327,nfeProc/NFe/infNFe/cana,-,
+fq72328,nfeProc/NFe/infNFe/cana/forDia,-,
+fq72329,nfeProc/NFe/infNFe/cana/deduc,-,
+fq72334,nfeProc/NFe/infNFe/det/prod/rastro,-,
+fq72317,nfeProc/NFe/infNFe,-,

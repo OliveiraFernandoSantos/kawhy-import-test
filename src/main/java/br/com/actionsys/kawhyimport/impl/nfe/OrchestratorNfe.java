@@ -1,6 +1,7 @@
-package br.com.actionsys.kawhyimport;
+package br.com.actionsys.kawhyimport.impl.nfe;
 
 import br.com.actionsys.kawhycommons.integration.IntegrationItem;
+import br.com.actionsys.kawhyimport.MetadataOrchestrator;
 import br.com.actionsys.kawhyimport.command.SqlCommand;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

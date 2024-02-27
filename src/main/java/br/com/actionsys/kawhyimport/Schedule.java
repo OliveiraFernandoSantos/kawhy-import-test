@@ -1,5 +1,6 @@
 package br.com.actionsys.kawhyimport;
 
+import br.com.actionsys.kawhyimport.impl.nfe.OrchestratorNfe;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;

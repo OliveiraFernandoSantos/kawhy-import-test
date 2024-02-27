@@ -14,10 +14,10 @@ import org.springframework.stereotype.Component;
 @Component
 @EnableScheduling
 @SpringBootApplication(scanBasePackages = "br.com.actionsys")
-public class ImportNfeApplication implements ApplicationRunner {
+public class ImportApplication implements ApplicationRunner {
 
     public static void main(String[] args) {
-        SpringApplication.run(ImportNfeApplication.class, args);
+        SpringApplication.run(ImportApplication.class, args);
     }
 
     @Autowired
