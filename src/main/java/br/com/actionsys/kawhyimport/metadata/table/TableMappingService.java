@@ -17,7 +17,8 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class TableMappingService {
 
-  @Autowired private FieldMappingService fieldMappingService;
+  @Autowired
+  private FieldMappingService fieldMappingService;
 
   public List<TableMapping> read(Path tableMetadataFile, Path fieldMetadataFile) {
 

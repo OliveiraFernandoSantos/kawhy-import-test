@@ -3,11 +3,13 @@ package br.com.actionsys.kawhyimport.metadata;
 import br.com.actionsys.kawhycommons.integration.IntegrationItem;
 import br.com.actionsys.kawhycommons.integration.metadata.MetadataService;
 import br.com.actionsys.kawhyimport.command.SqlCommand;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.stream.Stream;
+
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -25,67 +27,65 @@ import org.springframework.core.io.Resource;
 @SpringBootApplication(scanBasePackages = "br.com.actionsys")
 public class CommandsXmlServiceTest {
 
-  @Autowired CommandsXmlService commandsXmlService;
+    @Autowired
+    private CommandsXmlService commandsXmlService;
 
-  @Autowired MetadataService metadataService;
+    @Autowired
+    private MetadataService metadataService;
 
-  @Test
-  @DisplayName("Testar o processamento de Nfes utilizando a estrutura atual de testes do KawhyNfe")
-  void validateNfeMetadata() {
+    @Test
+    @DisplayName("Testar o processamento de Nfes utilizando a estrutura atual de testes do KawhyNfe")
+    void validateNfeMetadata() {
 
-    Resource xmlResource = new ClassPathResource("nfe/xml");
+        Resource xmlResource = new ClassPathResource("nfe/xml");
 
-    Resource validationMetadataResource =
-        new ClassPathResource("nfe/metadata/validation");
+        Resource validationMetadataResource = new ClassPathResource("nfe/metadata/validation");
 
-    Resource importTableMetadataResource =
-        new ClassPathResource("nfe/metadata/import/nfeImportTableMetadata.csv");
+        Resource importTableMetadataResource = new ClassPathResource("nfe/metadata/import/nfeImportTableMetadata.csv");
 
-    Resource importFieldMetadataResource =
-        new ClassPathResource("nfe/metadata/import/nfeImportFieldMetadata.csv");
+        Resource importFieldMetadataResource = new ClassPathResource("nfe/metadata/import/nfeImportFieldMetadata.csv");
 
-    importFiles(xmlResource, importTableMetadataResource, importFieldMetadataResource);
+        importFiles(xmlResource, importTableMetadataResource, importFieldMetadataResource);
 
-    Assertions.assertDoesNotThrow(
-        () ->
-            metadataService.validateFiles(
-                validationMetadataResource.getFile().toPath(), xmlResource.getFile().toPath()));
-  }
-
-  private void importFiles(
-      Resource xmlResource,
-      Resource importTableMetadataResource,
-      Resource importFieldMetadataResource) {
-
-    try (Stream<Path> files =
-        Files.walk(xmlResource.getFile().toPath(), 99).filter(Files::isRegularFile)) {
-
-      files.forEach(
-          path -> importFile(path, importTableMetadataResource, importFieldMetadataResource));
-
-    } catch (IOException e) {
-      throw new RuntimeException("Erro ao importar arquivos", e);
+        Assertions.assertDoesNotThrow(
+                () ->
+                        metadataService.validateFiles(
+                                validationMetadataResource.getFile().toPath(), xmlResource.getFile().toPath()));
     }
-  }
 
-  private void importFile(
-      Path file, Resource tableMetadataResource, Resource fieldMetadataResource) {
+    private void importFiles(
+            Resource xmlResource,
+            Resource importTableMetadataResource,
+            Resource importFieldMetadataResource) {
 
-    try {
-      log.info("Importado documento {}", file.getFileName());
+        try (Stream<Path> files =
+                     Files.walk(xmlResource.getFile().toPath(), 99).filter(Files::isRegularFile)) {
 
-      IntegrationItem item = new IntegrationItem(file.toFile());
+            files.forEach(
+                    path -> importFile(path, importTableMetadataResource, importFieldMetadataResource));
 
-      List<SqlCommand> commands =
-          commandsXmlService.generateCommandsFromXml(
-              item,
-              tableMetadataResource.getFile().toPath(),
-              fieldMetadataResource.getFile().toPath());
-
-      commandsXmlService.executeCommands(commands);
-
-    } catch (Exception e) {
-      throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException("Erro ao importar arquivos", e);
+        }
     }
-  }
+
+    private void importFile(Path file, Resource tableMetadataResource, Resource fieldMetadataResource) {
+
+        try {
+            log.info("Importado documento {}", file.getFileName());
+
+            IntegrationItem item = new IntegrationItem(file.toFile());
+
+            List<SqlCommand> commands =
+                    commandsXmlService.generateCommandsFromXml(
+                            item,
+                            tableMetadataResource.getFile().toPath(),
+                            fieldMetadataResource.getFile().toPath());
+
+            commandsXmlService.executeCommands(commands);
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
