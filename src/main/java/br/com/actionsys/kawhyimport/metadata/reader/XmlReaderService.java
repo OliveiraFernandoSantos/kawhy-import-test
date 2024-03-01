@@ -2,28 +2,28 @@ package br.com.actionsys.kawhyimport.metadata.reader;
 
 import br.com.actionsys.kawhycommons.infra.function.ChaveAcessoNfseUtil;
 import br.com.actionsys.kawhycommons.infra.function.NumeroNfseUtil;
-import br.com.actionsys.kawhyimport.util.MetadataConstants;
+import br.com.actionsys.kawhycommons.integration.IntegrationItem;
 import br.com.actionsys.kawhyimport.metadata.field.FieldMapping;
 import br.com.actionsys.kawhyimport.metadata.table.TableMapping;
 import br.com.actionsys.kawhyimport.util.APathUtil;
-
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
-import javax.xml.xpath.XPathExpressionException;
-
+import br.com.actionsys.kawhyimport.util.MetadataFunctions;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
 
+import javax.xml.xpath.XPathExpressionException;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Slf4j
 @Service
 public class XmlReaderService {
 
-    public Object getValue(TableMapping table, Document document, FieldMapping field, int sequence, int parentSequence) {
+    public Object getValue(TableMapping table, IntegrationItem item, FieldMapping field, int sequence, int parentSequence) {
 
         try {
             String aPath = field.getAPath();
@@ -32,31 +32,34 @@ public class XmlReaderService {
                 return null;
             }
 
-            if (aPath.equals(MetadataConstants.SEQUENCE)) {
+            if (aPath.equals(MetadataFunctions.DOCUMENT_ID)) {
+                return item.getId();
+            }
+
+            if (aPath.equals(MetadataFunctions.SEQUENCE)) {
                 return sequence;
             }
 
-            if (aPath.equals(MetadataConstants.PARENT_SEQUENCE)) {
+            if (aPath.equals(MetadataFunctions.PARENT_SEQUENCE)) {
                 return parentSequence;
             }
 
-            if (aPath.equals(MetadataConstants.COMP_WHERE)) {
+            if (aPath.equals(MetadataFunctions.COMP_WHERE)) {
                 return StringUtils.substringBetween(field.getWhereComplement(), "'");
             }
 
-            if (MetadataConstants.GENERATE_ID_NFSE.equals(field.getAPath())) {
-                String cnpjPrest = APathUtil.getString(document, "IntegracaoMidas/DadosPrestador/Cnpj");
-                String data = APathUtil.getString(document, "IntegracaoMidas/DtEmissao");
-                String numNf = APathUtil.getString(document, "IntegracaoMidas/Numero");
+            if (MetadataFunctions.GENERATE_ID_NFSE.equals(field.getAPath())) {
+                String cnpjPrest = APathUtil.getString(item.getDocument(), "IntegracaoMidas/DadosPrestador/Cnpj");
+                String data = APathUtil.getString(item.getDocument(), "IntegracaoMidas/DtEmissao");
+                String numNf = APathUtil.getString(item.getDocument(), "IntegracaoMidas/Numero");
 
-                return Collections.singletonList(
-                        ChaveAcessoNfseUtil.generateNfseId(data, cnpjPrest, numNf));
+                return Collections.singletonList(ChaveAcessoNfseUtil.generateNfseId(data, cnpjPrest, numNf));
             }
 
-            if (MetadataConstants.GENERATE_NUMBER_NFSE.equals(field.getAPath())) {
+            if (MetadataFunctions.GENERATE_NUMBER_NFSE.equals(field.getAPath())) {
                 // Quando receber o NNF é feita a validação e alteração do número conforme regra no método
                 // generateNfseNumber
-                String numNf = APathUtil.getString(document, "IntegracaoMidas/Numero");
+                String numNf = APathUtil.getString(item.getDocument(), "IntegracaoMidas/Numero");
 
                 return Collections.singletonList(
                         BigDecimal.valueOf(Double.parseDouble(NumeroNfseUtil.generateNfseNumber(numNf, ""))));
@@ -70,14 +73,17 @@ public class XmlReaderService {
                 aPath = insertIndex(aPath, table.getParentAPath(), parentSequence);
             }
 
-            return formatValue(APathUtil.getString(document, aPath), field);
+            return formatValue(APathUtil.getString(item.getDocument(), aPath), field);
 
         } catch (Exception e) {
             throw new RuntimeException("Erro ao recuperar valor do campo: " + field, e);
         }
     }
 
-    private String insertIndex(String aPath, String parentAPath, Integer index) {
+    private String insertIndex(String aPath, String parentAPath, int index) {
+        if (index < 1) {
+            index = 1;
+        }
         return StringUtils.replace(aPath, parentAPath, parentAPath + "[" + index + "]");
     }
 

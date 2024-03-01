@@ -1,29 +1,28 @@
 package br.com.actionsys.kawhyimport.metadata.field;
 
 import br.com.actionsys.kawhycommons.infra.util.FilesUtil;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.stereotype.Service;
 
 import java.nio.file.Path;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.stereotype.Service;
-
 @Service
 public class FieldMappingService {
 
-    public List<FieldMapping> read(Path fieldMetadataFile) {
+    public List<FieldMapping> read(Path metadataFile) {
 
-        try {
-            return FilesUtil.readLines(fieldMetadataFile).stream()
-                    .map(this::build)
-                    .filter(field -> !isIncomplete(field))
-                    .collect(Collectors.toList());
+        List<String> lines = FilesUtil.readLines(metadataFile);
 
-        } catch (Exception e) {
-            // TODO PARAR PROCESSAMENTO?
-            throw new RuntimeException("Erro ao ler arquivos de metadados de colunas " + fieldMetadataFile, e);
-        }
+        // remove linha de cabecalho
+        lines.remove(0);
+
+        return lines.stream()
+                .map(this::build)
+                .filter(field -> !isIncomplete(field))
+                .collect(Collectors.toList());
+
     }
 
     private boolean isIncomplete(FieldMapping fieldMapping) {
@@ -48,6 +47,8 @@ public class FieldMappingService {
             fieldMapping.setWhereComplement(getColumnValue(columns, 5));
             fieldMapping.setRegex(getColumnValue(columns, 6));
             fieldMapping.setMaxSize(getColumnValue(columns, 7));
+            fieldMapping.setTableAPath(getColumnValue(columns, 8));
+            fieldMapping.setParentAPath(getColumnValue(columns, 9));
 
             fieldMapping.setTableId(
                     fieldMapping.getWhereComplement() == null

@@ -14,4 +14,6 @@ public class FieldMapping {
     private String whereComplement;
     private String regex;
     private String maxSize;
+    private String tableAPath;
+    private String parentAPath;
 }
