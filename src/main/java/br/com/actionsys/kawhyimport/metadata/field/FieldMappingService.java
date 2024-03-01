@@ -1,6 +1,7 @@
 package br.com.actionsys.kawhyimport.metadata.field;
 
 import br.com.actionsys.kawhycommons.infra.util.FilesUtil;
+import br.com.actionsys.kawhyimport.util.ImportConstants;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
@@ -36,7 +37,7 @@ public class FieldMappingService {
     private FieldMapping build(String csvLine) {
 
         try {
-            String[] columns = csvLine.split(",", -1);
+            String[] columns = csvLine.split(ImportConstants.CSV_SEPARATOR, -1);
 
             FieldMapping fieldMapping = new FieldMapping();
             fieldMapping.setTable(getColumnValue(columns, 0));

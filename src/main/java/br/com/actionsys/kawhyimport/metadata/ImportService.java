@@ -7,6 +7,8 @@ import br.com.actionsys.kawhyimport.metadata.reader.XmlReaderService;
 import br.com.actionsys.kawhyimport.metadata.table.TableMapping;
 import br.com.actionsys.kawhyimport.metadata.table.TableMappingService;
 import br.com.actionsys.kawhyimport.repository.GenericRepository;
+import br.com.actionsys.kawhyimport.util.ImportConstants;
+import br.com.actionsys.kawhyimport.util.MetadataFunctions;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +52,7 @@ public class ImportService {
         try {
             // Para preencher o id pelo menos uma das colunas de id deve ter o APath preenchido
             TableMapping table = tableMappings.stream()
-                    .filter(t -> !StringUtils.startsWith(t.getIdField().getAPath(), "${"))
+                    .filter(t -> !StringUtils.startsWith(t.getIdField().getAPath(), MetadataFunctions.FUNCTION_PREFIX))
                     .findFirst()
                     .orElseThrow(() -> new RuntimeException("Não foi encontrado uma coluna do tipo id com o APath preenchido"));
 

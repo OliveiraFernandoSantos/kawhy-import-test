@@ -4,6 +4,7 @@ import br.com.actionsys.kawhycommons.infra.function.ChaveAcessoNfseUtil;
 import br.com.actionsys.kawhycommons.infra.function.NumeroNfseUtil;
 import br.com.actionsys.kawhycommons.integration.IntegrationItem;
 import br.com.actionsys.kawhyimport.metadata.field.FieldMapping;
+import br.com.actionsys.kawhyimport.metadata.field.FieldType;
 import br.com.actionsys.kawhyimport.metadata.table.TableMapping;
 import br.com.actionsys.kawhyimport.util.APathUtil;
 import br.com.actionsys.kawhyimport.util.MetadataFunctions;
@@ -61,8 +62,7 @@ public class XmlReaderService {
                 // generateNfseNumber
                 String numNf = APathUtil.getString(item.getDocument(), "IntegracaoMidas/Numero");
 
-                return Collections.singletonList(
-                        BigDecimal.valueOf(Double.parseDouble(NumeroNfseUtil.generateNfseNumber(numNf, ""))));
+                return Collections.singletonList(BigDecimal.valueOf(Double.parseDouble(NumeroNfseUtil.generateNfseNumber(numNf, ""))));
             }
 
             if (StringUtils.isNoneBlank(table.getTableAPath())) {
@@ -110,13 +110,11 @@ public class XmlReaderService {
         try {
             return APathUtil.count(document, tableAPath);
         } catch (Exception e) {
-            throw new RuntimeException(
-                    "Erro ao realizar contagem de registros para a tabela: " + tableMapping, e);
+            throw new RuntimeException("Erro ao realizar contagem de registros para a tabela: " + tableMapping, e);
         }
     }
 
-    public List<?> getListOfValues(Document document, FieldMapping field)
-            throws XPathExpressionException {
+    public List<?> getListOfValues(Document document, FieldMapping field) throws XPathExpressionException {
 
         if (field.getAPath() == null) {
             return Collections.emptyList();
@@ -134,24 +132,22 @@ public class XmlReaderService {
         if (value == null || value.trim().isEmpty()) {
             return null;
 
-        } else if (field.getType().equals("Date")) {
+        } else if (FieldType.DATE.name().equals(field.getType().toUpperCase())) {
             return value.substring(0, 10);
 
-        } else if (field.getType().equals("Time")) {
+        } else if (FieldType.TIME.name().equals(field.getType().toUpperCase())) {
             return value.substring(11, 19);
 
-        } else if (field.getType().equals("Decimal")) {
+        } else if (FieldType.DECIMAL.name().equals(field.getType().toUpperCase())) {
             return BigDecimal.valueOf(Double.parseDouble(value));
 
-        } else if (field.getType().equals("Integer")) {
+        } else if (FieldType.INTEGER.name().equals(field.getType().toUpperCase())) {
             return new BigInteger(value);
 
         } else {
-
             if (field.getRegex() != null) { // TODO REVISAR REGEX
                 value = value.trim().replaceAll(field.getRegex(), "");
             }
-
             if (field.getMaxSize() != null) {
                 try {
                     value = StringUtils.substring(value, 0, Integer.parseInt(field.getMaxSize()));
@@ -159,7 +155,6 @@ public class XmlReaderService {
                     throw new RuntimeException("Erro processar maxSize", e);
                 }
             }
-
             return value.trim();
         }
     }
