@@ -9,4 +9,6 @@ public class MetadataFunctions {
     public static final String PARENT_SEQUENCE = "${parentSequence}";
     public static final String SEQUENCE = "${sequence}";
     public static final String DOCUMENT_ID = "${chaveDeAcesso}";
+    public static final String GET_CNPJ_TOMADOR = "${getCnpjTomador}"; //TODO IMPLE
+    public static final String FIXED_VALUE_PREFIX = FUNCTION_PREFIX + "'";
 }

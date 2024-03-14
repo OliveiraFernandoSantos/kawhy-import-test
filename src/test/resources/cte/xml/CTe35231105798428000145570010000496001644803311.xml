@@ -1,0 +1,225 @@
+<cteProc versao="3.00" xmlns="http://www.portalfiscal.inf.br/cte">
+	<CTe xmlns="http://www.portalfiscal.inf.br/cte">
+		<infCte versao="3.00" Id="CTe35231105798428000145570010000496001644803311">
+			<ide>
+				<cUF>35</cUF>
+				<cCT>64480331</cCT>
+				<CFOP>5352</CFOP>
+				<natOp>PREST SERV DE TRANSP A ESTAB INDL</natOp>
+				<mod>57</mod>
+				<serie>1</serie>
+				<nCT>49600</nCT>
+				<dhEmi>2023-11-16T10:59:16-03:00</dhEmi>
+				<tpImp>1</tpImp>
+				<tpEmis>1</tpEmis>
+				<cDV>1</cDV>
+				<tpAmb>1</tpAmb>
+				<tpCTe>0</tpCTe>
+				<procEmi>0</procEmi>
+				<verProc>00</verProc>
+				<cMunEnv>3515004</cMunEnv>
+				<xMunEnv>EMBU</xMunEnv>
+				<UFEnv>SP</UFEnv>
+				<modal>01</modal>
+				<tpServ>0</tpServ>
+				<cMunIni>3518800</cMunIni>
+				<xMunIni>GUARULHOS</xMunIni>
+				<UFIni>SP</UFIni>
+				<cMunFim>3550308</cMunFim>
+				<xMunFim>SAO PAULO</xMunFim>
+				<UFFim>SP</UFFim>
+				<retira>1</retira>
+				<indIEToma>1</indIEToma>
+				<toma3>
+					<toma>1</toma>
+				</toma3>
+			</ide>
+			<compl>
+				<xEmi>MILTON</xEmi>
+				<Entrega>
+					<comData>
+						<tpPer>2</tpPer>
+						<dProg>2023-11-16</dProg>
+					</comData>
+					<semHora>
+						<tpHor>0</tpHor>
+					</semHora>
+				</Entrega>
+				<origCalc>GUARULHOS</origCalc>
+				<destCalc>SAO PAULO</destCalc>
+				<xObs>TRUCK CZC-7598 MOTORISTA MARCIO ANTONIO DE OLIVEIRA CPF 31165765802 Peso Total 1.000,000KG Volume Total 40</xObs>
+			</compl>
+			<emit>
+				<CNPJ>05798428000145</CNPJ>
+				<IE>298164550117</IE>
+				<xNome>LOGIAR TRANSP ARMAZ E LOGISTICA LTDA ME</xNome>
+				<xFant>LOGIAR</xFant>
+				<enderEmit>
+					<xLgr>HELIO OSSAMU DAIKUARA</xLgr>
+					<nro>607</nro>
+					<xBairro>JARDIM FERREIRA</xBairro>
+					<cMun>3515004</cMun>
+					<xMun>EMBU</xMun>
+					<CEP>06806225</CEP>
+					<UF>SP</UF>
+					<fone>1147813942</fone>
+				</enderEmit>
+			</emit>
+			<rem>
+				<CNPJ>08062665000646</CNPJ>
+				<IE>127420758112</IE>
+				<xNome>VETTA QUIMICA IMP E EXP LTDA</xNome>
+				<xFant>VETTA QUIMICA IMP E EXP LTDA</xFant>
+				<fone>1154643089</fone>
+				<enderReme>
+					<xLgr>AV JACUNDA</xLgr>
+					<nro>140</nro>
+					<xBairro>CIDADE TUPINAMBA</xBairro>
+					<cMun>3518800</cMun>
+					<xMun>GUARULHOS</xMun>
+					<CEP>07263170</CEP>
+					<UF>SP</UF>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+				</enderReme>
+			</rem>
+			<exped>
+				<CNPJ>08062665000647</CNPJ>
+				<IE>127420758112</IE>
+				<xNome>VETTA QUIMICA IMP E EXP LTDA</xNome>
+				<fone>1154643089</fone>
+				<enderExped>
+					<xLgr>AV JACUNDA</xLgr>
+					<nro>140</nro>
+					<xBairro>CIDADE TUPINAMBA</xBairro>
+					<cMun>3518800</cMun>
+					<xMun>GUARULHOS</xMun>
+					<CEP>07263170</CEP>
+					<UF>SP</UF>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+				</enderExped>
+			</exped>
+			<receb>
+				<CNPJ>02746406000143</CNPJ>
+				<IE>116009467116</IE>
+				<xNome>FLEXOMARINE SA</xNome>
+				<fone>1126338611</fone>
+				<enderReceb>
+					<xLgr>RUA DIAS DA SILVA</xLgr>
+					<nro>17</nro>
+					<xBairro>VILA MARIA BAIXA</xBairro>
+					<cMun>3550308</cMun>
+					<xMun>SAO PAULO</xMun>
+					<CEP>02114000</CEP>
+					<UF>SP</UF>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+				</enderReceb>
+			</receb>
+			<dest>
+				<CNPJ>02746406000143</CNPJ>
+				<IE>116009467116</IE>
+				<xNome>FLEXOMARINE SA</xNome>
+				<fone>1126338611</fone>
+				<enderDest>
+					<xLgr>RUA DIAS DA SILVA</xLgr>
+					<nro>17</nro>
+					<xBairro>VILA MARIA BAIXA</xBairro>
+					<cMun>3550308</cMun>
+					<xMun>SAO PAULO</xMun>
+					<CEP>02114000</CEP>
+					<UF>SP</UF>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+				</enderDest>
+			</dest>
+			<vPrest>
+				<vTPrest>782.49</vTPrest>
+				<vRec>782.49</vRec>
+				<Comp>
+					<xNome>FRETE PESO</xNome>
+					<vComp>675.00</vComp>
+				</Comp>
+				<Comp>
+					<xNome>FRETE VALOR</xNome>
+					<vComp>13.59</vComp>
+				</Comp>
+			</vPrest>
+			<imp>
+				<ICMS>
+					<ICMS00>
+						<CST>00</CST>
+						<vBC>782.49</vBC>
+						<pICMS>12.00</pICMS>
+						<vICMS>93.90</vICMS>
+					</ICMS00>
+				</ICMS>
+				<vTotTrib>93.90</vTotTrib>
+			</imp>
+			<infCTeNorm>
+				<infCarga>
+					<vCarga>13590.00</vCarga>
+					<proPred>ESTEARINA DUPLA SACO</proPred>
+					<xOutCat>VOLUMES</xOutCat>
+					<infQ>
+						<cUnid>03</cUnid>
+						<tpMed>VOLUMES</tpMed>
+						<qCarga>40.0000</qCarga>
+					</infQ>
+					<infQ>
+						<cUnid>01</cUnid>
+						<tpMed>ESTEARINA DUPLA</tpMed>
+						<qCarga>1000.0000</qCarga>
+					</infQ>
+				</infCarga>
+				<infDoc>
+					<infNFe>
+						<chave>35231108062665000646550010000057691003580661</chave>
+						<dPrev>2023-11-16</dPrev>
+					</infNFe>
+				</infDoc>
+				<infModal versaoModal="3.00">
+					<rodo>
+						<RNTRC>11874909</RNTRC>
+					</rodo>
+				</infModal>
+			</infCTeNorm>
+		</infCte>
+		<infCTeSupl>
+			<qrCodCTe><![CDATA[https://nfe.fazenda.sp.gov.br/CTeConsulta/qrCode?chCTe=35231105798428000145570010000496001644803311&tpAmb=1]]></qrCodCTe>
+		</infCTeSupl>
+		<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+			<SignedInfo>
+				<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+				<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+				<Reference URI="#CTe35231105798428000145570010000496001644803311">
+					<Transforms>
+						<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+						<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+					</Transforms>
+					<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+					<DigestValue>1wc7E6h1vFgY2oXXMgVEDu53lyc=</DigestValue>
+				</Reference>
+			</SignedInfo>
+			<SignatureValue>gjbHJmA8HTpAsp3s+isu6Fsb+HNWDxChHXD3v7R5KE9DMpYU+Mkljux33lY4sOLgQqlM+/InZ8cRjAUQFj3ldCQdcgw96dTUpz71aDBsf4+A4K0o0VS3nL9cjjUid9s/6z9cWTbpgjtr4wIzyA8/ACSFn/HrskqiGKuBjKcB0OiGmUFIbgj43uysUlj8Ur3kDomnhacg6BX8eO5bnxEXedUmkZhexh0b1Ch6SBTgOTf0Px+RiTLNzjnBWiZGLf19wymCvGMabOOadhp50z4fEgE8NxnYjRh5PUMOXdtOh+ZBJKlBLRkuSGGxro80Y2FhjopmU1K2wr36qY+tVECMQQ==</SignatureValue>
+			<KeyInfo>
+				<X509Data>
+					<X509Certificate>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</X509Certificate>
+				</X509Data>
+			</KeyInfo>
+		</Signature>
+	</CTe>
+	<protCTe versao="3.00">
+		<infProt>
+			<tpAmb>1</tpAmb>
+			<verAplic>SP-CTe-2023-08-30-1</verAplic>
+			<chCTe>35231105798428000145570010000496001644803311</chCTe>
+			<dhRecbto>2023-11-16T10:59:21-03:00</dhRecbto>
+			<nProt>135239707539823</nProt>
+			<digVal>1wc7E6h1vFgY2oXXMgVEDu53lyc=</digVal>
+			<cStat>100</cStat>
+			<xMotivo>Autorizado o uso do CT-e</xMotivo>
+		</infProt>
+	</protCTe>
+</cteProc>

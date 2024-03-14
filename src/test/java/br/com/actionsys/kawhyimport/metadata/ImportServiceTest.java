@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
+import org.springframework.test.context.jdbc.Sql;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -31,6 +32,7 @@ public class ImportServiceTest {
     MetadataService metadataService;
 
     @Test
+    @Sql({"/nfe/delete-nfe.sql"})
     @DisplayName("Testar o processamento de Nfes utilizando a estrutura atual de testes do KawhyNfe")
     void validateNfeMetadata() {
 
@@ -43,6 +45,25 @@ public class ImportServiceTest {
         Assertions.assertDoesNotThrow(() -> metadataService.validateFiles(validationMetadataFolder.getFile().toPath(), xmlFolder.getFile().toPath()));
     }
 
+    @Test
+    @Sql({"/cte/delete-cte.sql"})
+    @DisplayName("Testar o processamento de Ctes utilizando a estrutura atual de testes do KawhyCte")
+    void validateCteMetadata() {
+
+        Resource xmlFolder = new ClassPathResource("cte/xml");
+        Resource validationMetadataFolder = new ClassPathResource("cte/metadata/validation");
+        Resource importMetadataFile = new ClassPathResource("cte/metadata/import/cteImportMetadata.csv");
+
+        importFiles(xmlFolder, importMetadataFile);
+
+        Assertions.assertDoesNotThrow(() -> metadataService.validateFiles(validationMetadataFolder.getFile().toPath(), xmlFolder.getFile().toPath()));
+    }
+
+    /**
+     * Importar arquivos no banco de dados
+     * @param xmlFolder pasta contendo os arquivos xml
+     * @param importMetadataFile arquivo de metadados utilizado para importar os arquivos
+     */
     private void importFiles(Resource xmlFolder, Resource importMetadataFile) {
 
         try (Stream<Path> files = Files.walk(xmlFolder.getFile().toPath(), 99).filter(Files::isRegularFile)) {
@@ -54,6 +75,11 @@ public class ImportServiceTest {
         }
     }
 
+    /**
+     * Importar arquivo XML no banco de dados
+     * @param file arquivo xml
+     * @param importMetadataFile arquivo de metadados utilizado para importar os arquivos
+     */
     private void importFile(Path file, Resource importMetadataFile) {
 
         try {

@@ -1,0 +1,182 @@
+<cteProc versao="3.00" xmlns="http://www.portalfiscal.inf.br/cte">
+    <CTe xmlns="http://www.portalfiscal.inf.br/cte">
+        <infCte Id="CTe35180605048234000122570010001563431005252092" versao="3.00">
+            <ide>
+                <cUF>35</cUF>
+                <cCT>00525209</cCT>
+                <CFOP>5353</CFOP>
+                <natOp>0</natOp>
+                <mod>57</mod>
+                <serie>1</serie>
+                <nCT>156343</nCT>
+                <dhEmi>2018-06-29T14:50:00-03:00</dhEmi>
+                <tpImp>1</tpImp>
+                <tpEmis>1</tpEmis>
+                <cDV>2</cDV>
+                <tpAmb>1</tpAmb>
+                <tpCTe>0</tpCTe>
+                <procEmi>0</procEmi>
+                <verProc>SAT-5.12.0.24</verProc>
+                <cMunEnv>3509502</cMunEnv>
+                <xMunEnv>CAMPINAS</xMunEnv>
+                <UFEnv>SP</UFEnv>
+                <modal>01</modal>
+                <tpServ>0</tpServ>
+                <cMunIni>3550308</cMunIni>
+                <xMunIni>SAO PAULO</xMunIni>
+                <UFIni>SP</UFIni>
+                <cMunFim>3518800</cMunFim>
+                <xMunFim>GUARULHOS</xMunFim>
+                <UFFim>SP</UFFim>
+                <retira>0</retira>
+                <indIEToma>1</indIEToma>
+                <toma3>
+                    <toma>0</toma>
+                </toma3>
+            </ide>
+            <compl>
+                <xEmi>GRAZIELEN</xEmi>
+                <xObs>Transporte Subcontratado com THIAGO DA SILVA PINHEIRO,CNPJ/CPF:29225780893,Propr.do Veiculo Marca
+                    RANAULT MASTER ,Placas:EYS3702,UF SP. Motorista: THIAGO DA SILVA PINHEIRO,CPF:29225780893,Placas:
+                    EYS3702,Renavam: 00496336673 NFe(s): 117748
+                </xObs>
+                <ObsCont xCampo="RESPSEG">
+                    <xTexto>05048234000122</xTexto>
+                </ObsCont>
+                <ObsCont xCampo="PLACA">
+                    <xTexto>EYS3702</xTexto>
+                </ObsCont>
+            </compl>
+            <emit>
+                <CNPJ>05048234000122</CNPJ>
+                <IE>244907086110</IE>
+                <xNome>ATOS LOGISTICA S/A</xNome>
+                <xFant>ATOS LOGISTICA S/A</xFant>
+                <enderEmit>
+                    <xLgr>R DOS ALECRINS</xLgr>
+                    <nro>940</nro>
+                    <xCpl>CONJUNTO 602</xCpl>
+                    <xBairro>CAMBUI</xBairro>
+                    <cMun>3509502</cMun>
+                    <xMun>CAMPINAS</xMun>
+                    <CEP>13024912</CEP>
+                    <UF>SP</UF>
+                    <fone>01935144000</fone>
+                </enderEmit>
+            </emit>
+            <rem>
+                <CNPJ>61721320000206</CNPJ>
+                <IE>109497380115</IE>
+                <xNome>COMERCIAL DE PNEUS ROMA LTDA</xNome>
+                <xFant>COMERCIAL DE PNEUS ROMA LTDA</xFant>
+                <fone>1138373805</fone>
+                <enderReme>
+                    <xLgr>AV ANTONIO E DE CARVALHO 2654</xLgr>
+                    <nro>02644</nro>
+                    <xBairro>CIDADE PATRIARCA</xBairro>
+                    <cMun>3550308</cMun>
+                    <xMun>SAO PAULO</xMun>
+                    <CEP>03540200</CEP>
+                    <UF>SP</UF>
+                    <cPais>1058</cPais>
+                    <xPais>Brasil</xPais>
+                </enderReme>
+            </rem>
+            <dest>
+                <CNPJ>03264294000408</CNPJ>
+                <IE>ISENTO</IE>
+                <xNome>CHEMBRO QUIMICA LTDA</xNome>
+                <fone>24363682</fone>
+                <enderDest>
+                    <xLgr>R ANTONIO MESTRINER ;</xLgr>
+                    <nro>00440</nro>
+                    <xBairro>BONSUCESSO</xBairro>
+                    <cMun>3518800</cMun>
+                    <xMun>GUARULHOS</xMun>
+                    <CEP>07175550</CEP>
+                    <UF>SP</UF>
+                    <cPais>1058</cPais>
+                    <xPais>BRASIL</xPais>
+                </enderDest>
+            </dest>
+            <vPrest>
+                <vTPrest>220.75</vTPrest>
+                <vRec>220.75</vRec>
+                <Comp>
+                    <xNome>FRETE VALOR</xNome>
+                    <vComp>220.75</vComp>
+                </Comp>
+            </vPrest>
+            <imp>
+                <ICMS>
+                    <ICMS00>
+                        <CST>00</CST>
+                        <vBC>220.75</vBC>
+                        <pICMS>12.00</pICMS>
+                        <vICMS>26.49</vICMS>
+                    </ICMS00>
+                </ICMS>
+                <vTotTrib>26.49</vTotTrib>
+            </imp>
+            <infCTeNorm>
+                <infCarga>
+                    <vCarga>13680.00</vCarga>
+                    <proPred>PRODUTOS AUTOMOTIVOS</proPred>
+                    <xOutCat>..</xOutCat>
+                    <infQ>
+                        <cUnid>01</cUnid>
+                        <tpMed>PESO BRUTO</tpMed>
+                        <qCarga>1.0000</qCarga>
+                    </infQ>
+                    <vCargaAverb>13680.00</vCargaAverb>
+                </infCarga>
+                <infDoc>
+                    <infNFe>
+                        <chave>35180661721320000206550010001177481001177489</chave>
+                    </infNFe>
+                </infDoc>
+                <infModal versaoModal="3.00">
+                    <rodo>
+                        <RNTRC>00731317</RNTRC>
+                    </rodo>
+                </infModal>
+            </infCTeNorm>
+        </infCte>
+        <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+            <SignedInfo>
+                <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+                <Reference URI="#CTe35180605048234000122570010001563431005252092">
+                    <Transforms>
+                        <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                        <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                    </Transforms>
+                    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                    <DigestValue>ANaqHqCJYzhxECX8TIY7vTPYjWw=</DigestValue>
+                </Reference>
+            </SignedInfo>
+            <SignatureValue>
+                I4sbE37f59UqwVqTmnnjhPlynd0pXi9OiOzls2IMHwLNPFgZRqJMgP9GJFcb5ZguUqQlVP0pqvkzfhcK43bUkA+xJjxpez7j2dmRwYo9h4mhxZxF30WdzCiNl8Y6znb9CAE/AY18LB39hTFMc6NjLEX8WgJRcP0tTZCocQPbg0A/UOaBms/5v+HPyULHmtWbVhiNH1QvfAUvwQTliyXecmO/Pm7OCV1tMvlJaoxXqIBAlbKvU5uCIbQnKwE314w3Jbo4UyQsfBd4Hjj3qi/46ztrIiDrpVwx+JVXg/VdFnjjXGm3tWPsxNXM+EYoGTqXuNV7HGsztx3WMf+6EDbpLg==
+            </SignatureValue>
+            <KeyInfo>
+                <X509Data>
+                    <X509Certificate>
+                        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
+                    </X509Certificate>
+                </X509Data>
+            </KeyInfo>
+        </Signature>
+    </CTe>
+    <protCTe versao="3.00">
+        <infProt>
+            <tpAmb>1</tpAmb>
+            <verAplic>SP-CTe-17-05-2018</verAplic>
+            <chCTe>35180605048234000122570010001563431005252092</chCTe>
+            <dhRecbto>2018-06-29T14:53:27-03:00</dhRecbto>
+            <nProt>135181231442379</nProt>
+            <digVal>ANaqHqCJYzhxECX8TIY7vTPYjWw=</digVal>
+            <cStat>100</cStat>
+            <xMotivo>Autorizado o uso do CT-e</xMotivo>
+        </infProt>
+    </protCTe>
+</cteProc>

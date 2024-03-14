@@ -7,7 +7,6 @@ import br.com.actionsys.kawhyimport.metadata.reader.XmlReaderService;
 import br.com.actionsys.kawhyimport.metadata.table.TableMapping;
 import br.com.actionsys.kawhyimport.metadata.table.TableMappingService;
 import br.com.actionsys.kawhyimport.repository.GenericRepository;
-import br.com.actionsys.kawhyimport.util.ImportConstants;
 import br.com.actionsys.kawhyimport.util.MetadataFunctions;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -35,16 +34,20 @@ public class ImportService {
 
     public void process(IntegrationItem item, Path metadataFile) {
 
-        List<TableMapping> tableMappings = tableMappingService.read(metadataFile);
+        try {
+            List<TableMapping> tableMappings = tableMappingService.read(metadataFile);
 
-        item.setId(getDocumentId(item, tableMappings));
+            item.setId(getDocumentId(item, tableMappings));
 
-        List<SqlCommand> commands = processTables(tableMappings, item);
+            List<SqlCommand> commands = processTables(tableMappings, item);
 
-        commands.forEach(sqlCommand -> {
-            log.debug("Executando comando: " + sqlCommand);
-            genericRepository.insert(sqlCommand.getTableName(), sqlCommand.getValues());
-        });
+            commands.forEach(sqlCommand -> {
+                log.debug("Executando comando: " + sqlCommand);
+                genericRepository.insert(sqlCommand.getTableName(), sqlCommand.getValues());
+            });
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao processar arquivo " + item.getFile().getAbsolutePath(), e);
+        }
     }
 
     private String getDocumentId(IntegrationItem item, List<TableMapping> tableMappings) {

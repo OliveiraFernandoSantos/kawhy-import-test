@@ -7,6 +7,7 @@ import br.com.actionsys.kawhyimport.metadata.field.FieldMapping;
 import br.com.actionsys.kawhyimport.metadata.field.FieldType;
 import br.com.actionsys.kawhyimport.metadata.table.TableMapping;
 import br.com.actionsys.kawhyimport.util.APathUtil;
+import br.com.actionsys.kawhyimport.util.ImportConstants;
 import br.com.actionsys.kawhyimport.util.MetadataFunctions;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -46,10 +47,10 @@ public class XmlReaderService {
             }
 
             if (aPath.equals(MetadataFunctions.COMP_WHERE)) {
-                return StringUtils.substringBetween(field.getWhereComplement(), "'");
+                return StringUtils.substringBetween(field.getWhereComplement(), ImportConstants.VALUE_SEPARATOR);
             }
 
-            if (MetadataFunctions.GENERATE_ID_NFSE.equals(field.getAPath())) {
+            if (MetadataFunctions.GENERATE_ID_NFSE.equals(aPath)) {
                 String cnpjPrest = APathUtil.getString(item.getDocument(), "IntegracaoMidas/DadosPrestador/Cnpj");
                 String data = APathUtil.getString(item.getDocument(), "IntegracaoMidas/DtEmissao");
                 String numNf = APathUtil.getString(item.getDocument(), "IntegracaoMidas/Numero");
@@ -57,12 +58,18 @@ public class XmlReaderService {
                 return Collections.singletonList(ChaveAcessoNfseUtil.generateNfseId(data, cnpjPrest, numNf));
             }
 
-            if (MetadataFunctions.GENERATE_NUMBER_NFSE.equals(field.getAPath())) {
+            if (MetadataFunctions.GENERATE_NUMBER_NFSE.equals(aPath)) {
                 // Quando receber o NNF é feita a validação e alteração do número conforme regra no método
                 // generateNfseNumber
                 String numNf = APathUtil.getString(item.getDocument(), "IntegracaoMidas/Numero");
 
                 return Collections.singletonList(BigDecimal.valueOf(Double.parseDouble(NumeroNfseUtil.generateNfseNumber(numNf, ""))));
+            }
+
+            // Caso nao encontre nenhuma funcao e tenha o prefixo foi cadastrado um valor fixo
+            // exemplo: ${'rem'}
+            if (StringUtils.contains(aPath, MetadataFunctions.FIXED_VALUE_PREFIX)) {
+                return StringUtils.substringBetween(field.getAPath(), ImportConstants.VALUE_SEPARATOR);
             }
 
             if (StringUtils.isNoneBlank(table.getTableAPath())) {

@@ -1,0 +1,293 @@
+<cteProc versao="4.00" xmlns="http://www.portalfiscal.inf.br/cte">
+    <CTe xmlns="http://www.portalfiscal.inf.br/cte">
+        <infCte Id="CTe33230600650831000370570060000962531020908860" versao="4.00">
+            <ide>
+                <cUF>33</cUF>
+                <cCT>02090886</cCT>
+                <CFOP>6352</CFOP>
+                <natOp>Transp a est industrial</natOp>
+                <mod>57</mod>
+                <serie>6</serie>
+                <nCT>96253</nCT>
+                <dhEmi>2023-06-27T20:12:48-03:00</dhEmi>
+                <tpImp>1</tpImp>
+                <tpEmis>1</tpEmis>
+                <cDV>0</cDV>
+                <tpAmb>1</tpAmb>
+                <tpCTe>0</tpCTe>
+                <procEmi>0</procEmi>
+                <verProc>1.0</verProc>
+                <cMunEnv>3301702</cMunEnv>
+                <xMunEnv>DUQUE DE CAXIAS</xMunEnv>
+                <UFEnv>RJ</UFEnv>
+                <modal>01</modal>
+                <tpServ>0</tpServ>
+                <cMunIni>3304557</cMunIni>
+                <xMunIni>RIO DE JANEIRO</xMunIni>
+                <UFIni>RJ</UFIni>
+                <cMunFim>4107652</cMunFim>
+                <xMunFim>FAZENDA RIO GRANDE</xMunFim>
+                <UFFim>PR</UFFim>
+                <retira>1</retira>
+                <indIEToma>1</indIEToma>
+                <toma3>
+                    <toma>0</toma>
+                </toma3>
+            </ide>
+            <compl>
+                <Entrega>
+                    <comData>
+                        <tpPer>2</tpPer>
+                        <dProg>2023-06-30</dProg>
+                    </comData>
+                    <semHora>
+                        <tpHor>0</tpHor>
+                    </semHora>
+                </Entrega>
+                <xObs>PO:23133379 **** D E V O L V E R C A N H O T O A S S I N A D O **** CST: 00 - Apolice seguro:
+                    02540033280/02550012067 - Seguradora: 72145931000199 SWISS RE CORP.SOLUT BR SEG. SA
+                </xObs>
+                <ObsCont xCampo="1">
+                    <xTexto>PO:23133379</xTexto>
+                </ObsCont>
+                <ObsCont xCampo="2">
+                    <xTexto>**** D E V O L V E R C A N H O T O A S S I N A D O ****</xTexto>
+                </ObsCont>
+                <ObsCont xCampo="3">
+                    <xTexto>CST: 00 - Apolice seguro: 02540033280/02550012067 - Seguradora: 72145931000199 SWISS RE
+                        CORP.SOLUT BR SEG. SA
+                    </xTexto>
+                </ObsCont>
+                <ObsCont xCampo="RESPSEG">
+                    <xTexto>00650831000370</xTexto>
+                </ObsCont>
+                <ObsCont xCampo="5">
+                    <xTexto>Tratamento de dados pessoais pode ser dado para execucao de contrato de transporte (LGPD
+                        art. 7, V).
+                    </xTexto>
+                </ObsCont>
+            </compl>
+            <emit>
+                <CNPJ>00650831000370</CNPJ>
+                <IE>77594949</IE>
+                <xNome>EFITRANS TRANSPORTES LTDA</xNome>
+                <enderEmit>
+                    <xLgr>R.EUSTAQUIO AZEVEDO,</xLgr>
+                    <nro>0</nro>
+                    <xBairro>CHACARA ARCAMPO</xBairro>
+                    <cMun>3301702</cMun>
+                    <xMun>DUQUE DE CAXIAS</xMun>
+                    <CEP>25251600</CEP>
+                    <UF>RJ</UF>
+                    <fone>2125843036</fone>
+                </enderEmit>
+                <CRT>3</CRT>
+            </emit>
+            <rem>
+                <CNPJ>00999042000188</CNPJ>
+                <IE>85203045</IE>
+                <xNome>QUAKER CHEMICAL INDUSTRIA E CO</xNome>
+                <fone>2133051800</fone>
+                <enderReme>
+                    <xLgr>AV. BRASIL</xLgr>
+                    <nro>44178</nro>
+                    <xBairro>DISTRITO INDUSTRIAL DE CAMPO GRANDE</xBairro>
+                    <cMun>3304557</cMun>
+                    <xMun>RIO DE JANEIRO</xMun>
+                    <CEP>23078001</CEP>
+                    <UF>RJ</UF>
+                    <cPais>1058</cPais>
+                    <xPais>BRASIL</xPais>
+                </enderReme>
+            </rem>
+            <exped>
+                <CNPJ>00999042000188</CNPJ>
+                <IE>85203045</IE>
+                <xNome>QUAKER CHEMICAL INDUSTRIA E CO</xNome>
+                <fone>2133051800</fone>
+                <enderExped>
+                    <xLgr>AV. BRASIL</xLgr>
+                    <nro>44178</nro>
+                    <xBairro>DISTRITO INDUSTRIAL DE CAMPO GRANDE</xBairro>
+                    <cMun>3304557</cMun>
+                    <xMun>RIO DE JANEIRO</xMun>
+                    <CEP>23078001</CEP>
+                    <UF>RJ</UF>
+                    <cPais>1058</cPais>
+                    <xPais>BRASIL</xPais>
+                </enderExped>
+            </exped>
+            <receb>
+                <CNPJ>02995040000146</CNPJ>
+                <IE>9018105591</IE>
+                <xNome>NTN ROLAMENTOS DO BRASIL LTDA</xNome>
+                <fone>4136278091</fone>
+                <enderReceb>
+                    <xLgr>AV DAS INDUSTRIAS</xLgr>
+                    <nro>380</nro>
+                    <xBairro>FAZENDA IGUACU</xBairro>
+                    <cMun>4107652</cMun>
+                    <xMun>FAZENDA RIO GRANDE</xMun>
+                    <CEP>83830332</CEP>
+                    <UF>PR</UF>
+                    <cPais>1058</cPais>
+                    <xPais>BRASIL</xPais>
+                </enderReceb>
+            </receb>
+            <dest>
+                <CNPJ>02995040000146</CNPJ>
+                <IE>9018105591</IE>
+                <xNome>NTN ROLAMENTOS DO BRASIL LTDA</xNome>
+                <fone>4136278091</fone>
+                <enderDest>
+                    <xLgr>AV DAS INDUSTRIAS</xLgr>
+                    <nro>380</nro>
+                    <xBairro>FAZENDA IGUACU</xBairro>
+                    <cMun>4107652</cMun>
+                    <xMun>FAZENDA RIO GRANDE</xMun>
+                    <CEP>83830332</CEP>
+                    <UF>PR</UF>
+                    <cPais>1058</cPais>
+                    <xPais>BRASIL</xPais>
+                </enderDest>
+            </dest>
+            <vPrest>
+                <vTPrest>255.52</vTPrest>
+                <vRec>255.52</vRec>
+                <Comp>
+                    <xNome>FRETE PESO</xNome>
+                    <vComp>87.85</vComp>
+                </Comp>
+                <Comp>
+                    <xNome>FRETE VALOR</xNome>
+                    <vComp>47.25</vComp>
+                </Comp>
+                <Comp>
+                    <xNome>DESPACHO</xNome>
+                    <vComp>27.56</vComp>
+                </Comp>
+                <Comp>
+                    <xNome>GRIS</xNome>
+                    <vComp>17.72</vComp>
+                </Comp>
+                <Comp>
+                    <xNome>PEDAGIO</xNome>
+                    <vComp>11.28</vComp>
+                </Comp>
+                <Comp>
+                    <xNome>CAT</xNome>
+                    <vComp>27.56</vComp>
+                </Comp>
+                <Comp>
+                    <xNome>ITR</xNome>
+                    <vComp>5.64</vComp>
+                </Comp>
+                <Comp>
+                    <xNome>IMP REPASSADO</xNome>
+                    <vComp>30.66</vComp>
+                </Comp>
+            </vPrest>
+            <imp>
+                <ICMS>
+                    <ICMS00>
+                        <CST>00</CST>
+                        <vBC>255.52</vBC>
+                        <pICMS>12.00</pICMS>
+                        <vICMS>30.66</vICMS>
+                    </ICMS00>
+                </ICMS>
+                <vTotTrib>30.66</vTotTrib>
+            </imp>
+            <infCTeNorm>
+                <infCarga>
+                    <vCarga>11812.04</vCarga>
+                    <proPred>QUAKERCOOL 3560 HBFF-3</proPred>
+                    <infQ>
+                        <cUnid>03</cUnid>
+                        <tpMed>UNIDADE</tpMed>
+                        <qCarga>2</qCarga>
+                    </infQ>
+                    <infQ>
+                        <cUnid>03</cUnid>
+                        <tpMed>PARES</tpMed>
+                        <qCarga>0</qCarga>
+                    </infQ>
+                    <infQ>
+                        <cUnid>00</cUnid>
+                        <tpMed>M3</tpMed>
+                        <qCarga>0.0000</qCarga>
+                    </infQ>
+                    <infQ>
+                        <cUnid>01</cUnid>
+                        <tpMed>PESO REAL</tpMed>
+                        <qCarga>239.2000</qCarga>
+                    </infQ>
+                    <infQ>
+                        <cUnid>01</cUnid>
+                        <tpMed>PESO BASE DE CALCULO</tpMed>
+                        <qCarga>239.2000</qCarga>
+                    </infQ>
+                    <vCargaAverb>11812.04</vCargaAverb>
+                </infCarga>
+                <infDoc>
+                    <infNFe>
+                        <chave>33230600999042000188550010001593121004923318</chave>
+                    </infNFe>
+                    <infNFe>
+                        <chave>33230600999042000188550010001593131004923323</chave>
+                    </infNFe>
+                </infDoc>
+                <infModal versaoModal="4.00">
+                    <rodo>
+                        <RNTRC>00133939</RNTRC>
+                    </rodo>
+                </infModal>
+            </infCTeNorm>
+            <infRespTec>
+                <CNPJ>01446320000132</CNPJ>
+                <xContato>Suporte SSW</xContato>
+                <email>suporte@ssw.inf.br</email>
+                <fone>04133360877</fone>
+            </infRespTec>
+        </infCte>
+        <infCTeSupl>
+            <qrCodCTe>https://dfe-portal.svrs.rs.gov.br/cte/qrCode?chCTe=33230600650831000370570060000962531020908860&amp;tpAmb=1</qrCodCTe>
+        </infCTeSupl>
+        <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+            <SignedInfo>
+                <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+                <Reference URI="#CTe33230600650831000370570060000962531020908860">
+                    <Transforms>
+                        <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                        <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                    </Transforms>
+                    <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                    <DigestValue>1h0kYCZ7wKNgbM2konlik6nJDi8=</DigestValue>
+                </Reference>
+            </SignedInfo>
+            <SignatureValue>
+                DuaZ+3G7SoN3sDSUDO7ZcGtUPa9fROKt4djZNzAWF7v0BhTivFv/yKuUIah/vq75RdSrZ8OdJSvpJcAyZ7hDIADIR6k2/Mwdl0aaJ9FF+fF4gGzhY2BYZL6TB6KnxqzVcTkI+VBOT6dv8ldIHpr3RsGdNfny9al8mDNbJs92XbeyjyqZFo2df5YIJ6dBvLuu3N09MIq2TctNXM0I9W6utibHnLx+tBbw9oR5U/WexMHQkvMV/0uXnuE74ohwcavVdXBL7MO/F9px1XJWSwDOLENQlgT9VihkTiHmA57qJYoRscZZPNXLyrXTilYFuhCNfxbAgNc2ArWTOq/mnB3ofQ==
+            </SignatureValue>
+            <KeyInfo>
+                <X509Data>
+                    <X509Certificate>
+                        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
+                    </X509Certificate>
+                </X509Data>
+            </KeyInfo>
+        </Signature>
+    </CTe>
+    <protCTe versao="4.00" xmlns="http://www.portalfiscal.inf.br/cte">
+        <infProt Id="CTe333230147383104">
+            <tpAmb>1</tpAmb>
+            <verAplic>RS20230626080859</verAplic>
+            <chCTe>33230600650831000370570060000962531020908860</chCTe>
+            <dhRecbto>2023-06-27T20:12:49-03:00</dhRecbto>
+            <nProt>333230147383104</nProt>
+            <digVal>1h0kYCZ7wKNgbM2konlik6nJDi8=</digVal>
+            <cStat>100</cStat>
+            <xMotivo>Autorizado o uso do CT-e</xMotivo>
+        </infProt>
+    </protCTe>
+</cteProc>
