@@ -1,6 +1,8 @@
 package br.com.actionsys.kawhyimport.metadata;
 
+import br.com.actionsys.kawhycommons.infra.util.DateUtil;
 import br.com.actionsys.kawhycommons.integration.IntegrationItem;
+import br.com.actionsys.kawhycommons.types.KawhyType;
 import br.com.actionsys.kawhyimport.command.SqlCommand;
 import br.com.actionsys.kawhyimport.metadata.field.FieldMapping;
 import br.com.actionsys.kawhyimport.metadata.reader.XmlReaderService;
@@ -13,11 +15,10 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Slf4j
 @Service
@@ -31,6 +32,36 @@ public class ImportService {
 
     @Autowired
     GenericRepository genericRepository;
+
+    public void process(IntegrationItem item, Path metadataFile, KawhyType kawhyType) {
+
+        try {
+            HashMap<Object, Object> tempVariables = new HashMap<>();
+
+            // AUDIT_SERVICE_NAME
+            tempVariables.put(MetadataFunctions.AUDIT_SERVICE_NAME, kawhyType.getServiceName());
+
+            // AUDIT_USER
+            tempVariables.put(MetadataFunctions.AUDIT_USER, kawhyType.getServiceName());
+
+            // AUDIT_HOST
+            try {
+                tempVariables.put(MetadataFunctions.AUDIT_HOST, InetAddress.getLocalHost().getHostAddress());
+            } catch (UnknownHostException e) {
+                tempVariables.put(MetadataFunctions.AUDIT_HOST, "");
+            }
+
+            // AUDIT_DATE e AUDIT_TIME
+            Date date = new Date();
+            tempVariables.put(MetadataFunctions.AUDIT_DATE, DateUtil.formatDateToDb(date));
+            tempVariables.put(MetadataFunctions.AUDIT_TIME, DateUtil.formatTimeToDb(date));
+
+        } catch (Exception e) {
+            log.warn("Erro ao preencher variaveis", e);
+        }
+
+        process(item, metadataFile);
+    }
 
     public void process(IntegrationItem item, Path metadataFile) {
 
@@ -55,7 +86,8 @@ public class ImportService {
         try {
             // Para preencher o id pelo menos uma das colunas de id deve ter o APath preenchido
             TableMapping table = tableMappings.stream()
-                    .filter(t -> !StringUtils.startsWith(t.getIdField().getAPath(), MetadataFunctions.FUNCTION_PREFIX))
+                    .filter(t -> !StringUtils.startsWith(t.getIdField().getAPath(), MetadataFunctions.FUNCTION_PREFIX)
+                            || StringUtils.equals(t.getIdField().getAPath(), MetadataFunctions.GENERATE_ID_NFSE))
                     .findFirst()
                     .orElseThrow(() -> new RuntimeException("Não foi encontrado uma coluna do tipo id com o APath preenchido"));
 

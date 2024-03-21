@@ -1,5 +1,6 @@
 package br.com.actionsys.kawhyimport.metadata.reader;
 
+import br.com.actionsys.kawhycommons.Constants;
 import br.com.actionsys.kawhycommons.infra.function.ChaveAcessoNfseUtil;
 import br.com.actionsys.kawhycommons.infra.function.NumeroNfseUtil;
 import br.com.actionsys.kawhycommons.integration.IntegrationItem;
@@ -55,7 +56,7 @@ public class XmlReaderService {
                 String data = APathUtil.getString(item.getDocument(), "IntegracaoMidas/DtEmissao");
                 String numNf = APathUtil.getString(item.getDocument(), "IntegracaoMidas/Numero");
 
-                return Collections.singletonList(ChaveAcessoNfseUtil.generateNfseId(data, cnpjPrest, numNf));
+                return ChaveAcessoNfseUtil.generateNfseId(data, cnpjPrest, numNf);
             }
 
             if (MetadataFunctions.GENERATE_NUMBER_NFSE.equals(aPath)) {
@@ -64,6 +65,26 @@ public class XmlReaderService {
                 String numNf = APathUtil.getString(item.getDocument(), "IntegracaoMidas/Numero");
 
                 return Collections.singletonList(BigDecimal.valueOf(Double.parseDouble(NumeroNfseUtil.generateNfseNumber(numNf, ""))));
+            }
+
+            if (MetadataFunctions.AUDIT_HOST.equals(aPath)) {
+                return item.getTempVariables().get(MetadataFunctions.AUDIT_HOST);
+            }
+
+            if (MetadataFunctions.AUDIT_DATE.equals(aPath)) {
+                return item.getTempVariables().get(MetadataFunctions.AUDIT_DATE);
+            }
+
+            if (MetadataFunctions.AUDIT_TIME.equals(aPath)) {
+                return item.getTempVariables().get(MetadataFunctions.AUDIT_TIME);
+            }
+
+            if (MetadataFunctions.AUDIT_SERVICE_NAME.equals(aPath)) {
+                return item.getTempVariables().get(MetadataFunctions.AUDIT_SERVICE_NAME);
+            }
+
+            if (MetadataFunctions.AUDIT_USER.equals(aPath)) {
+                return item.getTempVariables().get(MetadataFunctions.AUDIT_USER);
             }
 
             // Caso nao encontre nenhuma funcao e tenha o prefixo foi cadastrado um valor fixo
