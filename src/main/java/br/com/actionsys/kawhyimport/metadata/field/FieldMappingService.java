@@ -3,6 +3,7 @@ package br.com.actionsys.kawhyimport.metadata.field;
 import br.com.actionsys.kawhycommons.infra.util.FilesUtil;
 import br.com.actionsys.kawhyimport.util.ImportConstants;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.nio.file.Path;
@@ -12,9 +13,12 @@ import java.util.stream.Collectors;
 @Service
 public class FieldMappingService {
 
-    public List<FieldMapping> read(Path metadataFile) {
+    @Value("${arquivo.metadados:#{null}}")
+    public String arquivoMetadados;
 
-        List<String> lines = FilesUtil.readLines(metadataFile);
+    public List<FieldMapping> read() {
+
+        List<String> lines = FilesUtil.readLines(Path.of(arquivoMetadados));
 
         // remove linha de cabecalho
         lines.remove(0);

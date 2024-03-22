@@ -13,6 +13,7 @@ import br.com.actionsys.kawhyimport.util.MetadataFunctions;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.net.InetAddress;
@@ -24,6 +25,7 @@ import java.util.*;
 @Service
 public class ImportService {
 
+
     @Autowired
     TableMappingService tableMappingService;
 
@@ -33,7 +35,7 @@ public class ImportService {
     @Autowired
     GenericRepository genericRepository;
 
-    public void process(IntegrationItem item, Path metadataFile, KawhyType kawhyType) {
+    public void process(IntegrationItem item, KawhyType kawhyType) {
 
         try {
             HashMap<Object, Object> tempVariables = new HashMap<>();
@@ -60,13 +62,13 @@ public class ImportService {
             log.warn("Erro ao preencher variaveis", e);
         }
 
-        process(item, metadataFile);
+        process(item);
     }
 
-    public void process(IntegrationItem item, Path metadataFile) {
+    public void process(IntegrationItem item) {
 
         try {
-            List<TableMapping> tableMappings = tableMappingService.read(metadataFile);
+            List<TableMapping> tableMappings = tableMappingService.read();
 
             item.setId(getDocumentId(item, tableMappings));
 

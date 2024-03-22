@@ -20,10 +20,10 @@ public class TableMappingService {
     @Autowired
     private FieldMappingService fieldMappingService;
 
-    public List<TableMapping> read(Path metadataFile) {
+    public List<TableMapping> read() {
 
         try {
-            List<FieldMapping> allFields = fieldMappingService.read(metadataFile);
+            List<FieldMapping> allFields = fieldMappingService.read();
 
             return allFields.stream()
                     .collect(Collectors.groupingBy(FieldMapping::getTableId))
@@ -32,7 +32,7 @@ public class TableMappingService {
 
         } catch (Exception e) {
             // TODO PARAR PROCESSAMENTO?
-            throw new RuntimeException("Erro ao ler arquivos de metadados " + metadataFile, e);
+            throw new RuntimeException("Erro ao ler arquivos de metadados ", e);
         }
     }
 
