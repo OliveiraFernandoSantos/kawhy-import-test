@@ -4,21 +4,22 @@ import br.com.actionsys.kawhycommons.infra.util.FilesUtil;
 import br.com.actionsys.kawhyimport.util.ImportConstants;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
-import java.nio.file.Path;
+import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
 public class FieldMappingService {
 
-    @Value("${arquivo.metadados:#{null}}")
-    public String arquivoMetadados;
+    @Value("${arquivo.metadados}")
+    public Resource arquivoMetadados;
 
-    public List<FieldMapping> read() {
+    public List<FieldMapping> read() throws IOException {
 
-        List<String> lines = FilesUtil.readLines(Path.of(arquivoMetadados));
+        List<String> lines = FilesUtil.readLines(arquivoMetadados.getFile().toPath());
 
         // remove linha de cabecalho
         lines.remove(0);
