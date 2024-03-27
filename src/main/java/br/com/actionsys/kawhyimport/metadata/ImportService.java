@@ -70,8 +70,6 @@ public class ImportService {
         try {
             List<TableMapping> tableMappings = tableMappingService.read();
 
-            item.setId(getDocumentId(item, tableMappings));
-
             List<SqlCommand> commands = processTables(tableMappings, item);
 
             commands.forEach(sqlCommand -> {
