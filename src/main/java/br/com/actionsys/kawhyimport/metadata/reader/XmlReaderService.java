@@ -178,6 +178,7 @@ public class XmlReaderService {
                 try {
                     int dbSize = Integer.parseInt(field.getDbColumnSize());
                     if (StringUtils.length(value) > dbSize) {
+                        log.warn("Feito substring para o campo=" + field.getColumn() + " tabela=" + field.getTable() + " tamanhoColuna=" + field.getDbColumnSize() + " valor original=" + value);
                         value = StringUtils.substring(value, 0, dbSize);
                     }
                 } catch (Exception e) {
