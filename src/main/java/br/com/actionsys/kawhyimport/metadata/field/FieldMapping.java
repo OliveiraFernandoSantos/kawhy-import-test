@@ -13,7 +13,7 @@ public class FieldMapping {
     private String type;
     private String whereComplement;
     private String regex;
-    private String maxSize;
+    private String dbColumnSize;
     private String tableAPath;
     private String parentAPath;
 }

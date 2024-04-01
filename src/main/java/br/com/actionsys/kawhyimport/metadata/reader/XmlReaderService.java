@@ -1,6 +1,5 @@
 package br.com.actionsys.kawhyimport.metadata.reader;
 
-import br.com.actionsys.kawhycommons.Constants;
 import br.com.actionsys.kawhycommons.infra.function.ChaveAcessoNfseUtil;
 import br.com.actionsys.kawhycommons.infra.function.NumeroNfseUtil;
 import br.com.actionsys.kawhycommons.integration.IntegrationItem;
@@ -157,6 +156,8 @@ public class XmlReaderService {
 
     private Object formatValue(String value, FieldMapping field) {
 
+        value = StringUtils.trim(value);
+
         if (value == null || value.trim().isEmpty()) {
             return null;
 
@@ -173,12 +174,12 @@ public class XmlReaderService {
             return new BigInteger(value);
 
         } else {
-            if (field.getRegex() != null) { // TODO REVISAR REGEX
-                value = value.trim().replaceAll(field.getRegex(), "");
-            }
-            if (field.getMaxSize() != null) {
+            if (field.getDbColumnSize() != null) {
                 try {
-                    value = StringUtils.substring(value, 0, Integer.parseInt(field.getMaxSize()));
+                    int dbSize = Integer.parseInt(field.getDbColumnSize());
+                    if (StringUtils.length(value) > dbSize) {
+                        value = StringUtils.substring(value, 0, dbSize);
+                    }
                 } catch (Exception e) {
                     throw new RuntimeException("Erro processar maxSize", e);
                 }

@@ -51,10 +51,9 @@ public class FieldMappingService {
             fieldMapping.setAPath(getColumnValue(columns, 3));
             fieldMapping.setType(getColumnValue(columns, 4));
             fieldMapping.setWhereComplement(getColumnValue(columns, 5));
-            fieldMapping.setRegex(getColumnValue(columns, 6));
-            fieldMapping.setMaxSize(getColumnValue(columns, 7));
-            fieldMapping.setTableAPath(getColumnValue(columns, 8));
-            fieldMapping.setParentAPath(getColumnValue(columns, 9));
+            fieldMapping.setDbColumnSize(getColumnValue(columns, 6));
+            fieldMapping.setTableAPath(getColumnValue(columns, 7));
+            fieldMapping.setParentAPath(getColumnValue(columns, 8));
 
             fieldMapping.setTableId(
                     fieldMapping.getWhereComplement() == null
