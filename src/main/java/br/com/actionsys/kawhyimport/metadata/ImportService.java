@@ -120,6 +120,7 @@ public class ImportService {
 
         List<SqlCommand> commands = new ArrayList<>();
 
+        //TODO remover essa validação?!
         if (item.getId() == null) {
             item.setId((String) xmlReaderService.getValue(table, item, table.getIdField(), 1, 0));
         }
