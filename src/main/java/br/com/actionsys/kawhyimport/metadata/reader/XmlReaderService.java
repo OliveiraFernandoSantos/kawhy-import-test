@@ -1,6 +1,6 @@
 package br.com.actionsys.kawhyimport.metadata.reader;
 
-import br.com.actionsys.kawhycommons.infra.function.NumeroNfseFuction;
+import br.com.actionsys.kawhycommons.infra.function.NumeroNfseFunction;
 import br.com.actionsys.kawhycommons.integration.IntegrationItem;
 import br.com.actionsys.kawhyimport.metadata.field.FieldMapping;
 import br.com.actionsys.kawhyimport.metadata.field.FieldType;
@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 public class XmlReaderService {
 
     @Autowired
-    private NumeroNfseFuction numeroNfseFuction;
+    private NumeroNfseFunction numeroNfseFunction;
 
     public Object getValue(TableMapping table, IntegrationItem item, FieldMapping field, int sequence, int parentSequence) {
 
@@ -58,7 +58,7 @@ public class XmlReaderService {
                 // generateNfseNumber
                 String numNf = APathUtil.getString(item.getDocument(), "IntegracaoMidas/Numero");
 
-                return Collections.singletonList(BigDecimal.valueOf(Double.parseDouble(numeroNfseFuction.generateNfseNumber(numNf))));
+                return Collections.singletonList(BigDecimal.valueOf(Double.parseDouble(numeroNfseFunction.generateNfseNumber(numNf))));
             }
 
             if (MetadataFunctions.AUDIT_HOST.equals(aPath)) {
