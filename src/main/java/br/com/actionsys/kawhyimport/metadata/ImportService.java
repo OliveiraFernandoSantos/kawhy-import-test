@@ -78,23 +78,6 @@ public class ImportService {
         }
     }
 
-    private String getDocumentId(IntegrationItem item, List<TableMapping> tableMappings) {
-
-        try {
-            // Para preencher o id pelo menos uma das colunas de id deve ter o APath preenchido
-            TableMapping table = tableMappings.stream()
-                    .filter(t -> !StringUtils.startsWith(t.getIdField().getAPath(), MetadataFunctions.FUNCTION_PREFIX)
-                            || StringUtils.equals(t.getIdField().getAPath(), MetadataFunctions.GENERATE_ID_NFSE))
-                    .findFirst()
-                    .orElseThrow(() -> new RuntimeException("Não foi encontrado uma coluna do tipo id com o APath preenchido"));
-
-            return (String) xmlReaderService.getValue(table, item, table.getIdField(), 1, 0);
-
-        } catch (Exception e) {
-            throw new RuntimeException("Erro ao recuperar chave de acesso", e);
-        }
-    }
-
     private List<SqlCommand> processTables(List<TableMapping> tables, IntegrationItem item) {
 
         ArrayList<SqlCommand> commands = new ArrayList<>();

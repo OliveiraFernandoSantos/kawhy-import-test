@@ -3,7 +3,6 @@ package br.com.actionsys.kawhyimport.util;
 public class MetadataFunctions {
 
     public static final String FUNCTION_PREFIX = "${";
-    public static final String GENERATE_ID_NFSE = "${generateNfseId}";
     public static final String GENERATE_NUMBER_NFSE = "${generateNfseNumber}";
     public static final String COMP_WHERE = "${compWhere}";
     public static final String PARENT_SEQUENCE = "${parentSequence}";

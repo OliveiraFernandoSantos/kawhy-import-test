@@ -1,7 +1,6 @@
 package br.com.actionsys.kawhyimport.metadata.reader;
 
-import br.com.actionsys.kawhycommons.infra.function.ChaveAcessoNfseUtil;
-import br.com.actionsys.kawhycommons.infra.function.NumeroNfseUtil;
+import br.com.actionsys.kawhycommons.infra.function.NumeroNfseFuction;
 import br.com.actionsys.kawhycommons.integration.IntegrationItem;
 import br.com.actionsys.kawhyimport.metadata.field.FieldMapping;
 import br.com.actionsys.kawhyimport.metadata.field.FieldType;
@@ -11,6 +10,7 @@ import br.com.actionsys.kawhyimport.util.ImportConstants;
 import br.com.actionsys.kawhyimport.util.MetadataFunctions;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
 
@@ -24,6 +24,9 @@ import java.util.stream.Collectors;
 @Slf4j
 @Service
 public class XmlReaderService {
+
+    @Autowired
+    private NumeroNfseFuction numeroNfseFuction;
 
     public Object getValue(TableMapping table, IntegrationItem item, FieldMapping field, int sequence, int parentSequence) {
 
@@ -50,20 +53,12 @@ public class XmlReaderService {
                 return StringUtils.substringBetween(field.getWhereComplement(), ImportConstants.VALUE_SEPARATOR);
             }
 
-            if (MetadataFunctions.GENERATE_ID_NFSE.equals(aPath)) {
-                String cnpjPrest = APathUtil.getString(item.getDocument(), "IntegracaoMidas/DadosPrestador/Cnpj");
-                String data = APathUtil.getString(item.getDocument(), "IntegracaoMidas/DtEmissao");
-                String numNf = APathUtil.getString(item.getDocument(), "IntegracaoMidas/Numero");
-
-                return ChaveAcessoNfseUtil.generateNfseId(data, cnpjPrest, numNf);
-            }
-
             if (MetadataFunctions.GENERATE_NUMBER_NFSE.equals(aPath)) {
                 // Quando receber o NNF é feita a validação e alteração do número conforme regra no método
                 // generateNfseNumber
                 String numNf = APathUtil.getString(item.getDocument(), "IntegracaoMidas/Numero");
 
-                return Collections.singletonList(BigDecimal.valueOf(Double.parseDouble(NumeroNfseUtil.generateNfseNumber(numNf, ""))));
+                return Collections.singletonList(BigDecimal.valueOf(Double.parseDouble(numeroNfseFuction.generateNfseNumber(numNf))));
             }
 
             if (MetadataFunctions.AUDIT_HOST.equals(aPath)) {
