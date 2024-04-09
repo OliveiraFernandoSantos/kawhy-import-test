@@ -35,7 +35,7 @@ public class ImportService {
     public void process(IntegrationItem item, KawhyType kawhyType) {
 
         try {
-            HashMap<Object, Object> tempVariables = new HashMap<>();
+            Map<String, String> tempVariables = item.getTempVariables();
 
             // AUDIT_SERVICE_NAME
             tempVariables.put(MetadataFunctions.AUDIT_SERVICE_NAME, kawhyType.getServiceName());
