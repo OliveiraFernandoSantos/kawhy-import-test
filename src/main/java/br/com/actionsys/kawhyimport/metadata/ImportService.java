@@ -1,7 +1,7 @@
 package br.com.actionsys.kawhyimport.metadata;
 
 import br.com.actionsys.kawhycommons.infra.util.DateUtil;
-import br.com.actionsys.kawhycommons.integration.IntegrationItem;
+import br.com.actionsys.kawhycommons.integration.IntegrationContext;
 import br.com.actionsys.kawhycommons.types.KawhyType;
 import br.com.actionsys.kawhyimport.command.SqlCommand;
 import br.com.actionsys.kawhyimport.metadata.field.FieldMapping;
@@ -32,7 +32,7 @@ public class ImportService {
     @Autowired
     GenericRepository genericRepository;
 
-    public void process(IntegrationItem item, KawhyType kawhyType) {
+    public void process(IntegrationContext item, KawhyType kawhyType) {
 
         try {
             Map<String, String> tempVariables = item.getTempVariables();
@@ -62,7 +62,7 @@ public class ImportService {
         process(item);
     }
 
-    public void process(IntegrationItem item) {
+    public void process(IntegrationContext item) {
 
         try {
             List<TableMapping> tableMappings = tableMappingService.read();
@@ -78,7 +78,7 @@ public class ImportService {
         }
     }
 
-    private List<SqlCommand> processTables(List<TableMapping> tables, IntegrationItem item) {
+    private List<SqlCommand> processTables(List<TableMapping> tables, IntegrationContext item) {
 
         ArrayList<SqlCommand> commands = new ArrayList<>();
 
@@ -96,7 +96,7 @@ public class ImportService {
         return commands;
     }
 
-    private List<SqlCommand> processTable(TableMapping table, IntegrationItem item, int parentSequence) {
+    private List<SqlCommand> processTable(TableMapping table, IntegrationContext item, int parentSequence) {
 
         List<SqlCommand> commands = new ArrayList<>();
 
@@ -135,7 +135,7 @@ public class ImportService {
         return commands;
     }
 
-    private List<SqlCommand> processTableWithParent(TableMapping tableMapping, IntegrationItem item) {
+    private List<SqlCommand> processTableWithParent(TableMapping tableMapping, IntegrationContext item) {
 
         List<SqlCommand> commands = new ArrayList<>();
 
