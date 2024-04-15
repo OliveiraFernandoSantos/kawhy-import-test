@@ -38,10 +38,10 @@ public class ImportService {
             Map<String, String> tempVariables = item.getTempVariables();
 
             // AUDIT_SERVICE_NAME
-            tempVariables.put(MetadataFunctions.AUDIT_SERVICE_NAME, kawhyType.getServiceName());
+            tempVariables.put(MetadataFunctions.AUDIT_SERVICE_NAME, kawhyType.getAuditName());
 
             // AUDIT_USER
-            tempVariables.put(MetadataFunctions.AUDIT_USER, kawhyType.getServiceName());
+            tempVariables.put(MetadataFunctions.AUDIT_USER, kawhyType.getAuditName());
 
             // AUDIT_HOST
             try {
