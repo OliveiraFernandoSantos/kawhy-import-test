@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Service
 public class FieldMappingService {
@@ -17,14 +17,12 @@ public class FieldMappingService {
     @Value("${arquivo.metadados}")
     public Resource arquivoMetadados;
 
-    public List<FieldMapping> read() throws IOException {
+    public List<FieldMapping> read() {
 
-        List<String> lines = FilesUtil.readLines(arquivoMetadados.getFile().toPath());
+        Stream<String> lines = FilesUtil.readLines(arquivoMetadados);
 
-        // remove linha de cabecalho
-        lines.remove(0);
-
-        return lines.stream()
+        return lines
+                .skip(1) // remove linha de cabecalho
                 .map(this::build)
                 .filter(field -> !isIncomplete(field))
                 .collect(Collectors.toList());
