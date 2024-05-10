@@ -70,7 +70,7 @@ public class ImportService {
             List<SqlCommand> commands = processTables(tableMappings, item);
 
             commands.forEach(sqlCommand -> {
-                log.debug("Executando comando: " + sqlCommand);
+//                log.debug("Executando comando: " + sqlCommand);
                 genericRepository.insert(sqlCommand.getTableName(), sqlCommand.getValues());
             });
         } catch (Exception e) {
@@ -84,7 +84,7 @@ public class ImportService {
 
         for (TableMapping table : tables) {
 
-            log.debug("Processando tabela: " + table);
+//            log.debug("Processando tabela: " + table);
 
             List<SqlCommand> tableCommands = table.getParentAPath() == null
                     ? processTable(table, item, 0)
@@ -113,7 +113,7 @@ public class ImportService {
 
             for (FieldMapping field : table.getFields()) {
 
-                log.debug("Processando coluna: " + field);
+//                log.debug("Processando coluna: " + field);
 
                 Object value = xmlReaderService.getValue(table, item, field, sequence, parentSequence);
 
