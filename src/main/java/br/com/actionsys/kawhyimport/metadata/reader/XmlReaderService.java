@@ -57,8 +57,9 @@ public class XmlReaderService {
                 // Quando receber o NNF é feita a validação e alteração do número conforme regra no método
                 // generateNfseNumber
                 String numNf = APathUtil.getString(item.getDocument(), "IntegracaoMidas/Numero");
+                String dtEmissao = APathUtil.getString(item.getDocument(), "IntegracaoMidas/DtEmissao");
 
-                return Collections.singletonList(BigDecimal.valueOf(Double.parseDouble(numeroNfseFunction.generateNfseNumber(numNf))));
+                return Collections.singletonList(BigDecimal.valueOf(Double.parseDouble(numeroNfseFunction.generateNfseNumber(numNf, dtEmissao))));
             }
 
             if (MetadataFunctions.AUDIT_HOST.equals(aPath)) {
