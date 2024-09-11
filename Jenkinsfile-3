@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven '3.9.8'  // Nome da instalação do Maven configurada no Jenkins
+        maven 'Maven-3.9.9'  // Nome da instalação do Maven configurada no Jenkins
     }
 
     environment {
@@ -14,9 +14,15 @@ pipeline {
     triggers {
         cron('H H * * *')
     }
-	
 
     stages {
+
+        stage('Build Dependent Project') {
+            steps {
+                build job: 'commons-test', propagate: true
+            }
+        }
+
         stage('Checkout SCM') {
             steps {
                 git branch: 'main', url: 'https://github.com/OliveiraFernandoSantos/kawhy-import-test.git'
@@ -52,7 +58,9 @@ pipeline {
 
     post {
         always {
+            // Arquivar artefatos do build
             archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
+            // Relatórios de testes JUnit
             junit '**/target/surefire-reports/*.xml'
         }
         failure {
