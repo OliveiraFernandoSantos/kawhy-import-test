@@ -10,6 +10,7 @@
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
 
+
     <groupId>br.com.actionsys</groupId>
     <artifactId>kawhy-import</artifactId>
     <name>KawhyImport</name>
@@ -42,6 +43,14 @@
             <scope>test</scope>
         </dependency>
 
+
     </dependencies>
+
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.2</version>
+    </plugin>
+
 
 </project>
