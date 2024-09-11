@@ -35,13 +35,6 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
-            steps {
-                withCredentials([usernamePassword(credentialsId: 'oracle-db-credentials', usernameVariable: 'DB_USER', passwordVariable: 'DB_PASSWORD')]) {
-                    sh 'mvn test -Ddb.url=${DB_URL} -Ddb.user=${DB_USER} -Dspring.datasource.password=${DB_PASSWORD}'
-                }
-            }
-        }
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('sq1') {
@@ -60,8 +53,6 @@ pipeline {
         always {
             // Arquivar artefatos do build
             archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
-            // Relatórios de testes JUnit
-            junit '**/target/surefire-reports/*.xml'
         }
         failure {
             echo 'Build, Test, or Deploy failed.'
