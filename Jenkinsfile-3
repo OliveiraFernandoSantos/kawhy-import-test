@@ -14,8 +14,18 @@ pipeline {
     triggers {
         cron('H H * * *')
     }
+	
 
     stages {
+	
+	
+		stage('Build Dependent Project') {
+			steps {
+				build job: 'commons-test', propagate: true
+			}
+		}
+	
+	
         stage('Checkout SCM') {
             steps {
                 git branch: 'main', url: 'https://github.com/OliveiraFernandoSantos/kawhy-import-test.git'
