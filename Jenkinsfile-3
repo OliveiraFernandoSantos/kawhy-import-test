@@ -12,8 +12,8 @@ pipeline {
     }
 
     triggers {
-        cron('H H * * *')
-    }
+    cron('H 0 * * *')  // Executa diariamente à meia-noite
+}
 
     stages {
 
