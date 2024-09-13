@@ -22,11 +22,6 @@ pipeline {
                 build job: 'kawhy-commons', propagate: true
             }
         }
-    stage('Clean Workspace') {
-            steps {
-                // Limpa o workspace
-                cleanWs()
-            }
 
         stage('Checkout SCM') {
             steps {
