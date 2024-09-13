@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven-3.9.9'  // Nome da instalação do Maven configurada no Jenkins
+        maven '3.9.8'  // Nome da instalação do Maven configurada no Jenkins
     }
 
     environment {
@@ -38,7 +38,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('sq1') {
-                    sh 'mvn sonar:sonar -Dsonar.projectKey=kawhy-import-test -Dsonar.host.url=http://172.24.208.1:9000 -Dsonar.login=${SONAR_AUTH_TOKEN}'
+                    sh 'mvn sonar:sonar -Dsonar.projectKey=kawhy-import-pipeline -Dsonar.host.url=http://172.24.208.1:9000 -Dsonar.login=${SONAR_AUTH_TOKEN}'
 
                 }
             }
