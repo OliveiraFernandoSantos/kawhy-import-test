@@ -19,7 +19,7 @@ pipeline {
 
         stage('Build Dependent Project') {
             steps {
-                build job: 'commons-test', propagate: true
+                build job: 'commons-pipeline', propagate: true
             }
         }
 
